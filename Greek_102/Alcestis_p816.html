@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+
+<!-- This demo shows how to enable aligned treebanks and translations -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alpheios Embedded Library Treebank Translation Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+    <meta name="alpheios-v2-treebank-diagram-url"
+      data-alpheios_tb_src="https://github.com/rgorman/VG-treebank-display/embed/DOC/SENTENCE?w=WORD"
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+      	import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+            window.AlpheiosEmbed.importDependencies({ mode: 'cdn' }).then(Embedded => {
+              new Embedded({clientId: 'embed-lib-demo-perseids-treebanks', authEnv: null}).activate();
+            }).catch(e => {
+              console.error(`Import of an embedded library dependencies failed: ${e}`)
+            })
+          }).catch(e => {
+            console.error(`Import of an embedded library failed: ${e}`)
+          })
+        })
+    </script>
+    <div class="alpheios-enabled" lang="grc">
+      <!-- Put Greek text in this div -->
+      
+   
+    
+                <sp>
+                  <speaker>Ἡρακλῆς</speaker>  <br/> 
+                  <l>ἀλλ᾽ ἦ πέπονθα δείν᾽ ὑπὸ ξένων ἐμῶν;</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Θεράπων</speaker>  <br/> 
+                  <l>οὐκ ἦλθες ἐν δέοντι δέξασθαι δόμοις.</l>
+                  <l>[πένθος γὰρ ἡμῖν ἐστι: καὶ στολμοὺς βλέπεις</l>
+                  <l>μελαμπέπλους κουράν τε.]</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Ἡρακλῆς</speaker>  <br/> 
+                  <l>[τίς δ᾽ ὁ κατθανών;]</l>
+                  <l n="820">μῶν ἢ τέκνων τι φροῦδον ἢ γέρων πατήρ;</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Θεράπων</speaker>  <br/> 
+                  <l>γυνὴ μὲν οὖν ὄλωλεν Ἀδμήτου, ξένε.</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Ἡρακλῆς</speaker>  <br/> 
+                  <l>τί φῄς; ἔπειτα δῆτά μ᾽ ἐξενίζετε;</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Θεράπων</speaker>  <br/> 
+                  <l>ᾐδεῖτο γάρ σε τῶνδ᾽ ἀπώσασθαι δόμων.</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Ἡρακλῆς</speaker>  <br/> 
+                  <l>ὦ σχέτλι᾽, οἵας ἤμπλακες ξυναόρου.</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Θεράπων</speaker>  <br/> 
+                  <l n="825">ἀπωλόμεσθα πάντες, οὐ κείνη μόνη.</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Ἡρακλῆς</speaker>  <br/> 
+                  <l>ἀλλ᾽ ᾐσθόμην μὲν ὄμμ᾽ ἰδὼν δακρυρροοῦν</l>
+                  <l>κουράν τε καὶ πρόσωπον: ἀλλ᾽ ἔπειθέ με</l>
+                  <l>λέγων θυραῖον κῆδος ἐς τάφον φέρειν.</l>
+                  <l>βίᾳ δὲ θυμοῦ τάσδ᾽ ὑπερβαλὼν πύλας</l>
+                  <l n="830">ἔπινον ἀνδρὸς ἐν φιλοξένου δόμοις</l>
+                  <l>πράσσοντος οὕτω. κᾆτα κωμάζω κάρα</l>
+                  <l>στεφάνοις πυκασθείς; ἀλλὰ σοῦ τὸ νῦν φράσαι,</l>
+                  <l>κακοῦ τοσούτου δώμασιν προσκειμένου,</l>
+                  <l>ποῦ καί σφε θάπτει, ποῦ νιν εὑρήσω μολών.</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Θεράπων</speaker>  <br/> 
+                  <l n="835">ὀρθὴν παρ᾽ οἶμον ἣ 'πὶ Λάρισαν φέρει</l>
+                  <l>τύμβον κατόψῃ ξεστὸν ἐκ προαστίου.</l>
+                </sp>  <br/> <br/>
+                <sp>
+                  <speaker>Ἡρακλῆς</speaker>  <br/> 
+                  <l>ὦ πολλὰ τλᾶσα καρδία καὶ χεὶρ ἐμή,</l>
+                  <l>νῦν δεῖξον οἷον παῖδά σ᾽ ἡ Τιρυνθία</l>
+                  <l>ἐγείνατ᾽ Ἠλεκτρύωνος Ἀλκμήνη Διί.</l>
+                  <l n="840">δεῖ γάρ με σῶσαι τὴν θανοῦσαν ἀρτίως</l>
+                  <l>γυναῖκα κἀς τόνδ᾽ αὖθις ἱδρῦσαι δόμον</l>
+                  <l>Ἄλκηστιν Ἀδμήτῳ θ᾽ ὑπουργῆσαι χάριν.</l>
+                  <l>ἐλθὼν δ᾽ ἄνακτα τὸν μελάμπεπλον νεκρῶν</l>
+                  <l>Θάνατον φυλάξω, καί νιν εὑρήσειν δοκῶ</l>
+                  <l n="845">πίνοντα τύμβου πλησίον προσφαγμάτων.</l>
+                  
+    
+   </div>
+</body>
+</html>
