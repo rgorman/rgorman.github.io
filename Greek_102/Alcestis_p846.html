@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+
+<!-- This demo shows how to enable aligned treebanks and translations -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alpheios Embedded Library Treebank Translation Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+    <meta name="alpheios-v2-treebank-diagram-url"
+      data-alpheios_tb_src="https://github.com/rgorman/VG-treebank-display/embed/DOC/SENTENCE?w=WORD"
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+      	import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+            window.AlpheiosEmbed.importDependencies({ mode: 'cdn' }).then(Embedded => {
+              new Embedded({clientId: 'embed-lib-demo-perseids-treebanks', authEnv: null}).activate();
+            }).catch(e => {
+              console.error(`Import of an embedded library dependencies failed: ${e}`)
+            })
+          }).catch(e => {
+            console.error(`Import of an embedded library failed: ${e}`)
+          })
+        })
+    </script>
+  
+  <h2>Due on 4/7/20</h2>
+    <div class="alpheios-enabled" lang="grc">
+      <!-- Put Greek text in this div -->
+      
+      
+      <l>κἄνπερ λοχαίας αὐτὸν ἐξ ἕδρας συθεὶς </l> &nbsp;&nbsp;&nbsp;&nbsp; 846 <br/>
+      <l>μάρψω, κύκλον δὲ περιβάλω χεροῖν ἐμαῖν, </l> <br/>
+      <l>οὐκ ἔστιν ὅστις αὐτὸν ἐξαιρήσεται </l> <br/>
+      <l>μογοῦντα πλευρά, πρὶν γυναῖκ᾽ ἐμοὶ μεθῇ. </l> <br/>
+      <l n="850">ἢν δ᾽ οὖν ἁμάρτω τῆσδ᾽ ἄγρας καὶ μὴ μόλῃ </l> &nbsp;&nbsp;&nbsp; 850  <br/>
+      <l>πρὸς αἱματηρὸν πέλανον, εἶμι τῶν κάτω </l> <br/>
+      <l>Κόρης Ἄνακτός τ᾽ εἰς ἀνηλίους δόμους, </l> <br/>
+      <l>αἰτήσομαί τε καὶ πέποιθ᾽ ἄξειν ἄνω </l> <br/>
+      <l>Ἄλκηστιν, ὥστε χερσὶν ἐνθεῖναι ξένου, </l> <br/>
+      <l n="855">ὅς μ᾽ ἐς δόμους ἐδέξατ᾽ οὐδ᾽ ἀπήλασεν, </l> &nbsp;&nbsp;&nbsp;&nbsp; 855<br/>
+      <l>καίπερ βαρείᾳ συμφορᾷ πεπληγμένος, </l> <br/>
+      <l>ἔκρυπτε δ᾽ ὢν γενναῖος, αἰδεσθεὶς ἐμέ. </l> <br/>
+      <l>τίς τοῦδε μᾶλλον Θεσσαλῶν φιλόξενος, </l> <br/>
+      <l>τίς Ἑλλάδ᾽ οἰκῶν; τοιγὰρ οὐκ ἐρεῖ κακὸν </l> <br/>
+      <l n="860">εὐεργετῆσαι φῶτα γενναῖος γεγώς. </l> &nbsp;&nbsp;&nbsp;&nbsp; 860<br/> <br/> <br/>
+    
+    
+
+         
+         Ἄδμητος <br/> 
+              <l>ἰώ, </l> <br/>
+              <l>στυγναὶ πρόσοδοι, στυγναὶ δ᾽ ὄψεις </l> <br/>
+              <l>χήρων μελάθρων. </l> <br/>
+              <l>ἰώ μοί μοι. αἰαῖ <αἰαῖ>. </l> <br/>
+              <l>ποῖ βῶ; ποῖ στῶ; τί λέγω; τί δὲ μή; </l> <br/>
+              <l>πῶς ἂν ὀλοίμην; </l> <br/>
+      <l n="865">ἦ βαρυδαίμονα μήτηρ μ᾽ ἔτεκεν. </l> &nbsp;&nbsp;&nbsp;&nbsp; 865 <br/>
+              <l>ζηλῶ φθιμένους, κείνων ἔραμαι, </l> <br/>
+              <l>κεῖν᾽ ἐπιθυμῶ δώματα ναίειν. </l> <br/>
+              <l>οὔτε γὰρ αὐγὰς χαίρω προσορῶν </l> <br/>
+              <l>οὔτ᾽ ἐπὶ γαίας πόδα πεζεύων: </l> <br/>
+      <l n="870">τοῖον ὅμηρόν μ᾽ ἀποσυλήσας </l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 870<br/>
+      <l>Ἅιδῃ Θάνατος παρέδωκεν. </l> <br/> <br/>
+      
+      ............................................... <br/><br/>
+         
+      Ἄδμητος <br/>
+      <l n="935">φίλοι, γυναικὸς δαίμον᾽ εὐτυχέστερον </l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 935 <br/>
+              <l>τοὐμοῦ νομίζω, καίπερ οὐ δοκοῦνθ᾽ ὅμως. </l> <br/>
+              <l>τῆς μὲν γὰρ οὐδὲν ἄλγος ἅψεταί ποτε, </l> <br/>
+              <l>πολλῶν δὲ μόχθων εὐκλεὴς ἐπαύσατο. </l> <br/>
+              <l>ἐγὼ δ᾽, ὃν οὐ χρῆν ζῆν, παρεὶς τὸ μόρσιμον </l> <br/>
+      <l n="940">λυπρὸν διάξω βίοτον: ἄρτι μανθάνω. </l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 940 <br/>
+              
+                
+    
+   </div>
+</body>
+</html>
