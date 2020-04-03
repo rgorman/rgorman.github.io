@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+
+<!-- This demo shows how to enable aligned treebanks and translations -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alpheios Embedded Library Treebank Translation Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+    <meta name="alpheios-v2-treebank-diagram-url"
+      data-alpheios_tb_src="https://github.com/rgorman/VG-treebank-display/embed/DOC/SENTENCE?w=WORD"
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+      	import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+            window.AlpheiosEmbed.importDependencies({ mode: 'cdn' }).then(Embedded => {
+              new Embedded({clientId: 'embed-lib-demo-perseids-treebanks', authEnv: null}).activate();
+            }).catch(e => {
+              console.error(`Import of an embedded library dependencies failed: ${e}`)
+            })
+          }).catch(e => {
+            console.error(`Import of an embedded library failed: ${e}`)
+          })
+        })
+    </script>
+  
+  <h2>Due on 4/7/20</h2>
+    <div class="alpheios-enabled" lang="grc">
+      <!-- Put Greek text in this div -->
+      
+      <h2>Alcestis lines 941-961, 1006-1016 <br/>
+        Due on 4/9/20</h2>
+      
+      
+      <speaker>Ἄδμητος</speaker> <br/>
+      <l>πῶς γὰρ δόμων τῶνδ᾽ εἰσόδους ἀνέξομαι;</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 941 <br/> 
+      <l>τίν᾽ ἂν προσειπών, τοῦ δὲ προσρηθεὶς ὕπο</l> <br/>
+      <l>τερπνῆς τύχοιμ᾽ ἂν εἰσόδου; ποῖ τρέψομαι;</l> <br/>
+      <l>ἡ μὲν γὰρ ἔνδον ἐξελᾷ μ᾽ ἐρημία,</l> <br/>
+      <l n="945">γυναικὸς εὐνὰς εὖτ᾽ ἂν εἰσίδω κενὰς</l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 945<br/> 
+      <l>θρόνους τ᾽ ἐν οἷσιν ἷζε καὶ κατὰ στέγας</l> <br/>
+      <l>αὐχμηρὸν οὖδας, τέκνα δ᾽ ἀμφὶ γούνασι</l> <br/>
+      <l>πίπτοντα κλαίῃ μητέρ᾽, οἱ δὲ δεσπότιν</l> <br/>
+      <l>στένωσιν οἵαν ἐκ δόμων ἀπώλεσαν.</l> <br/>
+      <l n="950">τὰ μὲν κατ᾽ οἴκους τοιάδ᾽: ἔξωθεν δέ με</l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 950<br/> 
+      <l>γάμοι τ᾽ ἐλῶσι Θεσσαλῶν καὶ ξύλλογοι</l> <br/>
+      <l>γυναικοπληθεῖς: οὐ γὰρ ἐξανέξομαι</l> <br/>
+      <l>λεύσσων δάμαρτος τῆς ἐμῆς ὁμήλικας.</l> <br/>
+      <l>ἐρεῖ δέ μ᾽ ὅστις ἐχθρὸς ὢν κυρεῖ τάδε:</l> <br/>
+      <l n="955">Ἰδοῦ τὸν αἰσχρῶς ζῶνθ᾽, ὃς οὐκ ἔτλη θανεῖν</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 955 <br/> 
+      <l>ἀλλ᾽ ἣν ἔγημεν ἀντιδοὺς ἀψυχίᾳ</l> <br/>
+      <l>πέφευγεν Ἅιδην: κᾆτ᾽ ἀνὴρ εἶναι δοκεῖ;</l> <br/>
+      <l>στυγεῖ δὲ τοὺς τεκόντας, αὐτὸς οὐ θέλων</l> <br/>
+      <l>θανεῖν. τοιάνδε πρὸς κακοῖσι κληδόνα</l> <br/>
+      <l n="960">ἕξω. τί μοι ζῆν δῆτα κέρδιον, φίλοι,</l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 960 <br/> 
+      <l>κακῶς κλύοντι καὶ κακῶς πεπραγότι;</l> <br/> <br/> <br/>
+      
+      ....................................................... <br/><br/>
+      
+      <speaker>Χορός</speaker><br/>
+      <l>καὶ μὴν ὅδ᾽, ὡς ἔοικεν, Ἀλκμήνης γόνος,</l> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1006 <br/> 
+      <l>Ἄδμητε, πρὸς σὴν ἑστίαν πορεύεται.</l> <br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker>
+        <l>φίλον πρὸς ἄνδρα χρὴ λέγειν ἐλευθέρως,</l> <br/>
+        <l>Ἄδμητε, μομφὰς δ᾽ οὐχ ὑπὸ σπλάγχνοις ἔχειν</l> <br/>
+        <l n="1010">σιγῶντ᾽. ἐγὼ δὲ σοῖς κακοῖσιν ἠξίουν</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1010 <br/>
+        <l>ἐγγὺς παρεστὼς ἐξετάζεσθαι φίλος:</l> <br/>
+        <l>σὺ δ᾽ οὐκ ἔφραζες σῆς προκείμενον νέκυν</l> <br/>
+        <l>γυναικός, ἀλλά μ᾽ ἐξένιζες ἐν δόμοις,</l> <br/>
+        <l>ὡς δὴ θυραίου πήματος σπουδὴν ἔχων.</l> <br/>
+        <l n="1015">κἄστεψα κρᾶτα καὶ θεοῖς ἐλειψάμην</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1015 <br/>
+        <l>σπονδὰς ἐν οἴκοις δυστυχοῦσι τοῖσι σοῖς.</l> <br/>
+        
+     
+     
+    
+   </div>
+</body>
+</html>
