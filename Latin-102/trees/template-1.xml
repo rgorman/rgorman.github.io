@@ -30,27 +30,27 @@
         <address>rgorman1@unl.edu</address>
         <uri>http://data.perseus.org/sosol/users/Bob%20Gorman</uri>
     </annotator>
-    <sentence id="1" document_id="" subdoc="" span="">
+    <sentence id="1" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Huic" lemma="hic" postag="a-s---md_" relation="" head="2"/>
         <word id="2" form="provinciae" lemma="provincia" postag="n-s---fd-" relation="" head="4"/>
         <word id="3" form="Caesar" lemma="Caesar" postag="n-s---mn-" relation="" head="4"/>
         <word id="4" form="praefuit" lemma="praesum" postag="v3sria---" relation="MnVb" head="0"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="2" document_id="" subdoc="" span="">
+    <sentence id="2" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Ille" lemma="ille" postag="p-s---mn-" relation="" head="4"/>
         <word id="2" form="exercitui" lemma="exercitus2" postag="n-s---md-" relation="" head="4"/>
         <word id="3" form="postea" lemma="postea" postag="d--------" relation="" head="4"/>
         <word id="4" form="praefuit" lemma="praesum" postag="v3sria---" relation="MnVb" head="0"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="3" document_id="" subdoc="" span="">
+    <sentence id="3" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Militibus" lemma="miles" postag="n-p---md-" relation="" head="3"/>
         <word id="2" form="signum" lemma="signum" postag="n-s---na-" relation="" head="3"/>
         <word id="3" form="dedit" lemma="do" postag="v3sria---" relation="MnVb" head="0"/>
         <word id="4" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="4" document_id="" subdoc="" span="">
+    <sentence id="4" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Caesar" lemma="Caesar" postag="n-s---mn-" relation="" head="4"/>
         <word id="2" form="magnis" lemma="magnus" postag="a-p---fb-" relation="" head="3"/>
         <word id="3" form="copiis" lemma="copia1" postag="n-p---fb-" relation="" head="4"/>
@@ -58,7 +58,7 @@
         <word id="5" form="est" lemma="sum1" postag="v3spia---" relation="AuxV" head="4"/>
         <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="5" document_id="" subdoc="" span="">
+    <sentence id="5" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Is" lemma="is" postag="p-s---mn-" relation="" head="5"/>
         <word id="2" form="ab" lemma="ab" postag="r--------" relation="" head="5"/>
         <word id="3" form="isto" lemma="iste" postag="p-s---mb-" relation="" head="2"/>
@@ -66,41 +66,41 @@
         <word id="5" form="affert" lemma="affero" postag="v3spia---" relation="MnVb" head="0"/>
         <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="6" document_id="" subdoc="" span="">
+    <sentence id="6" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Caesar" lemma="Caesar" postag="n-s---mn-" relation="" head="4"/>
         <word id="2" form="eo" lemma="is" postag="a-s---mb_" relation="" head="3"/>
         <word id="3" form="die" lemma="dies" postag="n-s---mb-" relation="" head="4"/>
         <word id="4" form="expectabatur" lemma="exspecto" postag="v3siip---" relation="MnVb" head="0"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="7" document_id="" subdoc="" span="">
+    <sentence id="7" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Hic" lemma="hic" postag="p-s---mn-" relation="" head="3"/>
         <word id="2" form="epistulas" lemma="epistula" postag="n-p---fa-" relation="" head="3"/>
         <word id="3" form="affert" lemma="affero" postag="v3spia---" relation="MnVb" head="0"/>
         <word id="4" form="duas" lemma="duo" postag="a-p---fa-" relation="" head="2"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="8" document_id="" subdoc="" span="">
+    <sentence id="8" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Magnos" lemma="magnus" postag="a-p---ma-" relation="" head="2"/>
         <word id="2" form="equitatus" lemma="equitatus1" postag="n-p---ma-" relation="" head="3"/>
         <word id="3" form="expectabant" lemma="exspecto" postag="v3piia---" relation="MnVb" head="0"/>
         <word id="4" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="9" document_id="" subdoc="" span="">
+    <sentence id="9" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Laudabam" lemma="laudo" postag="v1siia---" relation="MnVb" head="0"/>
         <word id="2" form="incredibilem" lemma="incredibilis" postag="a-s---fa-" relation="" head="3"/>
         <word id="3" form="diligentiam" lemma="diligentia" postag="n-s---fa-" relation="" head="1"/>
         <word id="4" form="Caesaris" lemma="Caesar" postag="n-s---mg-" relation="" head="3"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="10" document_id="" subdoc="" span="">
+    <sentence id="10" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Saepe" lemma="saepe" postag="d--------" relation="" head="3"/>
         <word id="2" form="praeposteris" lemma="praeposterus" postag="a-p---nb-" relation="" head="4"/>
         <word id="3" form="utimur" lemma="utor" postag="v1ppid---" relation="MnVb" head="0"/>
         <word id="4" form="consiliis" lemma="consilium" postag="n-p---nb-" relation="" head="3"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="11" document_id="" subdoc="" span="">
+    <sentence id="11" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="In" lemma="in" postag="r--------" relation="" head="5"/>
         <word id="2" form="pluribus" lemma="multus" postag="a-p---mbc" relation="" head="3"/>
         <word id="3" form="locis" lemma="locus" postag="n-p---mb-" relation="" head="1"/>
@@ -108,7 +108,7 @@
         <word id="5" form="utimur" lemma="utor" postag="v1ppid---" relation="MnVb" head="0"/>
         <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="12" document_id="" subdoc="" span="">
+    <sentence id="12" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Haec" lemma="hic" postag="a-s---fn_" relation="" head="2"/>
         <word id="2" form="civitas" lemma="civitas" postag="n-s---fn-" relation="" head="4"/>
         <word id="3" form="magnas" lemma="magnus" postag="a-p---fa-" relation="" head="5"/>
@@ -116,7 +116,7 @@
         <word id="5" form="copias" lemma="copia1" postag="n-p---fa-" relation="" head="4"/>
         <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="13" document_id="" subdoc="" span="">
+    <sentence id="13" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Antea" lemma="antea" postag="d--------" relation="" head="2"/>
         <word id="2" form="capiebam" lemma="capio1" postag="v1siia---" relation="MnVb" head="0"/>
         <word id="3" form="ex" lemma="ex" postag="r--------" relation="" head="2"/>
@@ -125,7 +125,7 @@
         <word id="6" form="voluptatem" lemma="voluptas" postag="n-s---fa-" relation="" head="2"/>
         <word id="7" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="14" document_id="" subdoc="" span="">
+    <sentence id="14" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Interim" lemma="interim" postag="d--------" relation="" head="3"/>
         <word id="2" form="litteras" lemma="littera" postag="n-p---fa-" relation="" head="3"/>
         <word id="3" form="accipit" lemma="accipio" postag="v3spia---" relation="MnVb" head="0"/>
@@ -133,7 +133,7 @@
         <word id="5" form="Caesare" lemma="Caesar" postag="n-s---mb-" relation="" head="4"/>
         <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="15" document_id="" subdoc="" span="">
+    <sentence id="15" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Spem" lemma="spes" postag="n-s---fa-" relation="" head="5"/>
         <word id="2" form="omnem" lemma="omnis" postag="a-s---fa-" relation="" head="1"/>
         <word id="3" form="in" lemma="in" postag="r--------" relation="" head="5"/>
@@ -141,7 +141,7 @@
         <word id="5" form="habemus" lemma="habeo" postag="v1ppia---" relation="MnVb" head="0"/>
         <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="16" document_id="" subdoc="" span="">
+    <sentence id="16" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Eo" lemma="is" postag="a-s---nb_" relation="" head="2"/>
         <word id="2" form="tempore" lemma="tempus" postag="n-s---nb-" relation="" head="6"/>
         <word id="3" form="principatum" lemma="principatus" postag="n-s---ma-" relation="" head="6"/>
@@ -150,7 +150,7 @@
         <word id="6" form="obtinuerat" lemma="obtineo" postag="v3slia---" relation="MnVb" head="0"/>
         <word id="7" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="17" document_id="" subdoc="" span="">
+    <sentence id="17" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Non" lemma="non" postag="d--------" relation="" head="6"/>
         <word id="2" form="ego" lemma="ego" postag="p-s---mn-" relation="" head="6"/>
         <word id="3" form="de" lemma="de" postag="r--------" relation="" head="6"/>
@@ -159,14 +159,14 @@
         <word id="6" form="loquor" lemma="loquor" postag="v1spid---" relation="MnVb" head="0"/>
         <word id="7" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="18" document_id="" subdoc="" span="">
+    <sentence id="18" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Equitatui" lemma="equitatus1" postag="n-s---md-" relation="" head="4"/>
         <word id="2" form="omni" lemma="omnis" postag="a-s---md-" relation="" head="1"/>
         <word id="3" form="Caesar" lemma="Caesar" postag="n-s---mn-" relation="" head="4"/>
         <word id="4" form="praefuit" lemma="praesum" postag="v3sria---" relation="MnVb" head="0"/>
         <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="19" document_id="" subdoc="" span="">
+    <sentence id="19" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Ego" lemma="ego" postag="p-s---mn-" relation="" head="6"/>
         <word id="2" form="illum" lemma="ille" postag="a-s---ma_" relation="" head="3"/>
         <word id="3" form="virum" lemma="vir" postag="n-s---ma-" relation="" head="6"/>
@@ -176,7 +176,7 @@
         <word id="7" form="eram" lemma="sum1" postag="v1siia---" relation="AuxV" head="6"/>
         <word id="8" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
-    <sentence id="20" document_id="" subdoc="" span="">
+    <sentence id="20" document_id="rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Pecuniam" lemma="pecunia" postag="n-s---fa-" relation="" head="3"/>
         <word id="2" form="Caesari" lemma="Caesar" postag="n-s---md-" relation="" head="3"/>
         <word id="3" form="dederunt" lemma="do" postag="v3pria---" relation="" head="0"/>
