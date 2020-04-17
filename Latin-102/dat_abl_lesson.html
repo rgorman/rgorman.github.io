@@ -1,0 +1,148 @@
+---
+layout: default
+---
+
+
+<!-- This demo shows how to enable aligned treebanks and translations -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alpheios Embedded Library Treebank Translation Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+    <meta name="alpheios-v2-treebank-diagram-url"
+      data-alpheios_tb_src="https://github.com/rgorman/VG-treebank-display/embed/DOC/SENTENCE?w=WORD"
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+      	import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+            window.AlpheiosEmbed.importDependencies({ mode: 'cdn' }).then(Embedded => {
+              new Embedded({clientId: 'embed-lib-demo-perseids-treebanks', authEnv: null}).activate();
+            }).catch(e => {
+              console.error(`Import of an embedded library dependencies failed: ${e}`)
+            })
+          }).catch(e => {
+            console.error(`Import of an embedded library failed: ${e}`)
+          })
+        })
+    </script>
+    <div class="alpheios-enabled" lang="lat">
+      <!-- Put Greek text in this div -->
+      <ol>
+        
+        <h2>Ablatives</h2>
+        
+       
+        
+        <li>semper eadem <strong>celeritate</strong> <strong><em>utimur</em></strong>, inquit Griphook.</li>
+        
+        <li><strong>manu dextra</strong> <strong><em>utor</em></strong>, inquit Harrius.</li>
+        
+        <li>Ronaldus iam vehementer cum Decano Thomas, qui eodem <strong>dormitorio</strong> <strong><em>utebatur</em></strong>, de ludo follis pedumque rixatus erat.</li>
+        
+        <li>Harrius nunc <strong>Hermione</strong> familiariter <strong><em>utebatur</em></strong>.</li>
+        
+        <li>Dominus et Domina Dursley non sine superbia dicebant se  <strong>ratione</strong> ordinaria vitae <em><strong>uti</strong></em>.</li>
+        
+        <li>Professor Dumbledore <strong>symphoniacis</strong> in camera canentibus et decem conorum <strong>ludo</strong> <strong><em>fruitur</em></strong>.</li>
+        
+        <li>Nicolas Flamel <strong>vita tranquilla</strong> apud Dumnonios <strong><em>fruitur</em></strong>.</li>
+        
+        <li>Dudley ululabat: quinque <strong><em>caruerat</em></strong> <strong>emissionibus televisificis </strong>quas videre voluerat.</li>
+        
+        <li>libri aliquot <strong>titulis</strong> omnino <strong><em>carebant</em></strong>.</li>
+        
+        <li>scio quis sis! inquit Ronaldus subito. es Nick Paene <strong>Capite</strong> <strong><em>Carens</em></strong>!</li>
+        
+        
+        
+        
+        <h2>Datives</h2>
+        
+        <h3>Indirect Object</h3>
+        
+        <h4>Verbs of "giving"</h4>
+        
+        <li>Hagrid <em>epistulam convolutam</em> <strong>strigi</strong> <strong><em>dedit</em></strong>.</li>
+        
+        <li>Hagrid <em>nummos chartaceos</em> <strong>Harrio</strong> <strong><em>dedit</em></strong>.</li>
+        
+        <li>caput magnum et villosum super Harrium inclinavit et <strong>ei</strong> <strong><em>dedit</em></strong> <em>osculum</em> scilicet asperrimum et mystaciosum.</li>
+        
+      
+        
+        <h4>Words and information</h4>
+        
+        <li><strong>Domino Pottero</strong> <em>salutem</em> <strong><em>dat</em></strong> Professor McGonagall. Noli aperire fasciculum ad mensam. inest novus iste Nimbus MM ...</li>
+        
+        <li>Minerva McGonagell Praeses Vicaria <em>Salutem</em> <strong><em>Dicit</em></strong> <strong>Domino Pottero</strong>.</li>
+        
+        <li>Hagrid <em>salutem</em> <strong><em>dicit</em></strong> <strong>Harrio</strong>.</li>
+        
+        <li>Domina Dursley diem iucundum solito more degerat. super cenam <strong>ei</strong> <em><strong>dixit</strong></em> <em>quomodo Dudley verbum novum ("nolo") didicisset</em>.</li>
+        
+        <li>spectatores per telephonium <strong>mihi</strong> <em>dixerunt</em> <em>pro pluvia, quam heri promisi, se habuisse imbrem siderum cadentium</em>.</li>
+        
+        
+        
+        <h3>Datives of reference  adjectives </h3>
+        
+          
+        <li>mea cara Professor, nonne homo prudens <strong><em>similis</em></strong> <strong>tibi</strong> potest eum nominie proprio appellare? sane ineptum est eum "Quidam" appellare. </li>
+        
+        <li>in facie sua Harrius id solum amabat: cicatricem tenuissimam in fronte exceptam cuius figura erat <strong>fulguri</strong> <strong><em>similis</em></strong>. </li>
+        
+        <li>erat fulgor violaceus, sonus <strong><em>similis</em></strong> <strong>pyrobolo chartaceo</strong> ...</li>
+        
+        <li>potest fieri ut parumper Snapi resistam, sed re vera non <strong><em>par</em></strong> <strong>illi</strong> sum</li>
+        
+        
+        <h3>Dative Complements</h3>
+        
+        <li>potest fieri ut parumper <strong>Snapi</strong> <strong><em>resistam</em></strong>, sed re vera non par illi sum</li>
+        
+        <li>nonnulli <strong>ei</strong> <strong><em>resistebant</em></strong> -- quos necavit.</li>       
+    
+        
+        <li>obsecro <strong>mihi</strong> <strong><em>ignoscas</em></strong>, inquit Harrius.</li>
+        
+        <li>nihil quod Silvam incolit <strong>tibi</strong> <strong><em>nocebit</em></strong> si mecum eris, inquit Hagrid.</li>
+        
+        <li>Carolus in Romania <strong>draconibus</strong> <strong><em>studet</em></strong> et Gulielmus negotium aliquod in Africa curat.</li>
+        
+        <li>Dudley maligne <strong>Harrio</strong> <strong><em>subrisit</em></strong>.</li>
+        
+        <li>Dumbledore conversus est ut <strong>feli maculosae</strong> <em><strong>subrideret</strong></em>, sed illa abierat. in loco eius 
+          <strong>feminae severiori </strong> <em><strong>subridebat</strong></em> quae perspicilla quadrata gerebat.</li>
+        
+        <li>Dominus Dursley <em><strong>praeerat</strong></em> <strong>societati</strong> nomine Grunnings, quae terebras fecit. </li>
+        
+        <li>Silvius <strong>turmae Gryffindorensi</strong> <strong><em>praeest</em></strong>, explicuit Professor McGonagall.</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+       
+     
+        
+        
+        
+        
+        
+      </ol>
+      
+     
+      
+      
+   </div>
+</body>
+</html>
