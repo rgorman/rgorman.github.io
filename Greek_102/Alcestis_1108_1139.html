@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+
+<!-- This demo shows how to enable aligned treebanks and translations -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Alpheios Embedded Library Treebank Translation Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+    <meta name="alpheios-v2-treebank-diagram-url"
+      data-alpheios_tb_src="https://github.com/rgorman/VG-treebank-display/embed/DOC/SENTENCE?w=WORD"
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+      	import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+            window.AlpheiosEmbed.importDependencies({ mode: 'cdn' }).then(Embedded => {
+              new Embedded({clientId: 'embed-lib-demo-perseids-treebanks', authEnv: null}).activate();
+            }).catch(e => {
+              console.error(`Import of an embedded library dependencies failed: ${e}`)
+            })
+          }).catch(e => {
+            console.error(`Import of an embedded library failed: ${e}`)
+          })
+        })
+    </script>
+  
+  <h2>Alcestis lines 1108-1139 <br/>
+    Homework for 4/23/20</h2>
+    <div class="alpheios-enabled" lang="grc">
+      <!-- Put Greek text in this div -->
+      
+      
+     
+     
+     
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>νίκα νυν: οὐ μὴν ἁνδάνοντά μοι ποιεῖς.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>ἀλλ᾽ ἔσθ᾽ ὅθ᾽ ἡμᾶς αἰνέσεις: πιθοῦ μόνον.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l n="1110">κομίζετ᾽, εἰ χρὴ τήνδε δέξασθαι δόμοις.</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1110<br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>οὐκ ἂν μεθείην τὴν γυναῖκα προσπόλοις.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>σὺ δ᾽ αὐτὸς αὐτὴν εἴσαγ᾽, εἰ δοκεῖ, δόμους.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>ἐς σὰς μὲν οὖν ἔγωγε θήσομαι χέρας.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>οὐκ ἂν θίγοιμι: δῶμα δ᾽ εἰσελθεῖν πάρα.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l n="1115">τῇ σῇ πέποιθα χειρὶ δεξιᾷ μόνῃ.</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1115<br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ἄναξ, βιάζῃ μ᾽ οὐ θέλοντα δρᾶν τάδε.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>τόλμα προτεῖναι χεῖρα καὶ θιγεῖν ξένης.</l><br/><br/></sp>     
+      
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>καὶ δὴ προτείνω, Γοργόν᾽ ὡς καρατομῶν.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>ἔχεις;</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ἔχω, ναί.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>σῷζέ νυν, καὶ τὸν Διὸς</l><br>
+        <l n="1120">φήσεις ποτ᾽ εἶναι παῖδα γενναῖον ξένον.</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1120</br>
+        <l>βλέψον πρὸς αὐτήν, εἴ τι σῇ δοκεῖ πρέπειν</l></br>
+        <l>γυναικί: λύπης δ᾽ εὐτυχῶν μεθίστασο.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ὦ θεοί, τί λέξω;  θαῦμ᾽ ἀνέλπιστον τόδε:</l></br>
+        <l>γυναῖκα λεύσσω τήνδ᾽ ἐμὴν ἐτητύμως,</l></br>
+        <l n="1125">ἢ κέρτομός μ᾽ ἐκ θεοῦ τις ἐκπλήσσει χαρά;</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1125<br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>οὐκ ἔστιν ἄλλη: τήνδ᾽ ὁρᾷς δάμαρτα σήν.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ὅρα δὲ μή τι φάσμα νερτέρων τόδ᾽ ᾖ.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>οὐ ψυχαγωγὸν τόνδ᾽ ἐποιήσω ξένον.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ἀλλ᾽ ἣν ἔθαπτον εἰσορῶ δάμαρτ᾽ ἐμήν;</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l n="1130">σάφ᾽ ἴσθ᾽: ἀπιστεῖν δ᾽ οὔ σε θαυμάζω τύχῃ.</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1130<br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>θίγω, προσείπω ζῶσαν ὡς δάμαρτ᾽ ἐμήν;</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l>πρόσειπ᾽: ἔχεις γὰρ πᾶν ὅσονπερ ἤθελες.</l><br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ὦ φιλτάτης γυναικὸς ὄμμα καὶ δέμας,</l></br>
+        <l>ἔχω σ᾽ ἀέλπτως, οὔποτ᾽ ὄψεσθαι δοκῶν.</l><br/><br/></sp>
+      <sp><speaker>Ἡρακλῆς</speaker><br/>
+        <l n="1135">ἔχεις: φθόνος δὲ μὴ γένοιτό τις θεῶν.</l>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1135<br/><br/></sp>
+      <sp><speaker>Ἄδμητος</speaker><br/>
+        <l>ὦ τοῦ μεγίστου Ζηνὸς εὐγενὲς τέκνον,</l></br>
+        <l>εὐδαιμονοίης καί σ᾽ ὁ φιτύσας πατὴρ</l></br>
+        <l>σῴζοι: σὺ γὰρ δὴ τἄμ᾽ ἀνώρθωσας μόνος.</l></br>
+        <l>πῶς τήνδ᾽ ἔπεμψας νέρθεν ἐς φάος τόδε;</l><br/><br/></sp>
+      
+      
+      
+    
+   </div>
+</body>
+</html>
