@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<treebank xmlns:saxon="http://saxon.sf.net/"
+    xml:lang="lat"
+    format="midlat"
+    direction="ltr"
+    version="1.5">
+    <date>2020-04-24 17:04:34 UTC</date>
+    <annotator>
+        <short/>
+        <name/>
+        <address/>
+        <uri>https://services.perseids.org/llt/segtok</uri>
+    </annotator>
+    <annotator>
+        <short/>
+        <name/>
+        <address/>
+        <uri>http://github.com/latin-language-toolkit/arethusa</uri>
+    </annotator>
+    <annotator>
+        <short>Bob Gorman</short>
+        <name>Robert Gorman</name>
+        <address>rgorman1@unl.edu</address>
+        <uri>http://data.perseus.org/sosol/users/Bob%20Gorman</uri>
+    </annotator>
+    <sentence id="1" document_id="" subdoc="" span="">
+        <word id="1" form="semper" lemma="semper" postag="d--------" relation="" head="4"/>
+        <word id="2" form="eadem" lemma="idem" postag="a-s---fb_" relation="Atr" head="3"/>
+        <word id="3" form="celeritate" lemma="celeritas" postag="n-s---fb-" relation="" head="4"/>
+        <word id="4" form="utimur" lemma="utor" postag="v1ppid---" relation="MnVb" head="0"/>
+        <word id="5" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+    </sentence>
+    <sentence id="2" document_id="" subdoc="" span="">
+        <word id="1" form="Nicolas" lemma="Nicolas" postag="n-s---mn-" relation="" head="2"/>
+        <word id="2" form="Flamel" lemma="Flamel" postag="n-s---mn-" relation="" head="7"/>
+        <word id="3" form="vita" lemma="vita" postag="n-s---fb-" relation="" head="7"/>
+        <word id="4" form="tranquilla" lemma="tranquillus" postag="a-s---fb-" relation="" head="3"/>
+        <word id="5" form="apud" lemma="apud" postag="r--------" relation="" head="7"/>
+        <word id="6" form="Dumnonios" lemma="Dumnonius" postag="n-p---ma-" relation="" head="5"/>
+        <word id="7" form="fruitur" lemma="fruor" postag="v3spid---" relation="MnVb" head="0"/>
+        <word id="8" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+    </sentence>
+    <sentence id="3" document_id="" subdoc="" span="">
+        <word id="1" form="Hagrid" lemma="Hagrid" postag="n-s---mn-" relation="" head="5"/>
+        <word id="2" form="epistulam" lemma="epistula" postag="n-s---fa-" relation="" head="5"/>
+        <word id="3" form="convolutam" lemma="con-volvo" postag="v-srppfa-" relation="" head="2"/>
+        <word id="4" form="strigi" lemma="strix" postag="n-s---fd-" relation="" head="5"/>
+        <word id="5" form="dedit" lemma="do" postag="v3sria---" relation="" head="0"/>
+        <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+    </sentence>
+</treebank>
+
