@@ -180,7 +180,7 @@
     <sentence id="20" document_id="https://rgorman.github.io/Latin-102/trees/template-1.xml" subdoc="" span="">
         <word id="1" form="Pecuniam" lemma="pecunia" postag="n-s---fa-" relation="" head="3"/>
         <word id="2" form="Caesari" lemma="Caesar" postag="n-s---md-" relation="" head="3"/>
-        <word id="3" form="dederunt" lemma="do" postag="v3pria---" relation="" head="0"/>
+        <word id="3" form="dederunt" lemma="do" postag="v3pria---" relation="MnVb" head="0"/>
         <word id="4" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
     </sentence>
 </treebank>
