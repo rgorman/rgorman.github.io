@@ -48,42 +48,64 @@ layout: default
         
         
     <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="lesson_1" >
-<ul>
-    <li> Exigua parte aestatis reliqua Caesar, etsi in his locis, quod omnis Gallia ad septentriones vergit, maturae sunt hiemes, tamen in Britanniam proficisci contendit, quod omnibus fere Gallicis bellis hostibus nostris inde subministrata auxilia intellegebat, et si tempus anni ad bellum gerendum deficeret, tamen magno sibi usui fore arbitrabatur, si modo insulam adiisset, genus hominum perspexisset, loca, portus, aditus cognovisset</li>
-    <li>Caesar proficisci [eo] contendit</li>
-    <li>Caesar in Britanniam proficisci contendit</li>
-    
-</ul>
+
       
       <br> <br>
       <h3>Sentences with syntax trees</h3> 
       
       <ul>
         
+        <h3>Sentence 1 unadapted</h3>    
+        
         <li><sentence data-alpheios_tb_sent="1"> Exigua parte aestatis reliqua Caesar , etsi in his locis , quod omnis Gallia ad septentriones vergit , maturae sunt hiemes , tamen in Britanniam proficisci contendit , quod omnibus fere Gallicis bellis hostibus nostris inde subministrata auxilia intellegebat , et si tempus anni ad bellum gerendum deficeret , tamen magno sibi usui fore arbitrabatur , si modo insulam adiisset , genus hominum perspexisset , loca , portus , aditus cognovisset ;</sentence></li>
-      
-      
-      <li><sentence data-alpheios_tb_sent="2"> Caesar proficisci [eo] contendit</sentence></li>
-      
-     <li> <sentence data-alpheios_tb_sent="3"> Caesar in Britanniam proficisci contendit</sentence></li>
-      
-      <li><sentence data-alpheios_tb_sent="4"> parte Caesar etsi tamen in Britanniam proficisci contendit quod</sentence></li>
-      
-      <li><sentence data-alpheios_tb_sent="5"> [tum] Caesar [improviso] tamen in Britanniam proficisci contendit [propterea]</sentence></li>
-      
-      <li><sentence data-alpheios_tb_sent="6"> [[etsi]] maturae sunt hiemes</sentence>
-      </li>
-      
-      <li><sentence data-alpheios_tb_sent="7"> [[etsi]] [ibi] [propterea] maturae sunt hiemes</sentence>
-      </li>
-      
-      <li><sentence data-alpheios_tb_sent="8"> [[etsi]] in his locis [propterea] maturae sunt hiemes</sentence>
-      </li>
-      
-      <li><sentence data-alpheios_tb_sent="9"> [tum] Caesar etsi in his locis [propterea] maturae sunt hiemes tamen in Britanniam proficisci contendit [propterea]</sentence>
-      </li>
-     <li><sentence data-alpheios_tb_sent="10"> [[quod]] Gallia [eo] vergit</sentence>
-      </li>
+        
+        <h3>Sentence 1 Kernal <br>
+          Only Main Verb and its arguments</h3> 
+        <li><sentence data-alpheios_tb_sent="2"> Caesar proficisci contendit</sentence></li>
+        
+        <h3>Sentence 1: Consider "second-order" arguments <br>
+          Sometimes arguments have their own arguments <br>
+        (Here "real" argument replaced with one-word placeholder)</h3>
+        <li><sentence data-alpheios_tb_sent="3"> Caesar proficisci [eo] contendit</sentence></li>
+        
+        <h3>Real agument restored</h3>
+        
+        <li><sentence data-alpheios_tb_sent="4"> Caesar in Britanniam proficisci contendit</sentence></li>
+        
+        <h3>The other words immediately dependent on the Main Verb can be considered its "satelites." <br>
+        Note that they cannot always be translated elegantly.</h3>
+        
+        <li><sentence data-alpheios_tb_sent="5"> parte Caesar etsi tamen in Britanniam proficisci contendit quod</sentence></li>
+        
+        <h3>One word place holders can help us see the sense and structure.</h3>
+        
+        <li><sentence data-alpheios_tb_sent="6"> [tum] Caesar [improviso] tamen in Britanniam proficisci contendit [propterea]</sentence></li>
+        
+        <h3>Now we expand the satelites one-by-one. <br>
+        First we handle the arguments of the chosen satelite clause. <br>
+        The double-brackets indicate that [[etsi]] is the subordinating conjunction that connects this clause to its matrix. <br>
+        We don't need to worry about its translation now.</h3>
+        
+        <li><sentence data-alpheios_tb_sent="7"> [[etsi]] maturae sunt hiemes</sentence></li>
+        
+        <h3>Then we put in place holders for its own satelites. <br>
+        This step helps us see clause structure (Eventually it will become automatic and we won't even know we are doing it.)</h3>
+        
+        
+        <li><sentence data-alpheios_tb_sent="8"> [[etsi]] [ibi] [propterea] maturae sunt hiemes</sentence></li>
+        
+        <h3>Expand the easier satelite.</h3>
+        
+        <li><sentence data-alpheios_tb_sent="9"> [[etsi]] in his locis [propterea] maturae sunt hiemes</sentence></li>
+        
+        <h3>Translate what we have so far.</h3>
+        
+        <li><sentence data-alpheios_tb_sent="10"> [tum] Caesar etsi in his locis [propterea] maturae sunt hiemes tamen in Britanniam proficisci contendit [propterea]</sentence></li>
+        
+        
+        
+        
+        
       </ul>
       
       
