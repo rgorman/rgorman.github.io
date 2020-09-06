@@ -235,6 +235,37 @@ layout: default
         <li><sentence data-alpheios_tb_sent="47"> Exigua parte aestatis reliqua Caesar , etsi in his locis , quod omnis Gallia ad septentriones vergit , maturae sunt hiemes , tamen in Britanniam proficisci contendit , quod omnibus fere Gallicis bellis hostibus nostris inde subministrata auxilia intellegebat , et si tempus anni ad bellum gerendum deficeret , tamen magno sibi usui fore arbitrabatur , si modo insulam adiisset , genus hominum perspexisset , loca , portus , aditus cognovisset ;</sentence></li>
         
         
+        <h2>Sentence 2</h2>
+        
+        <h3>Full sentence</h3>
+        <li><sentence data-alpheios_tb_sent="48"> quae omnia fere Gallis erant incognita</sentence></li>
+        
+        <h3>Kernel only; remember that the relative pronoun can be the equivalent of "these things" etc.</h3>
+        <li><sentence data-alpheios_tb_sent="49"> quae [ATR] [SATELLITE] erant incognita</sentence></li>
+        
+        <h3>Expand the satellite</h3>
+        <li><sentence data-alpheios_tb_sent="50"> quae [ATR] Gallis erant incognita</sentence></li>
+        
+        <h3>Expand the attribute to translate the full sentence.</h3>
+        <li><sentence data-alpheios_tb_sent="51"> quae omnia fere Gallis erant incognita</sentence></li>
+        
+        
+        <h2>Sentence 3</h2>
+        
+        
+        <li><sentence data-alpheios_tb_sent="52"> Ne -que enim temere praeter mercatores illo adit quisquam , ne -que his ipsis quicquam praeter oram maritimam atque eas regiones quae sunt contra Galliam notum est .</sentence></li>
+        
+        <H3>This sentence has coordinated kernels (PRED_CO); it is best to handle them one at a time.</H3>
+        <li><sentence data-alpheios_tb_sent="53"> Ne -que enim temere praeter mercatores illo adit quisquam -que [KERNEL-2]</sentence></li>
+        
+        <h3>First, main verb # 1 and its arguments.</h3>
+        <li><sentence data-alpheios_tb_sent="54"> Ne [SATELLITE] [SATELLITE] [SATELLITE] [ATR] illo adit quisquam -que [KERNEL-2]</sentence></li>
+        
+        <h3>Expand the attribute depending on the SBJ</h3>
+        <li><sentence data-alpheios_tb_sent="55"> Ne [SATELLITE] [SATELLITE] [SATELLITE] praeter mercatores illo adit quisquam -que est</sentence></li>
+        
+        <h3>Expand the satellite depending on verb #1; the other satellites work at the sentence level and can be left until the last step when we know the whole sentence structure and meaning.</h3>
+        <li><sentence data-alpheios_tb_sent="56"> Ne [SATELLITE] [SATELLITE] temere praeter mercatores illo adit quisquam -que est</sentence></li>
         
         
         
