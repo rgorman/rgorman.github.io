@@ -1,0 +1,715 @@
+---
+layout: default
+
+---
+
+<!DOCTYPE html >
+
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css"/>
+        <title>Latin 301/303 Translation assignment 2</title>
+    </head>
+  <body
+    data-alpheios_tb_app="perseids-treebank-template"
+    data-alpheios_tb_app_version="3.1.0"
+    data-alpheios_tb_app_url="https://rgorman.github.io/rg-trees/embed/DOC/SENTENCE">
+  
+  
+ 
+    
+   
+   
+   <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
+        components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js' }}).then(Embedded => {
+          new Embedded({clientId: 'embed-lib-demo-treebanks', authEnv: null}).activate();
+      }).catch(e => {
+        console.error(`Import of an embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of an embedded library failed: ${e}`)
+    })
+  });
+</script>
+    
+ 
+      
+    
+    <h1>Welcome to the Reading Environment for Latin 301/301 </h1>  
+    
+        <br/> <br/>  <br/>  <br/>
+        
+        <h2>Caesar turns his thoughts to Britain:</h2>
+       
+        
+        
+    <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="lesson_2" >
+      
+      <h2>Sentence 1</h2>
+      <ol>
+      <h3>The whole sentence.</h3>
+      <li>
+        <sentence data-alpheios_tb_sent="1">Dum in his locis Caesar navium parandarum causa moratur , ex magna parte Morinorum ad eum legati venerunt , qui se de superioris temporis consilio excusarent , quod homines barbari et nostrae consuetudinis imperiti bellum populo Romano fecissent , se -que ea quae imperasset facturos pollicerentur . </sentence>
+      </li>
+        
+        
+        <h3>One satelllite sub-tree and one ATR sub-tree are complex (with clause structure of their own). The reset is fairly simple.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="2">[SATELLITE] ex magna parte Morinorum ad eum legati venerunt [ATR] </sentence>
+        </li>
+        
+        <h3>The subordinate clause within the satellite is a gerundive clause and is farily easy to handle.</h3>
+        <li><sentence data-alpheios_tb_sent="3"> [[Dum]] in his locis Caesar navium parandarum causa moratur</sentence></li>
+        
+        <h3>Translate satellite and matrix together.</h3>
+        <li><sentence data-alpheios_tb_sent="4"> Dum in his locis Caesar navium parandarum causa moratur ex magna parte Morinorum ad eum legati venerunt [ATR]</sentence></li>
+        
+        
+        <h3>The remaining ATR sub-tree contains coordinated clauses which in turn contain subordinated clauses. Here is the coordination.</h3>
+        <li><sentence data-alpheios_tb_sent="5"> legati qui excusarent  pollicerentur</sentence></li>
+        
+        
+        <h3>The first coordinated relative:</h3>
+        <li><sentence data-alpheios_tb_sent="6"> qui se de superioris temporis consilio excusarent</sentence></li>
+        
+        
+        <h3>This coordinated relative has an satellite of its own. The most tricky thing here is to understand the predicative use of homines in this context.</h3>
+        <li><sentence data-alpheios_tb_sent="7"> quod homines barbari et nostrae consuetudinis imperiti bellum populo Romano fecissent</sentence></li>
+        
+        
+        <h3>Integrate the first part of the ATR sub-tree into the matrix.</h3>
+        <li><sentence data-alpheios_tb_sent="8"> ad eum legati venerunt qui se de superioris temporis consilio excusarent quod homines barbari et nostrae consuetudinis imperiti bellum populo Romano fecissent</sentence></li>
+        
+        <h3>Now the second coordinated relative. Its object is a complex clause with its own subordinate clause.</h3>
+        <li><sentence data-alpheios_tb_sent="9"> [[legati]] qui [OBJ] pollicerentur</sentence></li>
+        
+        <h3>The OBJ sub-tree of pollicerentur.</h3>
+        <li><sentence data-alpheios_tb_sent="10"> se ea [ATR] facturos</sentence></li>
+        
+        <h3>Include the ATR sub-tree.</h3>
+        <li><sentence data-alpheios_tb_sent="11"> se ea quae imperasset facturos</sentence></li>
+        
+        <h3>Integrate the second relative sub-tree with its antecedent. </h3>
+        <li><sentence data-alpheios_tb_sent="12"> legati qui se ea quae imperasset facturos pollicerentur</sentence></li>
+        
+        
+        <h3>Now the whole sentence can be translated.</h3>
+        <li><sentence data-alpheios_tb_sent="13"> Dum in his locis Caesar navium parandarum causa moratur , ex magna parte Morinorum ad eum legati venerunt , qui se de superioris temporis consilio excusarent , quod homines barbari et nostrae consuetudinis imperiti bellum populo Romano fecissent , se -que ea quae imperasset facturos pollicerentur .</sentence></li>
+   
+      </ol>
+      
+      <h2>Sentence 2</h2>
+      
+      <ol>
+        
+        
+        <h3>The whole sentence:</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="14"> Hoc sibi Caesar satis oportune accidisse arbitratus , quod ne -que post tergum hostem relinquere volebat ne -que belli gerendi propter anni tempus facultatem habebat ne -que has tantularum rerum occupationes Britanniae anteponendas iudicabat , magnum iis numerum obsidum imperat .</sentence>
+        </li>
+        
+        <h3>The kernel and its simple dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="15"> Caesar [SATELLITE] magnum iis numerum obsidum imperat</sentence>
+        </li>
+        
+        <h3>Note that the satellite is a perfect participle. It agrees with gender, number, and case with Caesar. So: </h3>
+          <ul>
+            <h3><li>Q: Why isn't it dependent on Caesar?</li>
+            <li>A. Particples agreeing with the subject of a verb are most often predicative; they tell us more about the circumstances of the event indicated by the verb than about any characteristics of the subject.</li>
+            <li>Consider these two English sentences:</li>
+            <ul>
+              <li>The boy swimming near the reef was eaten by a shark.</li>
+              <li>Swimming near the reef, the boy was eaten by a shark</li>
+            </ul>
+              <li>In the first sentence, the participle is attributive and gives more information about "the boy."</li>
+              <li>In the second sentence, the participle is predicative or circumstantial and gives information about the whole event.</li>
+              
+            </h3>
+            <h3>In the same way, arbitratus does not specify some quality of Caesar, but explains more about the whole event indicated by imperat.</h3>
+          </ul>          
+       
+        
+        <li>
+          <sentence data-alpheios_tb_sent="16"> Caesar arbitratus imperat</sentence>
+        </li>
+        
+        <h3>Arbitratus itself has an OBJ and we are not surprised to see that it is a clause. Why?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="17"> [OBJ] arbitratus [SATELLITE]</sentence>
+        </li>
+        
+        <h3>The participle with its clausal OBJ.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="18"> Hoc sibi satis oportune accidisse arbitratus [SATELLITE]</sentence>
+        </li>
+        
+        <h3>The satellite is complex, with many subordinate clauses. Its basic structure is a coordination of three verbs giving reasons for arbitratus.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="19"> arbitratus quod ne volebat ne habebat ne -que iudicabat</sentence>
+        </li>
+        
+        <h3>Here is the sub-tree of the first coordinated element.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="20"> quod ne post tergum hostem relinquere volebat</sentence>
+        </li>
+        
+        <h3>The second sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="21"> quod ne belli gerendi propter anni tempus facultatem habebat</sentence>
+        </li>
+        
+        <h3>The final sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="22"> quod ne has tantularum rerum occupationes Britanniae anteponendas iudicabat</sentence>
+        </li>
+        
+        <h3>Now the whole sentence can be read.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="23"> Hoc sibi Caesar satis oportune accidisse arbitratus , quod ne -que post tergum hostem relinquere volebat ne -que belli gerendi propter anni tempus facultatem habebat ne -que has tantularum rerum occupationes Britanniae anteponendas iudicabat , magnum iis numerum obsidum imperat .</sentence>
+        </li>
+        
+      </ol>
+      
+      <h2>Sentence 3</h2>
+      
+      <ol>
+        <h3>The whole sentence</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="24"> Quibus adductis eos in fidem recipit .</sentence>
+        </li>
+        
+        
+        <h3>The kernel.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="25"> [SATELLITE] eos in fidem recipit</sentence>
+        </li>
+        
+        <h3>What kind of clause is this satellite?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="26"> Quibus adductis</sentence>
+        </li>
+        
+        
+        <h3>Translate the whole.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="27"> Quibus adductis eos in fidem recipit .</sentence>
+        </li>
+        
+      </ol>
+      
+      <h2>Sentence 4</h2>
+      
+      <ol>
+        <h3>The whole sentence:</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="28"> Navibus circiter LXXX onerariis coactis contractis -que , quot satis esse ad duas transportandas legiones existimabat , quod praeterea navium longarum habebat quaestori , legatis praefectis -que distribuit .</sentence>
+        </li>
+        
+        <h3>The verb distribuit has a valency of 3 here. Why does it have 4 objects then?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="29"> [SATELLITE] [OBJ] quaestori legatis praefectis -que distribuit</sentence>
+        </li>
+        
+        <h3>The other OBJ is a "headless" relative clause.  What do you think that is? <br>
+          quod  navium is an idiom. "Which [amount] of ships" = "any ships"</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="30"> quod praeterea navium longarum habebat</sentence>
+        </li>
+        
+        <h3>Now put together the kernel of the sentence.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="31"> quod praeterea navium longarum habebat quaestori legatis praefectis -que distribuit</sentence>
+        </li>
+        
+        <h3>The satellite clause contains coordinated verbs. What kind of clauses are they?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="32"> Navibus circiter LXXX onerariis coactis contractis -que [ATR]</sentence>
+        </li>
+        
+        <h3>The ATR of navibus is a complex sub-tree (with subordinate clauses).</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="33"> quot satis esse existimabat</sentence>
+        </li>
+        
+        <h3>The word satis has a clausal sub-tree that specifies the meaning of "sufficient." </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="34"> satis ad duas transportandas legiones</sentence>
+        </li>
+        
+        <h3>Re-connect the ATR sub-tree with its antecedent.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="35"> [[Navibus]] quot satis esse ad duas transportandas legiones existimabat</sentence>
+        </li>
+        
+        <h3>The whole sentence has been analyzed and should be translated.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="36"> Navibus circiter LXXX onerariis coactis contractis -que , quot satis esse ad duas transportandas legiones existimabat , quod praeterea navium longarum habebat quaestori , legatis praefectis -que distribuit .</sentence>
+        </li>
+        
+      </ol>
+      
+      
+      
+      
+      <h2>Sentence 5</h2>
+      
+      <ol>
+        
+        <h3>The whole sentence:</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="37"> Huc accedebant XVIII onerariae naves , quae ex eo loco a milibus passuum VIII vento tenebantur quo minus in eundem portum venire possent :</sentence>
+        </li>
+        
+        <h3>The numerals spelled out.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="38"> Huc accedebant duodeviginti onerariae naves , quae ex eo loco a milibus passuum octo vento tenebantur quo minus in eundem portum venire possent :</sentence>
+        </li>
+        
+        
+        <h3>The kernel with its simple dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="39"> Huc accedebant duodeviginti onerariae naves [ATR]</sentence>
+        </li>
+        
+        <h3>The ATR is a complex sub-tree. Here is its kernel.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="40"> [[naves]] quae [SATELLITE] vento tenebantur [SATELLITE]</sentence>
+        </li>
+        
+        <h3>The first satellite sub-tree consists of prepositional phrases. The expression milia passuum ("thousands of paces") can be rendered "miles."</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="41"> [[naves]] quae ex eo loco a milibus passuum octo vento tenebantur</sentence>
+        </li>
+        
+        
+        <h3>The strings quo minus are sometimes considered a single word, sometimes two words. Treat quo here as a conjuction introducing a result clause (which would naturally have a subjunctive verb).  This result clause is itself complex since possent has a dependent clause venire. </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="42"> quo minus in eundem portum venire possent</sentence>
+        </li>
+        
+        <h3>Now connect the whole complex ATR sub-tree with its antecedent.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="43"> [[naves]] quae ex eo loco a milibus passuum octo vento tenebantur quo minus in eundem portum venire possent</sentence>
+        </li>
+        
+        <h3>The whole sentence has been translated and can be translated.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="44"> Huc accedebant duodeviginti onerariae naves , quae ex eo loco a milibus passuum octo vento tenebantur quo minus in eundem portum venire possent :</sentence>
+        </li>
+        
+        
+      </ol>
+      
+      <h2>Sentence 6</h2>
+      
+      <ol>
+        <h3>An easy one for a change!</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="45"> has equitibus tribuit .</sentence>
+        </li>
+      </ol>
+      
+      
+      <h2>Sentence 7</h2>
+      
+      <ol>
+        
+        <h3>The whole sentence:</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="46"> Reliquum exercitum Q. Titurio Sabino et L. Aurunculeio Cottae legatis in Menapios atque in eos pagos Morinorum a quibus ad eum legati non venerant ducendum dedit ;</sentence>
+        </li>
+        
+        <h3>The kernel and its simple dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="47"> Reliquum exercitum Q. Titurio Sabino et L. Aurunculeio Cottae legatis [ATR] dedit</sentence>
+        </li>
+        
+        <h3>The complex ATR of exercitum, namely ducendum, is a future passive participle; since it is an ATR, we can translate ducendum as "to be led." As a verb, ducendum has OBJ in a rather complex sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="48"> Reliquum exercitum Q. Titurio Sabino et L. Aurunculeio Cottae legatis ducendum dedit</sentence>
+        </li>
+        
+        <h3>Two co-ordinated OBJ prepositinal phrases as OBJ of ducendum. <br>
+        What is eos doing here. If it is anaphorical/cataphorical, what is it pointing at in the context?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="49"> in Menapios atque in eos pagos Morinorum [ATR] ducendum</sentence>
+        </li>
+        
+        <h3>The clausal ATR of pagos. What kind of clause? How do you know it?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="50"> [[pagos]] a quibus ad eum legati non venerant</sentence>
+        </li>
+        
+        <h3>Re-integrate the ducendum sub-tree with its head word (exercitum).</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="51"> exercitum in Menapios atque in eos pagos Morinorum a quibus ad eum legati non venerant ducendum</sentence>
+        </li>
+        
+        
+        <h3>You have analyzed the parts of the sentence and can now translate with confidence!</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="52"> Reliquum exercitum Q. Titurio Sabino et L. Aurunculeio Cottae legatis in Menapios atque in eos pagos Morinorum a quibus ad eum legati non venerant ducendum dedit ;</sentence>
+        </li>
+      </ol>
+      
+      
+      <h2>Sentence 8</h2>
+      
+      <ol>
+        <h3>The whole sentence.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="53"> Sulpicium Rufum legatum cum eo praesidio quod satis esse arbitrabatur portum tenere iussit .</sentence>
+        </li>
+        
+        <h3>Most of the kernel and its dependencies are fairly straightforward. <br>
+        What is the anaphoric/cataphoric adjective eo pointing to in the context?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="54"> Sulpicium Rufum legatum cum eo praesidio [ATR] portum tenere iussit</sentence>
+        </li>
+        
+        <h3>The ATR sub-tree from praesidio is complex, but shouldn't cause too much trouble. <br>
+        What kind of clause is esse? Why not that other kind of infinitive clause?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="55"> [[praesidio]] quod satis esse arbitrabatur</sentence>
+        </li>
+        
+        <h3>Analysis of important sub-trees should help you give an informed translation of the whole sentence.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="56"> Sulpicium Rufum legatum cum eo praesidio quod satis esse arbitrabatur portum tenere iussit .</sentence>
+        </li>
+      </ol>
+      
+      
+      <h2>Sentence 9</h2>
+      <ol>
+        
+        <h3>The whole sentence. <br>
+        Caesar finally gets his ships moving.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="57"> His constitutis rebus , nactus idoneam ad navigandum tempestatem tertia fere vigilia solvit equites -que in ulteriorem portum progredi et naves conscendere et se sequi iussit .</sentence>
+        </li>
+        
+        <h3>The kernel and its simplier dependencies. <br>
+          There are co-ordinated main verbs. The second main verb (iussit) usually has a valency that requires two OBJs, one for the person getting the order and one for the order itself. Here the second OBJ is divided into 3 co-ordinated clauses. </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="58"> [SATELLITE] [SATELLITE] tertia fere vigilia solvit equites -que [OBJ_CO] et [OBJ_CO] et [OBJ_CO] iussit</sentence>
+        </li>
+        
+        <h3>The OBJ clauses are parellel in structure and fairly easy to handle.<br>
+        The "masked" satellites are causal, each having a participle at their head; but they are different kind of participle clauses.  What kind?<br>
+        Why do the satellites hang from the co-ordinator of the main verbs?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="59"> [SATELLITE] [SATELLITE] tertia fere vigilia solvit equites -que in ulteriorem portum progredi et naves conscendere et se sequi iussit</sentence>
+        </li>
+        
+        <h3>The first participle clause. What kind?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="60"> His constitutis rebus</sentence>
+        </li>
+        
+        <h3>The second. <br>
+          Why is nactus masculine nominative singular? <br>
+        nactus can be translated with "having got" or similar.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="61"> nactus idoneam ad navigandum tempestatem</sentence>
+        </li>
+        
+        
+        <h3>Put the parts together and translate the whole.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="63"> His constitutis rebus , nactus idoneam ad navigandum tempestatem tertia fere vigilia solvit equites -que in ulteriorem portum progredi et naves conscendere et se sequi iussit .</sentence>
+        </li>
+      </ol>
+      
+      <H2>Sentence 10</H2>
+      <ol>
+        
+        <h3>Caesar reaches Britain and gets a surprise.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="64"> A quibus cum paulo tardius esset administratum , ipse hora diei circiter quarta cum primis navibus Britanniam attigit atque ibi in omnibus collibus expositas hostium copias armatas conspexit .</sentence>
+        </li>
+        
+        <h3>The sentence has two co-ordinated main verbs.  Here is the kernel structure.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="65"> [ADV] ipse [ADV] [ADV] Britanniam attigit atque ibi [OBJ] conspexit</sentence>
+        </li>
+        
+        <h3>The first main verb and its dependencies is not hard.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="66"> ipse hora diei circiter quarta cum primis navibus Britanniam attigit</sentence>
+        </li>
+        
+        <h3>The second main verb has a clausal OBJ. Remember that expositas is equivalent to expositas esse. <br>
+        What kind of infinitive clause is it?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="67"> ipse ibi [OBJ] conspexit</sentence>
+        </li>
+        
+        
+        <h3>The OBJ clause:</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="68"> in omnibus collibus expositas hostium copias armatas</sentence>
+        </li>
+        
+        <h3>The two main verbs and their sub-trees recombined: <br>
+        Only the ADV (a type of satellite, of course) remains to be analyzed.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="69"> [ADV] ipse hora diei circiter quarta cum primis navibus Britanniam attigit atque ibi in omnibus collibus expositas hostium copias armatas conspexit</sentence>
+        </li>
+        
+        <h3>The ADV is a clause; here is its kernel structure. <br>
+        Note that when a relative pronoun refers back to the previous sentence, it can be translated "that/those." <br>
+        Note also that the subordinating conjungtion cum is the third word in its clause. Why is it not the first word (its usual place)?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="70"> A quibus cum [ADV] esset administratum</sentence>
+        </li>
+        
+        <h3>The whole ADV clause.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="71"> A quibus cum paulo tardius esset administratum</sentence>
+        </li>
+        
+        <h3>The whole sentence has been analyzed.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="72"> A quibus cum paulo tardius esset administratum , ipse hora diei circiter quarta cum primis navibus Britanniam attigit atque ibi in omnibus collibus expositas hostium copias armatas conspexit .</sentence>
+        </li>
+      </ol>
+      
+      <h2>Sentence 11</h2>
+      
+      <ol>
+        <h3>A bad place for an amphibious landing. <br>
+        There are two co-ordinated main verbs.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="73"> Cuius loci haec erat natura atque ita montibus angustis mare continebatur , uti ex locis superioribus in litus telum adigi posset .</sentence>
+        </li>
+        
+        <h3>The first main verb and its dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="74"> Cuius loci haec erat natura</sentence>
+        </li>
+        
+        <h3>The second main verb and its simple dependencies. <br>
+        The adverb ita "thus"/"in this way"/"in such a way" is a placeholder. Its "content" must be supplied from the context. ita can usually be understood as an anaphor/cataphor. What does this mean?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="75"> ita montibus angustis mare continebatur [ADV]</sentence>
+        </li>
+        
+        <h3>The content of ita is often given in an ADV clause, usually introduced by the subordinator ut "that" : <br>
+        The ADV clause is complex, but not too difficult.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="76"> uti ex locis superioribus in litus telum adigi posset</sentence>
+        </li>
+        
+        <h3>The second main verb and all its dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="77"> ita montibus angustis mare continebatur uti ex locis superioribus in litus telum adigi posset</sentence>
+        </li>
+        
+        <h3>Put the whole sentence together.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="78"> Cuius loci haec erat natura atque ita montibus angustis mare continebatur , uti ex locis superioribus in litus telum adigi posset .</sentence>
+        </li>
+        
+        
+      </ol>
+      
+      <H2>Sentence 12</H2>
+      <ol>
+        <h3>Waiting for stragglers.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="79"> Hunc ad egrediendum nequaquam idoneum locum arbitratus , dum reliquae naves eo convenirent ad horam nonam in ancoris expectavit . </sentence>
+        </li>
+        
+        <h3>The kernel with clausal sub-trees masked.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="80"> [ADV] [OBJ] ad horam nonam in ancoris expectavit</sentence>
+        </li>
+        
+        <h3>The OBJ of expectavit is an "until" clause.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="81"> dum reliquae naves eo convenirent</sentence>
+        </li>
+        
+        <h3>Inegrate the OBJ clause with its matrix.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="82"> [ADV] dum reliquae naves eo convenirent ad horam nonam in ancoris expectavit</sentence>
+        </li>
+        
+        <h3>The ADV is a complex participial clause.
+          <ul>
+            <li>arbitratus is masculine singular nominative; why is it analyzed as ADV and not as SBJ or ATR?</li>
+            <li>esse is supplied here as the OBJ of arbitratus. What kind of infinitive clause?</li>
+          </ul>
+        </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="83"> Hunc idoneum locum arbitratus </sentence>
+        </li>
+        
+        <h3>The ATR idoneum has its own adverbial sub-trees, one of which is a gerund clause ("for disembarking").</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="84"> ad egrediendum nequaquam idoneum [[locum]]</sentence>
+        </li>
+        
+        <h3>Translate arbitratus and all its dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="85"> Hunc ad egrediendum nequaquam idoneum locum arbitratus </sentence>
+        </li>
+        
+        <h3>Translate the whole sentence.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="86"> Hunc ad egrediendum nequaquam idoneum locum arbitratus , dum reliquae naves eo convenirent ad horam nonam in ancoris expectavit . </sentence>
+        </li>
+        
+      </ol>
+      
+      <h2>Sentence 13</h2>
+      <ol>
+        <h3>Caesar holds a pre-game meeting.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="87"> Interim legatis tribunis -que militum convocatis et quae ex Voluseno cognovisset et quae fieri vellet ostendit monuit -que , ut rei militaris ratio , maxime -que ut maritimae res postularent , ut , cum celerem atque instabilem motum haberent , ad nutum et ad tempus omnes res ab iis administrarentur . postularet</sentence>
+        </li>
+        
+        <h3>The basic kernel structure with most dependencies masked; note the co-ordinated main verbs.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="88"> Interim [ADV] [OBJ-1] et [OBJ-2] ostendit monuit -que [OBJ]</sentence>
+        </li>
+        
+        <h3>The first OBJ of ostendit. 
+        <ul>
+          <li>What kind of clause it cognovisset etc.?</li>
+          <li>How do you know?</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="89"> quae ex Voluseno cognovisset [[ostendit]]</sentence>
+        </li>
+        
+        <h3>The second OBJ clause.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="90"> quae fieri vellet [[ostendit]]</sentence>
+        </li>
+        
+        <h3>Integrate the two OBJ clauses.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="91"> Interim et quae ex Voluseno cognovisset et quae fieri vellet ostendit</sentence>
+        </li>
+        
+        <h3>The second main verb and some dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="92"> monuit [ADV_CO] -que [ADV_CO] ut ad nutum et ad tempus omnes res ab iis administrarentur</sentence>
+        </li>
+        
+        <h3>The OBJ of administrarentur has a compound and complex sub-tree.
+        <ul>
+          <li>The ut here introduces a comparison clause</li>
+          <li>Why has postularet been added to the tree?</li>
+          <li>Translate the ut as "as."</li>
+          <li>But why is postularet subjunctive?</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="93"> ut rei militaris ratio postularet</sentence>
+        </li>
+        
+        <h3>The second ut-clause is the same kind as the first.
+        <ul>
+          <li>postularent has an ADV clause pointing out the unpredictable nature of maritimae res. </li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="94"> ut maritimae res postularent [ADV]</sentence>
+        </li>
+        
+        <h3>Here is the ADV clause. <ul>
+          <li>It is a causal clause.</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="95"> cum celerem atque instabilem motum haberent</sentence>
+        </li>
+        
+        <h3>Put the two ut-clauses together.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="96"> ut rei militaris ratio , maxime -que ut maritimae res postularent cum celerem atque instabilem motum haberent </sentence>
+        </li>
+        
+        <h3>Integrate monuit with its dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="97"> monuit ut rei militaris ratio maxime -que ut maritimae res postularent ut cum celerem atque instabilem motum haberent ad nutum et ad tempus omnes res ab iis administrarentur postularet</sentence>
+        </li>
+        
+        <h3>Recall the very basic sentence structure. The adverbial clause remains to be translated.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="98"> Interim [ADV] ostendit monuit -que</sentence>
+        </li>
+        
+        <h3>What kind of clause is it? How should we translate it?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="99"> legatis tribunis -que militum convocatis</sentence>
+        </li>
+        
+        <h3>Translate the whole sentence.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="100"> Interim legatis tribunis -que militum convocatis et quae ex Voluseno cognovisset et quae fieri vellet ostendit monuit -que , ut rei militaris ratio , maxime -que ut maritimae res postularent , ut , cum celerem atque instabilem motum haberent , ad nutum et ad tempus omnes res ab iis administrarentur . postularet</sentence>
+        </li>
+      </ol>
+      
+      <h2>Sentence 14</h2>
+      <ol>
+        <h3>Caesar attempt to out flank his enemies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="101"> His dimissis et ventum et aestum uno tempore nactus secundum , dato signo et sublatis ancoris , circiter milia passuum septem ab eo loco progressus aperto ac plano litore naves constituit .</sentence>
+        </li>
+        
+        <h3>The kernel is simple, but there are lots of satellites.
+        <ul>
+          <li>All the ADVs are participial clauses.</li>
+          <li>Some are nominative participles; we will start with those.</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="102"> [ADV] [ADV] [ADV_CO] et [ADV_CO] [ADV] aperto ac plano litore naves constituit</sentence>
+        </li>
+        
+        <h3>The first nominiative participle and its dependencies.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="103"> et ventum et aestum uno tempore nactus secundum</sentence>
+        </li>
+        
+        <h3>The second nominative participle etc.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="104"> circiter milia passuum septem ab eo loco progressus</sentence>
+        </li>
+        
+        <h3>Integrate both participle clauses with the matrix.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="105"> et ventum et aestum uno tempore nactus secundum circiter milia passuum septem ab eo loco progressus aperto ac plano litore naves constituit</sentence>
+        </li>
+        
+        <h3>The other participle clauses are not nominative.
+        <ul>
+          <li>What case are they?</li>
+          <li>What kind of clause then?</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="106"> His dimissis</sentence>
+        </li>
+        
+        <h3>The same kind of clause, but this time there are two, co-ordinated.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="107"> dato signo et sublatis ancoris</sentence>
+        </li>
+        
+        <h3>Translate the whole sentence.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="108"> His dimissis et ventum et aestum uno tempore nactus secundum , dato signo et sublatis ancoris , circiter milia passuum septem ab eo loco progressus aperto ac plano litore naves constituit .</sentence>
+        </li>
+        
+      </ol>
+      
+      
+</div>
+  
+    </body>
+</html>
