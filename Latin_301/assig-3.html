@@ -1,0 +1,263 @@
+---
+layout: default
+
+---
+
+<!DOCTYPE html >
+
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css"/>
+        <title>Latin 301/303 Translation assignment 2</title>
+    </head>
+  <body
+    data-alpheios_tb_app="perseids-treebank-template"
+    data-alpheios_tb_app_version="3.1.0"
+    data-alpheios_tb_app_url="https://rgorman.github.io/rg-trees/embed/DOC/SENTENCE">
+  
+  
+ 
+    
+   
+   
+   <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
+        components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js' }}).then(Embedded => {
+          new Embedded({clientId: 'embed-lib-demo-treebanks', authEnv: null}).activate();
+      }).catch(e => {
+        console.error(`Import of an embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of an embedded library failed: ${e}`)
+    })
+  });
+</script>
+    
+ 
+      
+    
+    <h1>Welcome to the Reading Environment for Latin 301/301 </h1>  
+    
+        <br/> <br/>  <br/>  <br/>
+        
+        <h2>Caesar comes ashore</h2>
+       
+        
+        
+    <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="lesson_3" >
+      
+      <h2>Sentence 1</h2>
+      
+      <ol>
+        
+        <h3>The enemy react to Caesar's flanking attempt.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="1"> At barbari , consilio Romanorum cognito praemisso equitatu et essedariis , quo plerumque genere in proeliis uti consuerunt , reliquis copiis subsecuti nostros navibus egredi prohibebant .</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The kernel with dependencies of arguments.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="2"> barbari [ADV] [ADV] [ADV] nostros navibus egredi prohibebant</sentence>
+        </li>
+        
+        <hr/>
+        <h3>One ADV clause unmasked.
+        <ul>
+          <li>What kind of clause is it?</li>
+          <li>How do you know?</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="3"> barbari [ADV] [ADV] reliquis copiis subsecuti nostros navibus egredi prohibebant</sentence>
+        </li>
+        
+        <hr/>
+        <h3>Aonther ADV clause.
+          <ul>
+            <li>What kind of clause is it?</li>
+            <li>How do you know?</li>
+          </ul>
+        </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="4"> consilio Romanorum cognito</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The last ADV clause. Note that it has an ATR sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="5"> praemisso equitatu et essedariis [ATR]</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The ATR sub-tree expanded. Remember that the verb utor takes an ablative OBJ.
+        <ul>
+          <li>What kind of clause is consuerunt</li>
+          <li>How do you know?</li><br>
+          <li>What kind of clause is uti</li>
+          <li>How do you know?</li>
+        </ul>
+        </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="6"> [[essedariis]] quo plerumque genere in proeliis uti consuerunt</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The whole sentence.
+        <ul>
+          <li>Though it is considered bad style in English, Caesar often starts a new sentence with a co-ordinating conjunction such as at.</li>
+          <li>In such cases we mark the main verb as PRED_CO, but do not go back and indicate co-ordination in the previous sentence.</li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="7"> At barbari , consilio Romanorum cognito praemisso equitatu et essedariis , quo plerumque genere in proeliis uti consuerunt , reliquis copiis subsecuti nostros navibus egredi prohibebant .</sentence>
+        </li>
+      </ol>
+      
+      <h2>Sentence 2</h2>
+      <ol>
+        <hr/>
+        <h3>The invasion is off to a slow start. <br>
+        A very long sentence, but not too difficult when taken in appropriate chunks or sub-trees.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="8"> Erat ob has causas summa difficultas , quod naves propter magnitudinem ni -si in alto constitui non poterant , militibus autem , ignotis locis , impeditis manibus , magno et gravi onere armorum oppressis simul et de navibus desiliendum et in fluctibus consistendum et cum hostibus erat pugnandum , cum illi aut ex arido aut paulum in aquam progressi omnibus membris expeditis , notissimis locis , audacter tela coicerent et equos insuefactos incitarent . poterant constitui</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The main kernel is easy, but ...  </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="9"> Erat ob has causas summa difficultas</sentence>
+        </li> 
+        
+        <hr/>
+        <h3>The main kernel is easy, but ...
+          <ul>
+            <li>The words <em>ob has causas</em> point to some context to supply meaning for <em>has</em>.</li>
+            <li>The meaning is provided through apposition.</li>
+            <li>Compare the following sentence:</li>
+              <ul><li>There was difficulty because of one man, Marcus Brutus.</li> </ul>
+            <li>Here, after a pause indicated by the comma, the words <em>one man</em> are clarified with another phrase, <em>Marcus Brutus</em>. </li>
+            <li>This additional phrase may be considered parallel to <em>one ma</em>n rather than subordinated as if it were an ATR</li>
+            <li>Such a structure is called apposition.</li>
+            <li>In our Latin sentence note:</li>
+            <ul><li><em>ob has causas</em> is an ADV expressing cause.</li> 
+              <li>Thus in appossition to <em>ob has causas</em> is a causal sub-tree introduced by <em>quod</em>.</li>
+              <li>This sub-tree is complicated with many subordinate clauses, but altogether it can be considered an equivalent of <em>ob has causas</em>.</li>
+            </ul>
+          </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="10"> Erat ob has causas summa difficultas , quod [ADV] , [ADV] [ADV] et [ADV]</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The first co-ordinated causal sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="11"> [[quod]] naves propter magnitudinem [ADV] constitui non poterant</sentence>
+        </li>
+        
+        <hr/>
+        <h3>This clausal sub-tree itself contains an ADV sub-tree. <br>
+        Note that there is more than one way to handle an ellipsis introduced by <em>nisi</em>.
+        <ul>
+          <li>You can say "if ... not" with the ellipsed elements restored (as in this tree).</li>
+          <li>You can say "except ..." and omit the ellipsed elements ("except in deep water").</li>
+        </ul>
+        </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="12"> [[quod]] naves propter magnitudinem ni -si in alto constitui non poterant  </sentence>
+        </li>
+        
+        <hr/>
+        <h3>Another clausal sub-tree. <br>
+        This one consists of three coordinated  clauses. <br>
+          This is a case of nested coordination: {{non poterant}, {desiliendum, consistendum, pugnandum}} <br>
+          <br>
+          Several points must be kept in mind:
+        <ul>
+          <li>Verbs in Latin which take ACC direct objects can make normal "personal" passives</li>
+          <ul><li>Brutus Caesarem interficit -> Caesar [a Bruto] interficitur, "Brutus kills Caesar" -> Caesar is killed [by Brutus]" </li></ul>
+          <li>Verbs that do not take ACC direct object do not make such personal passives. </li>
+          <ul><li>milites de navibus desiliunt  ->  [a militibus] de navibus desilitur, "the soldiers jump down from the ships" -> "There is a down jumping from the ships [by the soldiers]" </li>
+          <ul><li>There is no good equivalent in English for this impersonal passive; you must do your best.</li>
+            <li>In the present sentence, these impersonal passives are also gerundives (+ <em>erat</em>).</li>
+            <li>Remember this construction means debitive past: "must be verbed"</li>
+            <li>To express the agent of the verb of this kind of construction, a dative is usually used; hence <em>militibus</em>.</li>
+          
+          </ul>
+          </ul>
+        </ul>
+        
+        </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="13"> [[quod]] militibus autem [ADV] [ADV] [ADV] simul et de navibus desiliendum et in fluctibus consistendum et cum hostibus erat pugnandum [SATELLITE]</sentence>
+        </li>
+        
+        <hr/>
+        <h3>A circumstantial participial clause</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="14"> magno et gravi onere armorum oppressis</sentence>
+        </li>
+        
+        <hr/>
+        <h3>What kind of ADV clause is this?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="15"> ignotis locis</sentence>
+        </li>
+        
+        <hr/>
+        <h3>Same question.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="16"> impeditis manibus</sentence>
+        </li>
+        
+        <hr/>
+        <h3>Re-integrate this part of the <em>quod</em> sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="17"> [[quod]] militibus autem , ignotis locis , impeditis manibus , magno et gravi onere armorum oppressis simul et de navibus desiliendum et in fluctibus consistendum et cum hostibus erat pugnandum [ADV]</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The <em>cum</em> sub-tree explains the corresponding advantages held by the enemy.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="18"> cum illi [ADV_CO] aut [ADV_CO] [ADV] [ADV] coicerent et equos insuefactos incitarent</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The first coordinated ADVs. <br>
+          Note that two kinds of stuctures are coordinated here. This coordinated is grammatical because the two constructions are both adverbial to <em>coicerent et incitarent</em>.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="19"> cum illi aut ex arido aut paulum in aquam progressi audacter tela coicerent et equos insuefactos incitarent</sentence>
+        </li>
+        
+        <hr/>
+        <h3>What kind of ADV clause?</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="20"> membris expeditis</sentence>
+        </li>
+        
+        <hr/>
+        <h3>Same question.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="21"> notissimis locis</sentence>
+        </li>
+        
+        <hr/>
+        <h3>Re-integrate the <em>cum</em> sub-tree.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="22"> cum illi aut ex arido aut paulum in aquam progressi omnibus membris expeditis , notissimis locis , audacter tela coicerent et equos insuefactos incitarent</sentence>
+        </li>
+        
+        <hr/>
+        <h3>Now put the whole thing back together.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="23"> Erat ob has causas summa difficultas , quod naves propter magnitudinem ni -si in alto constitui non poterant , militibus autem , ignotis locis , impeditis manibus , magno et gravi onere armorum oppressis simul et de navibus desiliendum et in fluctibus consistendum et cum hostibus erat pugnandum , cum illi aut ex arido aut paulum in aquam progressi omnibus membris expeditis , notissimis locis , audacter tela coicerent et equos insuefactos incitarent . poterant constitui</sentence>
+        </li>
+        
+      </ol>
+      
+      
+</div>
+  
+    </body>
+</html>
