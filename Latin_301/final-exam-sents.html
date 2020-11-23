@@ -1,0 +1,145 @@
+---
+layout: default
+
+---
+
+<!DOCTYPE html >
+
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css"/>
+        <title>Latin 301/303 Translation assignment 2</title>
+    </head>
+  <body
+    data-alpheios_tb_app="perseids-treebank-template"
+    data-alpheios_tb_app_version="3.1.0"
+    data-alpheios_tb_app_url="https://rgorman.github.io/rg-trees/embed/DOC/SENTENCE">
+  
+  
+ 
+    
+   
+   
+   <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
+        components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js' }}).then(Embedded => {
+          new Embedded({clientId: 'embed-lib-demo-treebanks', authEnv: null}).activate();
+      }).catch(e => {
+        console.error(`Import of an embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of an embedded library failed: ${e}`)
+    })
+  });
+</script>
+    
+ 
+      
+    
+    <h1>Welcome to the Reading Environment for Latin 301/301 </h1>  
+    
+        <br/> <br/>  <br/>  <br/>
+        
+        
+    <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="Final-exam-trees" >
+      
+      <h2>Sentence 1</h2>
+      <ol>
+      <hr/>
+      <h3>Caesar has won his battles. <br>
+      The enemy send ambassadors to negotiate. <br>
+      Among them is a familiar face.</h3>
+      <li>
+        <sentence data-alpheios_tb_sent="1"> Una cum his legatis Commius Atrebas venit , quem supra demonstraveram a Caesare in Britanniam praemissum .</sentence>
+      </li>
+      
+      <hr/>
+      <h3>The main verb and its simple sub-trees.
+      <ul>
+        <li>Note that <em>una</em> is an adverb; it is often further specified by and adverbial prepositional phrase.</li>
+        <li>Note that <em>Atrebas</em> may be considered an adjective giving the nationality of a person; compare the English use of "German."</li>
+        <li>Note finally that a complex ATR sub-tree gives further information about one of the elements.</li>
+        
+      </ul>
+      
+      </h3>
+      <li>
+        <sentence data-alpheios_tb_sent="2"> Una cum his legatis Commius Atrebas venit [ATR]</sentence>
+      </li>
+      
+      <hr/>
+      <h3>The comples ATR sub-tree.
+      <ul>
+        <li>There are two verbs in this sub-tree. What kind of clauses are they?</li>
+        <ul><li>Note that <em>demonstraveram</em> is introduced by <em>quem</em>. What does that tell you about the kind of clause></li>
+          <li>Note that <em>praemissum</em> can be considered short for <em>praemissum esse</em>.  That makes it an infinitive clause. What kind is it?</li>
+        </ul>
+        <li>Note that an agent construction such as <em>a Caesare</em> is considered a kind of pseudo-argument; it would be a subject if the verb were active voice. Thus is it labeled as OBJ so that the argument structure of the verb can be roconstructed more easily.</li>
+        
+      </ul>
+      </h3>
+      <li>
+        <sentence data-alpheios_tb_sent="3"> [[Commius]] quem supra demonstraveram a Caesare in Britanniam praemissum</sentence>
+      </li>
+      
+      
+      <hr/>
+      <h3>Put the whole sentence together.</h3>
+      <li>
+        <sentence data-alpheios_tb_sent="4"> Una cum his legatis Commius Atrebas venit , quem supra demonstraveram a Caesare in Britanniam praemissum .</sentence>
+      </li>
+      </ol>
+      
+      <h2>Sentence 2</h2>
+      
+      <ol>
+        
+        <hr/>
+        <h3>Caesar has met the enemy ambassadors. They pass on his peace terms to their people.
+        <ul>
+          <li>Note that there are coordinated main verbs, each at the head of a complex sub-tree. It is best to do one at a time.</li>
+        </ul>
+        </h3>
+        <li>
+          <sentence data-alpheios_tb_sent="5"> Interea suos in agros remigrare iusserunt , principes -que undique convenire et se civitates -que suas Caesari commendare coeperunt .</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The first main verb.
+        <ul>
+          <li>Note that <em>iusserunt</em> is anaphoric. Its subject is legati ("ambassadors") froma the previous context.</li>
+          <li>What kind of infinitive clause is <em>remigrare</em></li>
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="6"> Interea suos in agros remigrare iusserunt</sentence>
+        </li>
+        
+        <hr/>
+        <h3>The second main clause and its dependencies.
+        <ul><li>Note that there are coordinated elements. Be careful with them.</li>
+          <li>Note that in this context <em>commendare</em> can be translated as "hand over."  </li>
+          <li>Note also that commendare takes and accusative OBJ of the thing handed over and a dative OBJ of the person it is handed over to.</li>
+          <li>What kind of infinitive clauses are <em>convenire</em> and <em>commendare</em>?</li>
+        
+        </ul></h3>
+        <li>
+          <sentence data-alpheios_tb_sent="7"> Interea principes undique convenire et se civitates -que suas Caesari commendare coeperunt</sentence>
+        </li>
+        
+        
+        <hr/>
+        <h3>Now put the whole thing together.</h3>
+        <li>
+          <sentence data-alpheios_tb_sent="8"> Interea suos in agros remigrare iusserunt , principes -que undique convenire et se civitates -que suas Caesari commendare coeperunt .</sentence>
+        </li>
+        
+      </ol>
+      
+      
+</div>
+  
+    </body>
+</html>
