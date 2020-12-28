@@ -10,6 +10,43 @@ layout: default
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css"/>
         <title>Latin 301/303 Translation assignment 2</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+l::after {
+   content:"\a";
+   white-space: pre;
+ }
+ 
+ div.pent {
+   text-indent: 1em; 
+ }
+
+
+
+</style>
+      
+      
+      
     </head>
   <body
     data-alpheios_tb_app="perseids-treebank-template"
@@ -47,14 +84,23 @@ layout: default
        
         
         
-    <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="lesson_3" >
+    <div class="row">
+      <div class="column">
+        <h2>Text</h2>
+        <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="lesson_3" >
       
     
+      <sentence data-alpheios_tb_sent="1"> <l>Sī quis in hōc artem populō nōn nōvit amandī , </l>
+       <l><div class="pent">Hoc legat et lectō carmine doctus amet .</div></l>
+      </sentence>
       
+</div></div>
+    
+      <div class="column" style="background-color:#bbb;"> 
+      <h2>Notes</h2>
       
-      
-      
-</div>
+      </div>
+    </div>
   
     </body>
 </html>
