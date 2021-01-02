@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml>
+    <head>
+        <head>
+            <meta charset="UTF-8"></meta>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css"/>
+            
+        <title>Put your own title here</title>
+            
+            <style>
+                
+                
+                * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+                
+                
+            </style>
+            
+    </head>
+        <body data-alpheios_tb_app="perseids-treebank-template"
+            data-alpheios_tb_app_version="3.1.0"
+            data-alpheios_tb_app_url="https://vgorman1.github.io/treebank-template/embed/DOC/SENTENCE">
+        
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
+        components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js' }}).then(Embedded => {
+          new Embedded({clientId: 'embed-lib-demo-treebanks', authEnv: null}).activate();
+      }).catch(e => {
+        console.error(`Import of an embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of an embedded library failed: ${e}`)
+    })
+  });
+</script>
+        
+        <center><h1>Welcome to a Reading Environment for Greek 150</h1></center>
+        
+        <div class="row">
+            
+            <div class="column">
+                
+                <div lang="grc" class="alpheios-enabled" data-alpheios_tb_doc="1_2_nouns_trees">
+                    <h4>Text</h4>
+            Some text here.
+           
+                    This word is <span style="color:red">red</span>.
+                    This word is <span style="color:blue">blue</span>.
+                    This word is <span style="color:green">green</span>.
+                    This word is <span style="color:purple">purple</span>.
+            
+        </div>
+            
+            </div>
+            
+            
+            <div class="column" style="background-color:#bbb;">
+                <h4>Notes</h4>
+                <p>Some notes here.</p>
+                
+                <p>This word is <b>bold</b>.</p>
+                <p>This word is <em>italics</em>.</p>
+                
+            </div>
+        
+        </div>
+        
+        
+    </body>
+</html>
