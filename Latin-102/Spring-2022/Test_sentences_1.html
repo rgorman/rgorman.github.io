@@ -287,6 +287,22 @@
         </div>
         
         </div>
+        
+        <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
+        components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js' }}).then(Embedded => {
+          new Embedded({clientId: 'embed-lib-demo-treebanks', authEnv: null}).activate();
+      }).catch(e => {
+        console.error(`Import of an embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of an embedded library failed: ${e}`)
+    })
+  });
+</script>
+        
     </body>
 </html>
 
