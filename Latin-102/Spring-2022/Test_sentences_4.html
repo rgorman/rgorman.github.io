@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css" />
-        <title>Latin 101 Sentences 10</title>
+        <title>Latin 102 practice sentences</title>
         <style>
             .item1 {
                 grid-area: number;
@@ -48,28 +48,22 @@
             </div>
             
         </div>
+       
+       
         <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", function (event) {
-                import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib = > {
-                    window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
-                            components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js'
-                        }
-                    }).then(Embedded = > {
-                        new Embedded({
-                            clientId: 'embed-lib-demo-treebanks', authEnv: null
-                        }).activate();
-                    }). catch (e = > {
-                        console.error(`Import of an embedded library dependencies failed: $ {
-                            e
-                        }
-                        `)
-                    })
-                }). catch (e = > {
-                    console.error(`Import of an embedded library failed: $ {
-                        e
-                    }
-                    `)
-                })
-            });</script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
+        components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js' }}).then(Embedded => {
+          new Embedded({clientId: 'embed-lib-demo-treebanks', authEnv: null}).activate();
+      }).catch(e => {
+        console.error(`Import of an embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of an embedded library failed: ${e}`)
+    })
+  });
+</script>
+       
     </body>
 </html>
