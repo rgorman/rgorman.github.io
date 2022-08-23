@@ -2,9 +2,45 @@
 <html>
     
     <head>
-       
         
         
+        <meta charset="UTF-8"/>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/style/style-components.css"/>
+        
+        <title>Miscellaneous Subjunctives 1</title>
+        
+        <style>
+            .item1 {
+                grid-area: number;
+            }
+            .item2 {
+                grid-area: main;
+            
+            
+            }
+            .item3 {
+                grid-area: notes;
+            }
+            
+            
+            .grid-container {
+                display: grid;
+                grid-template-areas: 
+                'number main main main main notes notes';
+                grid-template-columns: 10% 25% 25%;
+            
+                grid-gap: 10px;
+                background-color: #ebf5fb;
+                padding: 5px;
+            }
+            
+            .grid-container > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }</style>
     </head>
     
     <body data-alpheios_tb_app="perseids-treebank-template" 
