@@ -40,7 +40,8 @@
     <body>
         <h1>Sentences 2</h1>
         <p>Translate these sentences in to English and be ready to explain your work.</p>
-        <div class="grid-container">
+        <div class="alpheios-enabled" lang="lat"> 
+           <div class="grid-container">
             <div class="item1">Numbers</div>
             <div class="item2">Sentences</div>
             <div class="item3">Notes</div>
@@ -166,5 +167,25 @@
             <div class="item3">"Further Spain" and "Nearer Spain" were two different provinces of
                 the Roman Empire.</div>
         </div>
+        
+        </div>
+        <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+    import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+    window.AlpheiosEmbed.importDependencies({
+    mode: 'cdn'
+    }).then(Embedded => {
+    new Embedded({
+    clientId: 'https://rgorman.github.io/Latin_101/Fall_2021/alph_test_Latin_101_sentences-2.html'
+    }).activate();
+    }).catch(e => {
+    console.error(`Import of Alpheios embedded library dependencies failed: ${e}`)
+    })
+    }).catch(e => {
+    console.error(`Import of Alpheios Embedded library failed: ${e}`)
+    })
+    });
+</script>
+        
     </body>
 </html>
