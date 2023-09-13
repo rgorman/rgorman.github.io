@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
-    
+
     <p>Rōmae fuit.</p>
     <p>fuit Neāpolī.</p>
     <p>in Ītaliā fuērunt.</p>
@@ -29,6 +29,149 @@
     <p>venit eōdem cum suīs cōpiīs posterō diē Gāius Fabius.</p>
     <p>Labiēnus cum quattuor legiōnibus Lutetiam proficīscitur.</p>
     <p>litterās ad Mārcum Lepidum in Hispāniam citeriōrem mittit. </p>
-    
-    
+
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">Rōmae fuit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">2</div>
+        <div class="item2">fuit Neāpolī.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">3</div>
+        <div class="item2">in Ītaliā fuērunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">4</div>
+        <div class="item2">in prōvinciā mānsit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">5</div>
+        <div class="item2">magnās cōpiās mīsit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">6</div>
+        <div class="item2">Caesar sē ad suōs recēpit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">7</div>
+        <div class="item2">omnēs in castra perveniunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">8</div>
+        <div class="item2">in nostrōs impetum fēcērunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">9</div>
+        <div class="item2">lēgātī profectī sunt cum nostrīs.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">10</div>
+        <div class="item2">suās nāvīs ex portū ēdūcunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">11</div>
+        <div class="item2">legiōnēs ibi cēterās relīquit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">12</div>
+        <div class="item2">cōpiās omnīs in oppidum recipit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">13</div>
+        <div class="item2">cum tribus legiōnibus est profectus.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">14</div>
+        <div class="item2">posterō diē in Nerviōs pervēnit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">15</div>
+        <div class="item2">nostrī celeriter arma cēpērunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">16</div>
+        <div class="item2">equitātum omnem ex castrīs ēdūcit.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">17</div>
+        <div class="item2">posterō diē prīma lūce movet castra.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">18</div>
+        <div class="item2">prīmā lūce ex castrīs proficīscuntur.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">19</div>
+        <div class="item2">Lūcius Plancus locum capit superiōrem.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">20</div>
+        <div class="item2">posterō diē ad Ilerdam proficīscitur.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">21</div>
+        <div class="item2">reliquiās cōpiās contrā Labiēnum dūxērunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">22</div>
+        <div class="item2">sē in castra mūnītiōnēsque suās recipiunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">23</div>
+        <div class="item2">Pompēius mare trānsiit cum omnibus mīlitibus.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">24</div>
+        <div class="item2">Volēnsius quīntō diē ad Caesarem revertitur.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">25</div>
+        <div class="item2">reliquōs ex oppidō Drappēs et Luctērius ēdūcunt.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">26</div>
+        <div class="item2">venit eōdem cum suīs cōpiīs posterō diē Gāius Fabius.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">27</div>
+        <div class="item2">Labiēnus cum quattuor legiōnibus Lutetiam proficīscitur.</div>
+        <div class="item3">xxx</div>
+    </div>
+    <div class="grid-container">
+        <div class="item1">28</div>
+        <div class="item2">litterās ad Mārcum Lepidum in Hispāniam citeriōrem mittit. </div>
+        <div class="item3">xxx</div>
+    </div>
+
+
+
 </doc>
