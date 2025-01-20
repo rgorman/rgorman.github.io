@@ -44,29 +44,38 @@
     </head>
     <body data-alpheios_tb_app="perseids-treebank-template" data-alpheios_tb_app_version="3.1.0"
         data-alpheios_tb_app_url="https://rgorman.github.io/rg-trees/embed/DOC/SENTENCE">
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
         <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", function (event) {
-                import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib = > {
-                    window.AlpheiosEmbed.importDependencies({ mode: 'custom', libs: {
-                            components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js'
-                        }
-                    }).then(Embedded = > {
-                        new Embedded({
-                            clientId: 'embed-lib-demo-treebanks', authEnv: null
-                        }).activate();
-                    }). catch (e = > {
-                        console.error(`Import of an embedded library dependencies failed: $ {
-                            e
-                        }
-                        `)
-                    })
-                }). catch (e = > {
-                    console.error(`Import of an embedded library failed: $ {
-                        e
-                    }
-                    `)
-                })
-            });</script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+      window.AlpheiosEmbed.importDependencies({
+        mode: 'cdn'
+      }).then(Embedded => {
+        new Embedded({
+          clientId: 'httpsrgormangithubioLatin302Spring2025OvidArstreadings1html'
+        }).activate();
+      }).catch(e => {
+        console.error(`Import of Alpheios embedded library dependencies failed: ${e}`)
+      })
+    }).catch(e => {
+      console.error(`Import of Alpheios Embedded library failed: ${e}`)
+    })
+  });
+</script>
+        
+        <div class="alpheios-enabled" lang="lat">
+            <p>Arma virumque cano, Troiae qui primus ab oris</p>
+            <p>Italiam, fato profugus, Laviniaque venit</p>
+            <p>litora, multum ille et terris iactatus et alto</p>
+            <p>vi superum saevae memorem Iunonis ob iram;</p>
+        </div>
+        
+        
+        
+       
+        
         <div lang="lat" class="alpheios-enabled" data-alpheios_tb_doc="Ovid_ars_amatoria-1">
             <div class="grid-container">
                 <div class="item1">1</div>
