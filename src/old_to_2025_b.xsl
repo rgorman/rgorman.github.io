@@ -10,7 +10,7 @@
         <p>
            
                 <xsl:choose>
-                    <xsl:when test="./@class = 'pentam'">
+                    <xsl:when test="./@rend = 'indent'">
                         
                         <xsl:attribute name="class">pentam</xsl:attribute>
                     </xsl:when>
