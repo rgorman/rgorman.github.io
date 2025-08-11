@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alpheios Morphology API</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+    </head>
+    <body class="p-8">
+        <div class="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+            <h1 class="text-3xl font-bold text-gray-900 mb-6">Alpheios Morphology API</h1>
+            
+            <p class="text-gray-600 mb-4">Enter a Latin or Ancient Greek word and specify the parameters to get its morphological analysis.</p>
+            
+            <div class="space-y-4 mb-6">
+                <!-- Word Input -->
+                <div>
+                    <label for="wordInput" class="block text-sm font-medium text-gray-700">Word to Analyze</label>
+                    <input 
+                        type="text" 
+                        id="wordInput" 
+                        placeholder="e.g., videt"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"
+                    >
+                </div>
+                
+                <!-- Engine Selection -->
+                <div>
+                    <label for="engineSelect" class="block text-sm font-medium text-gray-700">Morphology Engine</label>
+                    <select id="engineSelect" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                        <option value="whitakerLat">Latin (Alpheios/Whitaker)</option>
+                        <option value="morpheuslat">Latin (Perseids)</option>
+                        <option value="morpheusgrc">Greek (Perseids)</option>
+                    </select>
+                </div>
+                
+                <!-- Response Format Selection -->
+                <div>
+                    <label for="formatSelect" class="block text-sm font-medium text-gray-700">Response Format</label>
+                    <select id="formatSelect" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                        <option value="json">JSON</option>
+                        <option value="xml">XML</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Button to trigger the API call -->
+            <button id="fetchButton" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200 shadow-md">
+                Analyze Word
+            </button>
+            
+            <!-- Container to display the API response -->
+            <div id="resultContainer" class="mt-8 p-6 bg-gray-100 border border-gray-300 rounded-xl">
+                <p class="text-gray-600 italic">Enter a word and click 'Analyze Word' to see the results.</p>
+            </div>
+        </div>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Define the API Endpoint ---
+            const apiEndpoint = 'https://morph.alpheios.net/api/v1/analysis/word';
+
+            // --- 2. Get References to the HTML Elements ---
+            const fetchButton = document.getElementById('fetchButton');
+            const wordInput = document.getElementById('wordInput');
+            const engineSelect = document.getElementById('engineSelect');
+            const formatSelect = document.getElementById('formatSelect');
+            const resultContainer = document.getElementById('resultContainer');
+
+            // --- 3. Create an Asynchronous Function to Fetch the Data ---
+            const fetchData = async () => {
+                const word = wordInput.value.trim();
+                const engine = engineSelect.value;
+                const format = formatSelect.value;
+                const clientId = 'my-test-client'; // A hardcoded client ID, since none is required for auth.
+
+                if (word === '') {
+                    resultContainer.innerHTML = '<p class="text-red-500">Please enter a word to analyze.</p>';
+                    return;
+                }
+                
+                resultContainer.innerHTML = '<p class="text-gray-600">Loading...</p>';
+                
+                try {
+                    // --- 4. Make the API Call with fetch() and a POST request ---
+                    const response = await fetch(apiEndpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            word: word,
+                            engine: engine,
+                            clientId: clientId,
+                            outputFormat: format
+                        })
+                    });
+
+                    // --- 5. Check for HTTP Errors ---
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
+                    // --- 6. Parse the Response based on the selected format ---
+                    let html = '';
+                    if (format === 'json') {
+                        const data = await response.json();
+                        if (data.status === 'success' && data.tree.length > 0) {
+                            data.tree.forEach(analysis => {
+                                const lemma = analysis.lemma?.lemma || 'N/A';
+                                const partOfSpeech = analysis.dendron?.nodes[0]?.label || 'N/A';
+                                const morphology = analysis.dendron?.nodes[1]?.label || 'N/A';
+                                html += `
+                                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+                                        <h3 class="text-lg font-bold text-gray-700">Analysis:</h3>
+                                        <p class="text-gray-700 mt-2"><span class="font-semibold">Lemma:</span> ${lemma}</p>
+                                        <p class="text-gray-700"><span class="font-semibold">Part of Speech:</span> ${partOfSpeech}</p>
+                                        <p class="text-gray-700"><span class="font-semibold">Morphology:</span> ${morphology}</p>
+                                    </div>
+                                `;
+                            });
+                        } else {
+                            html = `<p class="text-gray-600">No analysis found for "${word}".</p>`;
+                        }
+                    } else if (format === 'xml') {
+                        const xmlText = await response.text();
+                        const parser = new DOMParser();
+                        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                        
+                        const analyses = xmlDoc.querySelectorAll('analysis');
+                        if (analyses.length > 0) {
+                            analyses.forEach(analysis => {
+                                const lemma = analysis.querySelector('lemma')?.getAttribute('full') || 'N/A';
+                                const partOfSpeech = analysis.querySelector('morph[type="part-of-speech"]')?.textContent || 'N/A';
+                                const morphology = analysis.querySelector('morph[type="full-analysis"]')?.textContent || 'N/A';
+
+                                html += `
+                                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+                                        <h3 class="text-lg font-bold text-gray-700">Analysis:</h3>
+                                        <p class="text-gray-700 mt-2"><span class="font-semibold">Lemma:</span> ${lemma}</p>
+                                        <p class="text-gray-700"><span class="font-semibold">Part of Speech:</span> ${partOfSpeech}</p>
+                                        <p class="text-gray-700"><span class="font-semibold">Morphology:</span> ${morphology}</p>
+                                    </div>
+                                `;
+                            });
+                        } else {
+                            html = `<p class="text-gray-600">No analysis found for "${word}".</p>`;
+                        }
+                    }
+
+                    // --- 7. Display the Data ---
+                    resultContainer.innerHTML = html;
+                    
+                } catch (error) {
+                    // --- 8. Handle Errors ---
+                    console.error('There was an issue with the fetch operation:', error);
+                    resultContainer.innerHTML = `<p class="text-red-500">Error: ${error.message}</p>`;
+                }
+            };
+
+            // --- 9. Add a Click Event Listener to the Button ---
+            fetchButton.addEventListener('click', fetchData);
+        });
+    </script>
+    </body>
+</html>
