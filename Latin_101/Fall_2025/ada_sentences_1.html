@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css" />
+
+        <title>Latin 101, Fall 2023, Sentences 1</title>
+        <style>
+            .alpheios-morph-data__morphdata {
+                display: none;
+            }
+            .alpheios-inflections-list__inflections {
+                display: none;
+            }
+            
+            /* Main container for all sentences */
+            .sentences-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+            }
+            
+            /* Responsive Grid Layout for each sentence and its notes */
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    "number main notes";
+                grid-template-columns: 50px 2fr 1fr; /* Set column widths for a balanced layout */
+                grid-gap: 10px;
+                background-color: #ebf5fb; /* Lighter background for the entire row */
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid #cce6f2; /* Light border for visual separation */
+            }
+            
+            /* Styling for the sentence number */
+            .item1 {
+                grid-area: number;
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #006400; /* Dark green for prominence */
+            }
+            
+            /* Styling for the Latin sentence */
+            .item2 {
+                grid-area: main;
+                font-size: 1.2em;
+                font-family: 'Times New Roman', serif;
+                color: black;
+                line-height: 1.5;
+            }
+            
+            /* Styling for the notes section */
+            .item3 {
+                grid-area: notes;
+                padding-left: 20px;
+                border-left: 1px dashed #cccccc; /* Separator for the notes section */
+            }
+
+            .item3 ul {
+                /* list-style-type: none;  Removed to restore bullet points */
+                padding-left: 20px;
+                margin: 0;
+                font-size: 0.9em;
+                line-height: 1.4;
+                color: #333333;
+            }
+
+            .item3 ul li {
+                margin-bottom: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Sentences 1</h1>
+        <h2>Translate these sentences into English and be ready to explain your work.</h2>
+        
+        <div class="alpheios-enabled sentences-container" lang="lat">
+            <div class="grid-container" role="group" aria-labelledby="sentence-1">
+                <div class="item1" id="sentence-1">1</div>
+                <div class="item2">eō Caesar venit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>eō</i>: here an adverb meaning "to that place."</li>
+                        <li><i>Caesar</i> is a personal name (PrN).</li>
+                        <li><i>venit</i> is present tense; principal parts = veniō, ____ vēnī ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-2">
+                <div class="item1" id="sentence-2">2</div>
+                <div class="item2">Tullia vēnit ad mē.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Tullia</i> is a PrN: Tullia, Tulliae, f.</li>
+                        <li><i>vēnit</i> is perfect tense; principal parts = veniō ____ vēnī ____</li>
+                        <li><i>mē</i>: masculine singular accusative = "me"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-3">
+                <div class="item1" id="sentence-3">3</div>
+                <div class="item2">usque eō pervēnit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>eō</i>: here an adverb meaning "to that place."</li>
+                        <li><i>pervēnit</i> is perfect tense; principal parts = perveniō, ____, pervēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-4">
+                <div class="item1" id="sentence-4">4</div>
+                <div class="item2">ē prōvinciā rediit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>prōvinciā</i>: feminine</li>
+                        <li><i>rediit</i>: perfect tense; principal parts = redeō, ____, rediī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-5">
+                <div class="item1" id="sentence-5">5</div>
+                <div class="item2">ā mē profectus est.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>mē</i> masculine singular ablative = "me"</li>
+                        <li><i>profectus est</i> is semantically a single verb; it is perfect tense; principal parts = proficīscor, ___, profectus [est].</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-6">
+                <div class="item1" id="sentence-6">6</div>
+                <div class="item2">Caesar eōdem venit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Caesar</i> is a PrN.</li>
+                        <li><i>eōdem</i> is an adverb meaning "to the same place."</li>
+                        <li><i>venit</i> is present tense; principal parts = veniō, ____, vēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-7">
+                <div class="item1" id="sentence-7">7</div>
+                <div class="item2">inde in Asiam vēnit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Asiam</i> is a the proper name of a place (PLN).</li>
+                        <li><i>vēnit</i> is perfect tense; principal parts = veniō, ___, vēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-8">
+                <div class="item1" id="sentence-8">8</div>
+                <div class="item2">ad urbem proficīscitur.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>urbem</i>: feminine</li>
+                        <li><i>proficīscitur</i> is present tense; principal parts = proficīscor, ____, profectus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-9">
+                <div class="item1" id="sentence-9">9</div>
+                <div class="item2">eō Caesar pervēnit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>eō</i>: here an adverb meaning "to that place."</li>
+                        <li><i>pervēnit</i> is perfect tense; principal parts = perveniō, ____, pervēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-10">
+                <div class="item1" id="sentence-10">10</div>
+                <div class="item2">ad Genāvam pervenit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Genāvam</i> is a feminine PLN = "Geneva"</li>
+                        <li><i>pervenit</i> is present tense; principal parts = perveniō, ____, pervēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-11">
+                <div class="item1" id="sentence-11">11</div>
+                <div class="item2">in Ēpīrum proficīscitur.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Ēpīrum</i> is a PLN: Ēpīrus, Ēpīrī, f, "Epirus"</li>
+                        <li><i>proficīscitur</i> is a present tense; principal parts = proficīscor, ____, profectus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-12">
+                <div class="item1" id="sentence-12">12</div>
+                <div class="item2">vēnit ad mē Canisius.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>vēnit</i> is perfect tense; principal parts = veniō, ____, vēnī, ____</li>
+                        <li><i>Canisius</i> is PrN: Canisius, Canisī, m.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-13">
+                <div class="item1" id="sentence-13">13</div>
+                <div class="item2">ā Pompeiō discessit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Pompeiō</i> is a PrN: Pompeius, Pompeī, m.</li>
+                        <li><i>discessit</i> is perfect tense: principal parts = discēdō, ____, discessī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-14">
+                <div class="item1" id="sentence-14">14</div>
+                <div class="item2">ad mē trānsiērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>ad</i>: preposition + ACC <i>X</i> = "to X"</li>
+                        <li><i>mē</i>: masculine singular accusative = "me"</li>
+                        <li><i>trānsiērunt</i> is perfect tense; principal parts = trānseō, ____, trānsiī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-15">
+                <div class="item1" id="sentence-15">15</div>
+                <div class="item2">in Ītaliam profectus est.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li><i>Ītaliam</i> is a PLN: Ītalia, Ītaliae, f. "Italy"</li>
+                        <li><i>profectus est</i> is semantically a single verb; it is perfect tense; principal parts = proficīscor, ____, profectus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-16">
+                <div class="item1" id="sentence-16">16</div>
+                <div class="item2">ad urbem Rōmam vēnit.</div>
+                <div class="item3">
+                    <ul>
+                        <li>ad: preposition + ACC X = "to X"</li>
+                        <li><i>urbem</i>: feminine</li>
+                        <li><i>Rōmam</i> is PLN: Rōma, Rōmae, f. "Rome"</li>
+                        <li><i>vēnit</i> is perfect tense; principal parts = veniō, ____, vēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-17">
+                <div class="item1" id="sentence-17">17</div>
+                <div class="item2">ex Belgiō trānsiērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>ex</i>: preposition + ABL X = "out of X"</li>
+                        <li><i>Belgiō</i> is PLN: Belgium, Belgī, n. "Belgium"</li>
+                        <li><i>trānsiērunt</i> is perfect tense; principal parts = trānseō, ____, trānsiī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-18">
+                <div class="item1" id="sentence-18">18</div>
+                <div class="item2">Hērodotus Rōmā revertitur.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Hērodotus</i> is PrN: Hērodotus, Hērodotī, m. </li>
+                        <li><i>Rōmā</i> is PLN: Rōma, Rōmae, f. "Rome"; the bare ablative case (without a preposition) can be used to indicate separation = "from Rome"</li>
+                        <li><i>revertitur</i> is present tense; principal parts = revertor, ____, reversus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-19">
+                <div class="item1" id="sentence-19">19</div>
+                <div class="item2">Afrānius cōpiās ēdūcit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Afrānius</i> is PrN: Afrānius, Afrānī, m. </li>
+                        <li><i>cōpiās</i>: feminine plural accusative, here in the meaning "troops/forces"</li>
+                        <li><i>ēdūcit</i> is present tense; principal parts = ēdūcō, ____, ēdūxī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-20">
+                <div class="item1" id="sentence-20">20</div>
+                <div class="item2">in Illyricum proficīscitur.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li><i>Illyricum</i> is PLN: Illyricum, Illyricī, n. "Illyricum"</li>
+                        <li><i>proficīscitur</i> is present tense; principal parts = proficīscor, ____, profectus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-21">
+                <div class="item1" id="sentence-21">21</div>
+                <div class="item2">equitēs flūmen trānseunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>equitēs</i>: masculine, plural, nominative.</li>
+                        <li><i>flūmen</i>: neuter.</li>
+                        <li><i>trānseunt</i> is present tense; principal parts = trānseō, ____, trānsiī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-22">
+                <div class="item1" id="sentence-22">22</div>
+                <div class="item2">sēsē in portum recēpērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>sēsē</i> is a reflexive pronoun; it is masculine plural accusative = "themselves"</li>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li><i>recēpērunt</i> is perfect tense; principal parts = recipiō, ____, recēpī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-23">
+                <div class="item1" id="sentence-23">23</div>
+                <div class="item2">Caesar eōdem est profectus.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>eōdem</i> is an adverb meaning "to the same place"</li>
+                        <li><i>est profectus</i> is semantically a single verb; it is perfect tense; principal parts = proficīscor, ____, profectus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-24">
+                <div class="item1" id="sentence-24">24</div>
+                <div class="item2">ā tē litterae nōn vēnērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>a</i>: and alternate form of the preposition <i>ab</i>; ab + ABL X = "from X"</li>
+                        <li><i>tē</i> is the masculine singular ablative of <i>tū</i>, the personal pronoun meaning "you"</li>
+                        <li><i>litterae</i> is feminine, plural, nominative.</li>
+                        <li><i>vēnērunt</i> is perfect tense; principal parts = veniō, ____, vēnī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-25">
+                <div class="item1" id="sentence-25">25</div>
+                <div class="item2">Caesar ab urbe proficīscitur.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>ab</i>: preposition + ABL X = "from X"</li>
+                        <li><i>urbe</i>: feminine</li>
+                        <li><i>proficīscitur</i> is present tense; principal parts = proficīscor, ____, profectus [est]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-26">
+                <div class="item1" id="sentence-26">26</div>
+                <div class="item2">legiōnēs in hīberna mittit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>legiōnēs</i>: feminine, plural, accusative.</li>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li><i>hīberna</i>: neuter, plural, accusative, meaining "winter quarters"</li>
+                        <li><i>mittit</i> is present tense; principal parts = mittō, ____, mīsī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-27">
+                <div class="item1" id="sentence-27">27</div>
+                <div class="item2">Dolābella Dēlō proficīscitur.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Dolābella</i>: a PrN; Dolābella, Dolābellae, m.</li>
+                        <li><i>Dēlō</i>: a PLN; Dēlus, Dēlī, f. "Delos" (an island)</li>
+                        <li><i>proficīscitur</i> is a present tense; for principal parts see above</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-28">
+                <div class="item1" id="sentence-28">28</div>
+                <div class="item2">mē sēcum in Hispāniam dūcit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>mē</i>: masculine, accusative, singular = "me"</li>
+                        <li><i>sēcum</i>: = <i>cum sē</i> = the preposition <i>cum</i> + an ablative X = "with X"; <i>sē</i> is masculine, singular, accusative of the reflexive pronoun "herself/himself/themselves." Here = "himself" </li>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li>Hispaniam: feminine</li>
+                        <li><i>dūcit</i>: present tense; principal parts dūcō, ____, dūxī, ____</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-29">
+                <div class="item1" id="sentence-29">29</div>
+                <div class="item2">in Hispāniam ad tē est profectus.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li><i>Hispāniam</i>: feminine</li>
+                        <li><i>ad</i>: preposition + ACC X = "to X"</li>
+                        <li><i>tē</i>: masculine, singular, accusative = "you"</li>
+                        <li><i>est profectus</i>: semantically a single verb; it is perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-30">
+                <div class="item1" id="sentence-30">30</div>
+                <div class="item2">ad Cūriōnem cum classe redit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>ad</i>: preposition + ACC X = "to X"</li>
+                        <li><i>Cūriōnem</i>: PrN; Cūriō, Cūriōnis, m.</li>
+                        <li><i>cum</i>: preposition + ABL <i>X</i> = "with X"</li>
+                        <li><i>redit</i>: present tense; principal parts = redeō, redīre, rediī, reditum</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-31">
+                <div class="item1" id="sentence-31">31</div>
+                <div class="item2">proficīscitur in Hispāniam Caesar.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>proficīscitur</i>: present tense</li>
+                        <li><i>in</i>: preposition + ACC <i>X</i> = "into X"</li>
+                        <li><i>Hispāniam</i>: feminine</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-32">
+                <div class="item1" id="sentence-32">32</div>
+                <div class="item2">tabellāriī ā vōbīs vēnērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>tabellāriī</i>: masculine, plural, nominative</li>
+                        <li><i>ā</i>: an alternate form of the preposition <i>ab</i>; ab + ABL X = "from X"</li>
+                        <li><i>vōbīs</i>: masculine, plural, ablative = "you"</li>
+                        <li><i>vēnērunt</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-33">
+                <div class="item1" id="sentence-33">33</div>
+                <div class="item2">ad flūmen Rhēnum pervēnērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>ad</i>: preposition + ACC X = "to X"</li>
+                        <li><i>flūmen</i>: a neuter noun</li>
+                        <li><i>pervēnērunt</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-34">
+                <div class="item1" id="sentence-34">34</div>
+                <div class="item2">est profectus in Hispāniam Dexius.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>est profectus</i>: semantically a single perfect tense verb</li>
+                        <li><i>in</i>: preposition + ACC X = "into X"</li>
+                        <li><i>Dexius</i>: PrN, Dexius, Dexī, m.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-35">
+                <div class="item1" id="sentence-35">35</div>
+                <div class="item2">Caesar sē in Galliam recēpit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>sē</i>: masculine singular accusative of the reflexive pronoun, "himself"</li>
+                        <li><i>in</i>: preposition + ACC X = "into X"</li>
+                        <li>Galliam: feminine</li>
+                        <li><i>recēpit</i>: perfect</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-36">
+                <div class="item1" id="sentence-36">36</div>
+                <div class="item2">Laelius ad Brundisium venit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Laelius</i>: PrN, Laelius, Laelī, m.</li>
+                        <li><i>ad</i>: preposition + ACC X = "to X"</li>
+                        <li><i>Brundisium</i>: PLN, Brundisium, Brundisī, n.</li>
+                        <li><i>venit</i>: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-37">
+                <div class="item1" id="sentence-37">37</div>
+                <div class="item2">Metellus in prōvinciam profectus est.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Metellus</i>: PrN, Metellus, Metellī, m.</li>
+                        <li><i>in</i>: preposition + ACC X = "into X"</li>
+                        <li><i>prōvinciam</i>: feminine</li>
+                        <li><i>profectus est</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-38">
+                <div class="item1" id="sentence-38">38</div>
+                <div class="item2">Caesar ad Pompeium pervēnit.</div>
+                <div class="item3">
+                    <ul>
+                        <li>ad: preposition + ACC X = "to X"</li>
+                        <li><i>Pompēium</i>: PrN, Pompeius, Pompeī, m.</li>
+                        <li><i>pervēnit</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-39">
+                <div class="item1" id="sentence-39">39</div>
+                <div class="item2">Labiēnus discessit ā Caesare.</div>
+                <div class="item3">
+                    <ul>
+                        <li>Labiēnus: PrN, Labiēnus, Labiēnī, m. </li>
+                        <li>discessit: principal parts = discēd</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-40">
+                <div class="item1" id="sentence-40">40</div>
+                <div class="item2">Domitius in Macedoniam venit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Domitius</i>: PrN, Domitius, Domitī, m.</li>
+                        <li><i>Macedoniam</i>: PLN, Macedonia, Macedoniae, f.</li>
+                        <li><i>venit</i>: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-41">
+                <div class="item1" id="sentence-41">41</div>
+                <div class="item2">in Sardiniam et in Āfricam profectus est.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Sardiniam</i>: PLN, Sardinia, Sardiniae, f.</li>
+                        <li><i>Āfricam</i>: PLN, Āfrica, Āfricae, f.</li>
+                        <li><i>profectus est</i>: functions as a single perfect verb</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-42">
+                <div class="item1" id="sentence-42">42</div>
+                <div class="item2">Petreius ad Afrānium pervēnit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Petreius</i>: PrN, Petreius, Petreiī, m</li>
+                        <li><i>Afrānium</i>: PrN, Afrānius, Afrānī, m.</li>
+                        <li><i>pervēnit</i> is perfect.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-43">
+                <div class="item1" id="sentence-43">43</div>
+                <div class="item2">Cassius in Thessalium pervenit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Cassius</i>: PrN, Cassius, Cassī, m.</li>
+                        <li><i>Thessalium</i>: PLN, Thessalium, Thessalī, n.</li>
+                        <li><i>pervenit</i>: present tense.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-44">
+                <div class="item1" id="sentence-44">44</div>
+                <div class="item2">Scapius ad mē in castra venit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Scapius</i>: PrN, Scapius, Scapī, m</li>
+                        <li><i>mē</i>: masculine singluar accusative = "me"</li>
+                        <li><i>castra</i>: neuter, plural, accusative; this plural is usually translated with the singlular "camp"</li>
+                        <li><i>venit</i>: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-45">
+                <div class="item1" id="sentence-45">45</div>
+                <div class="item2">mīlitēs in Pamphȳliam vēnērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>mīlitēs</i>: masculine pluraal nominative</li>
+                        <li><i>Pamphȳliam</i>: PLN, Pamphȳlia, Pamphȳliae, f.</li>
+                        <li><i>vēnērunt</i>: perfect tense.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-46">
+                <div class="item1" id="sentence-46">46</div>
+                <div class="item2">lēgātī ex oppidō Vagā veniunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>lēgātī</i>: masculine plural nominative</li>
+                        <li><i>Vagā</i>: PLN, Vaga, Vagae, f.</li>
+                        <li><i>veniunt</i>: present</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-47">
+                <div class="item1" id="sentence-47">47</div>
+                <div class="item2">exercitum in Bellovacōs dūcit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Bellovacōs</i>: masculine plural accusative; this is the name of a Gallic people, "the Bellovaci"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-48">
+                <div class="item1" id="sentence-48">48</div>
+                <div class="item2">Caesōnius ad mē litterās mīsit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Caesōnius</i>: PrN, Caesōnius, Caesōnī, m.</li>
+                        <li><i>mē</i>: masculine singular accusative = "me"</li>
+                        <li><i>litterās</i>: feminine plural accusative; this word can be translated with the English singular "a letter"</li>
+                        <li><i>mīsit</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-49">
+                <div class="item1" id="sentence-49">49</div>
+                <div class="item2">trāns Rhēnum in Germāniam mittit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Rhēnum</i>: PLN, Rhēnus, Rhēnī, m. = "the Rhine"</li>
+                        <li><i>mittit</i>: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-50">
+                <div class="item1" id="sentence-50">50</div>
+                <div class="item2">fīlium in Germāniam dē pāce mīsit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>mīsit</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-51">
+                <div class="item1" id="sentence-51">51</div>
+                <div class="item2">discēdit sēque in castra recēpit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>discēdit</i>: perfect tense; principle parts = discessō ____, discēdī ____</li>
+                        <li><i>sē</i>: masculine singular accusaive of the reflexive pronoun = "himself"</li>
+                        <li><i>que</i>: a coordinating conjunction that is added to the end of a word = "and"</li>
+                        <li><i>castra</i>: neuter plural accusative = "a/the camp"</li>
+                        <li><i>recēpit</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-52">
+                <div class="item1" id="sentence-52">52</div>
+                <div class="item2">ad legiōnēs in Belgium sē recipit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>legiōnēs</i>: feminine plural accusative</li>
+                        <li><i>sē</i>: masculine singular accusaive of the reflexive pronoun = "himself"</li>
+                        <li><i>recipit</i>: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-53">
+                <div class="item1" id="sentence-53">53</div>
+                <div class="item2">ā mē profectus ad Caesarem est.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>mē</i>: masculine singular ablative = "me" </li>
+                        <li><i>profectus ... est</i>: note that the two elements of this single verb phrase do not need to be contiguous</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-54">
+                <div class="item1" id="sentence-54">54</div>
+                <div class="item2">Vārus praesidium ex oppidō ēdūcit.</div>
+                <div class="item3">
+                    <ul>
+                        <li>Vārus: PrN, Vārus, Vārī, m.</li>
+                        <li>ēdūcit: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-55">
+                <div class="item1" id="sentence-55">55</div>
+                <div class="item2">Caesar nūntium in Bellavacōs ad Mārcum Crassum mitttit.</div>
+                <div class="item3">
+                    <ul>
+                        <li>Bellavacōs: masculine plural accusative; this is the name of a Gallic people, "the Bellovaci"</li>
+                        <li>Mārcum Crassum: PrN, Mārcus Crassus, Mārcī Crassī, m.</li>
+                        <li>mitttit: present tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-56">
+                <div class="item1" id="sentence-56">56</div>
+                <div class="item2">Caesar ad Lingonēs litterās nūntiōsque mīsit.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>Lingonēs</i>: masculine plural accusative; the name of a Gallic people = "the Lingones."</li>
+                        <li><i>litterās</i>: feminine plural accusative; translate with the singular "a letter"</li>
+                        <li><i>nūntiōs</i>: masculine plural accusative</li>
+                        <li><i>que</i>: an enclitic coordinating conjunction = "and"</li>
+                        <li><i>mīsit</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-container" role="group" aria-labelledby="sentence-57">
+                <div class="item1" id="sentence-57">57</div>
+                <div class="item2">hostēs ad lēgātōs exercitumque pervēnērunt.</div>
+                <div class="item3">
+                    <ul>
+                        <li><i>hostēs</i>: masculine plural nominative</li>
+                        <li><i>lēgātōs</i>: masculine plural accusative</li>
+                        <li><i>que</i>: an enclitic coordinating conjunction = "and"</li>
+                        <li><i>pervēnērunt</i>: perfect tense</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function (event) {
+                import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+                    window.AlpheiosEmbed.importDependencies({
+                        mode: 'cdn'
+                    }).then(Embedded => {
+                        new Embedded({
+                            clientId: 'https://rgorman.github.io/Latin_101/Fall_2021/alph_test_Latin_101_sentences-2.html'
+                        }).activate();
+                    }).catch (e => {
+                        console.error(`Import of Alpheios embedded library dependencies failed: ${e}`)
+                    })
+                }).catch (e => {
+                    console.error(`Import of Alpheios Embedded library failed: ${e}`)
+                })
+            });</script>
+    </body>
+</html>
