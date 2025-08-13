@@ -19,7 +19,6 @@
             <p class="text-gray-600 mb-4">Enter a Latin or Ancient Greek word and specify the parameters to get its morphological analysis.</p>
             
             <div class="space-y-4 mb-6">
-                <!-- Word Input -->
                 <div>
                     <label for="wordInput" class="block text-sm font-medium text-gray-700">Word to Analyze</label>
                     <input 
@@ -30,7 +29,6 @@
                     >
                 </div>
                 
-                <!-- Engine Selection -->
                 <div>
                     <label for="engineSelect" class="block text-sm font-medium text-gray-700">Morphology Engine</label>
                     <select id="engineSelect" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
@@ -40,7 +38,6 @@
                     </select>
                 </div>
                 
-                <!-- Response Format Selection -->
                 <div>
                     <label for="formatSelect" class="block text-sm font-medium text-gray-700">Response Format</label>
                     <select id="formatSelect" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
@@ -50,12 +47,10 @@
                 </div>
             </div>
             
-            <!-- Button to trigger the API call -->
             <button id="fetchButton" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200 shadow-md">
                 Analyze Word
             </button>
             
-            <!-- Container to display the API response -->
             <div id="resultContainer" class="mt-8 p-6 bg-gray-100 border border-gray-300 rounded-xl">
                 <p class="text-gray-600 italic">Enter a word and click 'Analyze Word' to see the results.</p>
             </div>
@@ -65,7 +60,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             
             // --- 1. Define the API Endpoint ---
-            const apiEndpoint = 'https://morph.alpheios.net/api/v1/analysis/word';
+            const apiEndpoint = 'https://morph.alpheios.net/api/v1/analysis';
 
             // --- 2. Get References to the HTML Elements ---
             const fetchButton = document.getElementById('fetchButton');
@@ -79,7 +74,7 @@
                 const word = wordInput.value.trim();
                 const engine = engineSelect.value;
                 const format = formatSelect.value;
-                const clientId = 'my-test-client'; // A hardcoded client ID, since none is required for auth.
+                const clientId = 'my-test-client';
 
                 if (word === '') {
                     resultContainer.innerHTML = '<p class="text-red-500">Please enter a word to analyze.</p>';
@@ -89,26 +84,18 @@
                 resultContainer.innerHTML = '<p class="text-gray-600">Loading...</p>';
                 
                 try {
-                    // --- 4. Make the API Call with fetch() and a POST request ---
-                    const response = await fetch(apiEndpoint, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            word: word,
-                            engine: engine,
-                            clientId: clientId,
-                            outputFormat: format
-                        })
-                    });
-
-                    // --- 5. Check for HTTP Errors ---
+                    // --- 4. Construct the URL with query parameters ---
+                    const url = `${apiEndpoint}?word=${encodeURIComponent(word)}&engine=${engine}&clientId=${clientId}&outputFormat=${format}`;
+                    
+                    // --- 5. Make the API Call with a GET request ---
+                    const response = await fetch(url);
+                    
+                    // --- 6. Check for HTTP Errors ---
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                     }
 
-                    // --- 6. Parse the Response based on the selected format ---
+                    // --- 7. Parse the Response based on the selected format ---
                     let html = '';
                     if (format === 'json') {
                         const data = await response.json();
@@ -155,19 +142,19 @@
                         }
                     }
 
-                    // --- 7. Display the Data ---
+                    // --- 8. Display the Data ---
                     resultContainer.innerHTML = html;
                     
                 } catch (error) {
-                    // --- 8. Handle Errors ---
+                    // --- 9. Handle Errors ---
                     console.error('There was an issue with the fetch operation:', error);
                     resultContainer.innerHTML = `<p class="text-red-500">Error: ${error.message}</p>`;
                 }
             };
 
-            // --- 9. Add a Click Event Listener to the Button ---
+            // --- 10. Add a Click Event Listener to the Button ---
             fetchButton.addEventListener('click', fetchData);
         });
-    </script>
+        </script>
     </body>
 </html>
