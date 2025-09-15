@@ -1,152 +1,189 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Verb paradigm, present and perfect indicative active</title>
+        <title>Latin 101 Noun Patterns (Declensions)</title>
         <style>
-            /* Custom styling from previous requests */
             table,
             th,
             td {
-                border: 1px solid #555555; /* Dark gray border */
+                border: 1px solid #555555; /* Darker border color */
             }
 
             th {
-                background-color: #006400; /* Dark green for high contrast */
+                background-color: #006400; /* Darker green for higher contrast */
                 color: white;
-                font-size: 1.1em; /* Increased font size for visibility */
-                padding: 8px; /* Add some padding for breathing room */
-            }
-
-            td {
-                padding: 8px; /* Add padding to data cells as well */
-            }
-
-            /* New styling for captions */
-            caption {
-                text-align: left;
-                font-size: 1.25em; /* Larger font size */
-                font-weight: bold; /* Bold text */
-                margin-bottom: 10px; /* Space below the caption */
             }
             
-            /* Added margin to separate each table for readability */
-            table {
-                margin-bottom: 40px;
-                border-collapse: collapse; /* Collapses the borders for a cleaner look */
-            }
-
-            /* Custom classes for row visibility and emphasis */
             .focus {
                 background-color: #ffffcc; /* Light yellow background */
                 font-weight: bold; /* Bold text for emphasis */
+            }
+
+            .no_focus {
+                background-color: #f2f2f2; /* Light gray background */
+                font-style: italic; /* Italic text for less emphasis */
             }
 
             .hidden {
                 display: none; /* Hides the row completely */
             }
 
-            /* Consolidated class for the Latin verb forms */
-            .latin-verb-form {
-                color: black; /* Changed to black for optimal contrast */
-                font-size: 200%;
-            }
-
-            .latin-verb-form-small {
+            .latin-text {
                 color: black;
-                font-size: 100%;
-            }
-
-            /* Style for the horizontal rule separator */
-            .separator {
-                border-color: #555555;
-            }
-
-            /* New rule to control the width of the row header column */
-            tbody tr th {
-                width: 20%;
-                text-align: left;
-                white-space: nowrap; /* Prevents text from wrapping */
+                font-size: 150%;
+                font-family: serif;
             }
         </style>
     </head>
     <body>
-        <!-- Table 1: Present Indicative Active -->
+        <br />
         <table style="width:100%" border="1">
-            <caption>Present Indicative Active</caption>
+            <caption>Latin Noun Patterns (Declensions) - Part 2</caption>
             <thead>
                 <tr>
-                    <th scope="col"></th>
-                    <th scope="col">1st conj.</th>
-                    <th scope="col">2nd conj.</th>
-                    <th scope="col">3rd conj.</th>
-                    <th scope="col">3rd -io conj</th>
-                    <th scope="col">4th conj</th>
+                    <td></td>
+                    <th scope="col">3i. Decl.</th>
+                    <th scope="col">3i. Neuter Decl.</th>
+                    <th scope="col">4th Decl.</th>
+                    <th scope="col">4th Neuter Decl.</th>
+                    <th scope="col">5th Decl.</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- This row provides context and is not a "person," so it's kept visible. -->
+                <tr class="no_focus">
+                    <th scope="row">ID Criterion</th>
+                    <td>-ī</td>
+                    <td>-ī</td>
+                    <td>-ū</td>
+                    <td>ū</td>
+                    <td>-ē</td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Nom Sing</th>
+                    <td><span class="latin-text">nāvis</span></td>
+                    <td><span class="latin-text">mare</span></td>
+                    <td><span class="latin-text">portus</span></td>
+                    <td><span class="latin-text">cornū</span></td>
+                    <td><span class="latin-text">rēs</span></td>
+                </tr>
+                <tr class="hidden">
+                    <th scope="row">Gen Sing</th>
+                    <td>
+                        <strong class="latin-text">nāvis</strong>
+                    </td>
+                    <td>
+                        <strong class="latin-text">maris</strong>
+                    </td>
+                    <td>
+                        <strong class="latin-text">portūs</strong>
+                    </td>
+                    <td>
+                        <strong class="latin-text">cornūs</strong>
+                    </td>
+                    <td>
+                        <strong class="latin-text">reī</strong>
+                    </td>
+                </tr>
+                <tr class="hidden">
+                    <th scope="row">Dat Sing</th>
+                    <td>
+                        <span class="latin-text">nāvī</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">marī</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">portuī</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">cornū</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">reī</span>
+                    </td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Acc Sing</th>
+                    <td><span class="latin-text">nāvem</span></td>
+                    <td><span class="latin-text">mare</span></td>
+                    <td><span class="latin-text">portum</span></td>
+                    <td><span class="latin-text">cornū</span></td>
+                    <td><span class="latin-text">rem</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Abl Sing</th>
+                    <td><span class="latin-text">nāvī</span></td>
+                    <td><span class="latin-text">marī</span></td>
+                    <td><span class="latin-text">portū</span></td>
+                    <td><span class="latin-text">cornū</span></td>
+                    <td><span class="latin-text">rē</span></td>
+                </tr>
                 <tr>
-                    <th scope="row">identification</th>
-                    <td>laudō, laudāre</td>
-                    <td>moneō, monēre</td>
-                    <td>agō. agere</td>
-                    <td>capiō, capere</td>
-                    <td>audiō, audīre</td>
+                    <td colspan="6">
+                        <hr style="border-color: #555555;" />
+                    </td>
                 </tr>
                 <tr class="hidden">
-                    <th scope="row">1st person sing</th>
-                    <td><span class="latin-verb-form-small">laudō</span></td>
-                    <td><span class="latin-verb-form-small">moneō</span></td>
-                    <td><span class="latin-verb-form-small">agō</span></td>
-                    <td><span class="latin-verb-form-small">capiō</span></td>
-                    <td><span class="latin-verb-form-small">audiō</span></td>
+                    <th scope="row">Nom Plur</th>
+                    <td><span class="latin-text">nāvēs</span></td>
+                    <td><span class="latin-text">maria</span></td>
+                    <td><span class="latin-text">portūs</span></td>
+                    <td><span class="latin-text">cornua</span></td>
+                    <td><span class="latin-text">rēs</span></td>
                 </tr>
                 <tr class="hidden">
-                    <th scope="row">2nd person sing</th>
-                    <td><span class="latin-verb-form-small">laudās</span></td>
-                    <td><span class="latin-verb-form-small">monēs</span></td>
-                    <td><span class="latin-verb-form-small">agis</span></td>
-                    <td><span class="latin-verb-form-small">capis</span></td>
-                    <td><span class="latin-verb-form-small">audīs</span></td>
-                </tr>
-                <!-- This row pertains to the 3rd person and is focused. -->
-                <tr class="focus">
-                    <th scope="row">3rd person sing</th>
-                    <td><span class="latin-verb-form">laudat</span></td>
-                    <td><span class="latin-verb-form">monet</span></td>
-                    <td><span class="latin-verb-form">agit</span></td>
-                    <td><span class="latin-verb-form">capit</span></td>
-                    <td><span class="latin-verb-form">audit</span></td>
-                </tr>
-                <!-- Separator line between singular and plural forms -->
-                <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden">
-                    <th scope="row">1st person plur</th>
-                    <td><span class="latin-verb-form-small">laudāmus</span></td>
-                    <td><span class="latin-verb-form-small">monēmus</span></td>
-                    <td><span class="latin-verb-form-small">agimus</span></td>
-                    <td><span class="latin-verb-form-small">capimus</span></td>
-                    <td><span class="latin-verb-form-small">audīmus</span></td>
+                    <th scope="row">Gen Plur</th>
+                    <td>
+                        <span class="latin-text">nāvium</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">marium</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">portuum</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">cornuum</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">rērum</span>
+                    </td>
                 </tr>
                 <tr class="hidden">
-                    <th scope="row">2nd person plur</th>
-                    <td><span class="latin-verb-form-small">laudātis</span></td>
-                    <td><span class="latin-verb-form-small">monētis</span></td>
-                    <td><span class="latin-verb-form-small">agitis</span></td>
-                    <td><span class="latin-verb-form-small">capitis</span></td>
-                    <td><span class="latin-verb-form-small">audītis</span></td>
+                    <th scope="row">Dat Plur</th>
+                    <td>
+                        <span class="latin-text">nāvibus</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">maribus</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">portibus</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">cornibus</span>
+                    </td>
+                    <td>
+                        <span class="latin-text">rēbus</span>
+                    </td>
                 </tr>
-                <!-- This row pertains to the 3rd person and is focused. -->
-                <tr class="focus">
-                    <th scope="row">3rd person plur</th>
-                    <td><span class="latin-verb-form">laudant</span></td>
-                    <td><span class="latin-verb-form">monent</span></td>
-                    <td><span class="latin-verb-form">agunt</span></td>
-                    <td><span class="latin-verb-form">capiunt</span></td>
-                    <td><span class="latin-verb-form">audiunt</span></td>
+                <tr class="hidden">
+                    <th scope="row">Acc Plur</th>
+                    <td><span class="latin-text">nāvīs</span></td>
+                    <td><span class="latin-text">maria</span></td>
+                    <td><span class="latin-text">portūs</span></td>
+                    <td><span class="latin-text">cornua</span></td>
+                    <td><span class="latin-text">rēs</span></td>
+                </tr>
+                <tr class="hidden">
+                    <th scope="row">Abl Plur</th>
+                    <td><span class="latin-text">nāvibus</span></td>
+                    <td><span class="latin-text">maribus</span></td>
+                    <td><span class="latin-text">portibus</span></td>
+                    <td><span class="latin-text">cornibus</span></td>
+                    <td><span class="latin-text">rēbus</span></td>
                 </tr>
             </tbody>
         </table>
-
     </body>
 </html>
