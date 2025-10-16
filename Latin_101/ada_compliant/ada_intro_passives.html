@@ -46,11 +46,10 @@
             .focus {
                 background-color: #ffffcc; /* Light yellow background */
                 font-weight: bold; /* Bold text for emphasis */
-                /* Ensure focusable rows have a tabindex for keyboard navigation */
-                tabindex: 0; 
+                /* Note: tabindex is applied directly to the <tr> element */
             }
 
-            /* The 'hidden' class hides the row completely, as per the original structure */
+            /* The 'hidden' class hides the row completely, as requested by the user */
             .hidden {
                 display: none; 
             }
@@ -86,6 +85,13 @@
                 white-space: nowrap; /* Prevents text from wrapping */
                 font-weight: normal; /* Row headers should not be bold unless a specific class is applied */
                 background-color: #f9f9f9; /* Light background for row headers */
+                color: black; /* FIX: Set text color to black to be visible on light background */
+            }
+            
+            /* Ensure the row header in the focused row is bold, overriding tbody th:font-weight:normal */
+            tr.focus th {
+                font-weight: bold;
+                background-color: #ffffcc; /* Match the focus background */
             }
         </style>
     </head>
@@ -113,9 +119,8 @@
                     <td>capiō, capere, <br /> cēpī, captus</td>
                     <td>audiō, audīre, <br />audīvī, audītus</td>
                 </tr>
-                <!-- Separator row is removed for accessibility, using a divider within the cell instead -->
                 
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form-small">laudō</span></td>
                     <td><span class="latin-verb-form-small">moneō</span></td>
@@ -123,7 +128,7 @@
                     <td><span class="latin-verb-form-small">capiō</span></td>
                     <td><span class="latin-verb-form-small">audiō</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form-small">laudās</span></td>
                     <td><span class="latin-verb-form-small">monēs</span></td>
@@ -140,7 +145,7 @@
                     <td><span class="latin-verb-form">audit</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form-small">laudāmus</span></td>
                     <td><span class="latin-verb-form-small">monēmus</span></td>
@@ -148,7 +153,7 @@
                     <td><span class="latin-verb-form-small">capimus</span></td>
                     <td><span class="latin-verb-form-small">audīmus</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form-small">laudātis</span></td>
                     <td><span class="latin-verb-form-small">monētis</span></td>
@@ -190,7 +195,7 @@
                     <td>audiō, audīre, <br />audīvī, audītus</td>
                 </tr>
                 
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form-small">laudor</span></td>
                     <td><span class="latin-verb-form-small">moneor</span></td>
@@ -198,7 +203,7 @@
                     <td><span class="latin-verb-form-small">capior</span></td>
                     <td><span class="latin-verb-form-small">audior</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form-small">laudāris</span></td>
                     <td><span class="latin-verb-form-small">monēris</span></td>
@@ -215,7 +220,7 @@
                     <td><span class="latin-verb-form">audītur</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form-small">laudāmur</span></td>
                     <td><span class="latin-verb-form-small">monēmur</span></td>
@@ -223,7 +228,7 @@
                     <td><span class="latin-verb-form-small">capimur</span></td>
                     <td><span class="latin-verb-form-small">audīmur</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form-small">laudāminī</span></td>
                     <td><span class="latin-verb-form-small">monēminī</span></td>
@@ -265,7 +270,7 @@
                     <td>orior, orīrī, <br />ortus sum</td>
                 </tr>
                 
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form-small">hortor</span></td>
                     <td><span class="latin-verb-form-small">vereor</span></td>
@@ -273,7 +278,7 @@
                     <td><span class="latin-verb-form-small">patior</span></td>
                     <td><span class="latin-verb-form-small">orior</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form-small">hortāris</span></td>
                     <td><span class="latin-verb-form-small">verēris</span></td>
@@ -290,7 +295,7 @@
                     <td><span class="latin-verb-form">orītur</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form-small">hortāmur</span></td>
                     <td><span class="latin-verb-form-small">verēmur</span></td>
@@ -298,7 +303,7 @@
                     <td><span class="latin-verb-form-small">patimur</span></td>
                     <td><span class="latin-verb-form-small">orīmur</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form-small">hortāminī</span></td>
                     <td><span class="latin-verb-form-small">verēminī</span></td>
@@ -340,7 +345,7 @@
                     <td>audiō, audīre, <br />audīvī, audītus</td>
                 </tr>
                 
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form-small">laudāvī</span></td>
                     <td><span class="latin-verb-form-small">monuī</span></td>
@@ -348,7 +353,7 @@
                     <td><span class="latin-verb-form-small">cēpī</span></td>
                     <td><span class="latin-verb-form-small">audīvī</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form-small">laudāvistī</span></td>
                     <td><span class="latin-verb-form-small">monuistī</span></td>
@@ -365,7 +370,7 @@
                     <td><span class="latin-verb-form">audīvit</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form-small">laudāvimus</span></td>
                     <td><span class="latin-verb-form-small">monuimus</span></td>
@@ -373,7 +378,7 @@
                     <td><span class="latin-verb-form-small">cēpimus</span></td>
                     <td><span class="latin-verb-form-small">audīvimus</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form-small">laudāvistis.</span></td>
                     <td><span class="latin-verb-form-small">monuistis.</span></td>
@@ -415,7 +420,7 @@
                     <td>audiō, audīre, <br />audīvī, audītus</td>
                 </tr>
                 
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form-small">laudātus/a/um sum</span></td>
                     <td><span class="latin-verb-form-small">monitus/a/um sum</span></td>
@@ -423,7 +428,7 @@
                     <td><span class="latin-verb-form-small">captus/a/um sum</span></td>
                     <td><span class="latin-verb-form-small">audītus/a/um sum</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form-small">laudātus/a/um es</span></td>
                     <td><span class="latin-verb-form-small">monitus/a/um es</span></td>
@@ -440,7 +445,7 @@
                     <td><span class="latin-verb-form">audītus/a/um est</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form-small">laudātī/ae/a sumus</span></td>
                     <td><span class="latin-verb-form-small">monitī/ae/a sumus</span></td>
@@ -448,7 +453,7 @@
                     <td><span class="latin-verb-form-small">captī/ae/a sumus</span></td>
                     <td><span class="latin-verb-form-small">audītī/ae/a sumus</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form-small">laudātī/ae/a estis</span></td>
                     <td><span class="latin-verb-form-small">monitī/ae/a estis</span></td>
@@ -490,7 +495,7 @@
                     <td>orior, orīrī, <br />ortus sum</td>
                 </tr>
                 
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form-small">hortātus/a/um sum</span></td>
                     <td><span class="latin-verb-form-small">veritus/a/um sum</span></td>
@@ -498,7 +503,7 @@
                     <td><span class="latin-verb-form-small">passus/a/um sum</span></td>
                     <td><span class="latin-verb-form-small">ortus/a/um sum</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form-small">hortātus/a/um es</span></td>
                     <td><span class="latin-verb-form-small">veritus/a/um es</span></td>
@@ -515,7 +520,7 @@
                     <td><span class="latin-verb-form">ortus/a/um est</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form-small">hortātī/ae/a sumus</span></td>
                     <td><span class="latin-verb-form-small">veritī/ae/a sumus</span></td>
@@ -523,7 +528,7 @@
                     <td><span class="latin-verb-form-small">passī/ae/a sumus</span></td>
                     <td><span class="latin-verb-form-small">ortī/ae/a sumus</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form-small">hortātī/ae/a estis</span></td>
                     <td><span class="latin-verb-form-small">veritī/ae/a estis</span></td>
@@ -552,11 +557,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st singular</th>
                     <td><span class="latin-verb-form-small">sum</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd singular</th>
                     <td><span class="latin-verb-form-small">es</span></td>
                 </tr>
@@ -565,11 +570,11 @@
                     <td><span class="latin-verb-form">est</span></td>
                 </tr>
                 <tr><td colspan="2"><hr class="separator"/></td></tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">1st plural</th>
                     <td><span class="latin-verb-form-small">sumus</span></td>
                 </tr>
-                <tr class="hidden" tabindex="0">
+                <tr class="hidden" tabindex="0"> <!-- RE-APPLIED class="hidden" -->
                     <th scope="row">2nd plural</th>
                     <td><span class="latin-verb-form-small">estis</span></td>
                 </tr>
