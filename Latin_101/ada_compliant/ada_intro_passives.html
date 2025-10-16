@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verb Paradigms - Present and Perfect Tenses (ADA Compliant)</title>
+        <style>
+            /* Custom styling derived from "ada_intro_verb_forms" */
+            table,
+            th,
+            td {
+                border: 1px solid #555555; /* Dark gray border */
+                border-collapse: collapse; /* Collapses the borders for a cleaner look */
+            }
+
+            th {
+                /* Custom color scheme: Dark green (#006400) with white text */
+                background-color: #006400; 
+                color: white;
+                font-size: 1.1em; /* Increased font size for visibility */
+                padding: 10px 8px; /* Add some padding for breathing room */
+                text-align: left; /* Ensure headers are left-aligned */
+            }
+
+            td {
+                padding: 8px; /* Add padding to data cells as well */
+            }
+
+            /* New styling for captions */
+            caption {
+                text-align: left;
+                font-size: 1.25em; /* Larger font size */
+                font-weight: bold; /* Bold text */
+                margin-bottom: 10px; /* Space below the caption */
+            }
+            
+            /* Added margin to separate each table for readability */
+            table {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            /* Custom classes for row visibility and emphasis (ADA Focus/Hidden implementation) */
+            
+            /* The 'focus' class highlights the row we want to emphasize (e.g., 3rd person forms) */
+            .focus {
+                background-color: #ffffcc; /* Light yellow background */
+                font-weight: bold; /* Bold text for emphasis */
+                /* Ensure focusable rows have a tabindex for keyboard navigation */
+                tabindex: 0; 
+            }
+
+            /* The 'hidden' class hides the row completely, as per the original structure */
+            .hidden {
+                display: none; 
+            }
+
+            /* WCAG 2.1 Success Criterion 2.4.7: Focus Indicator */
+            tr:focus, tr:hover {
+                /* Highlight the entire row when hovered or focused (keyboard navigation) */
+                outline: 2px solid #0000ff; /* A clear, high-contrast outline */
+                outline-offset: -2px; /* Pulls the outline inside the border */
+                background-color: #f0f0f0; /* Slight background change */
+            }
+
+            /* Style for verb forms, using the classes from the source file */
+            .latin-verb-form {
+                color: black;
+                font-size: 200%; /* Corresponds to original div.a */
+            }
+
+            .latin-verb-form-small {
+                color: black;
+                font-size: 100%; /* Corresponds to original div.b */
+            }
+
+            /* Style for the horizontal rule separator */
+            .separator {
+                border-color: #555555;
+            }
+
+            /* Rule to control the width of the row header column for better alignment */
+            tbody th {
+                width: 20%;
+                text-align: left;
+                white-space: nowrap; /* Prevents text from wrapping */
+                font-weight: normal; /* Row headers should not be bold unless a specific class is applied */
+                background-color: #f9f9f9; /* Light background for row headers */
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!-- Table 1: Present Indicative Active -->
+        <table role="table" aria-label="Present Indicative Active Conjugation for all four conjugations">
+            <caption>Present Indicative Active</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>laudō, laudāre, laudāvī, laudātus</td>
+                    <td>moneō, monēre, <br />monuī, monitus</td>
+                    <td>agō, agere, <br /> ēgī, actus</td>
+                    <td>capiō, capere, <br /> cēpī, captus</td>
+                    <td>audiō, audīre, <br />audīvī, audītus</td>
+                </tr>
+                <!-- Separator row is removed for accessibility, using a divider within the cell instead -->
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">laudō</span></td>
+                    <td><span class="latin-verb-form-small">moneō</span></td>
+                    <td><span class="latin-verb-form-small">agō</span></td>
+                    <td><span class="latin-verb-form-small">capiō</span></td>
+                    <td><span class="latin-verb-form-small">audiō</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">laudās</span></td>
+                    <td><span class="latin-verb-form-small">monēs</span></td>
+                    <td><span class="latin-verb-form-small">agis</span></td>
+                    <td><span class="latin-verb-form-small">capis</span></td>
+                    <td><span class="latin-verb-form-small">audīs</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">laudat</span></td>
+                    <td><span class="latin-verb-form">monet</span></td>
+                    <td><span class="latin-verb-form">agit</span></td>
+                    <td><span class="latin-verb-form">capit</span></td>
+                    <td><span class="latin-verb-form">audit</span></td>
+                </tr>
+                <tr><td colspan="6"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">laudāmus</span></td>
+                    <td><span class="latin-verb-form-small">monēmus</span></td>
+                    <td><span class="latin-verb-form-small">agimus</span></td>
+                    <td><span class="latin-verb-form-small">capimus</span></td>
+                    <td><span class="latin-verb-form-small">audīmus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">laudātis</span></td>
+                    <td><span class="latin-verb-form-small">monētis</span></td>
+                    <td><span class="latin-verb-form-small">agitis</span></td>
+                    <td><span class="latin-verb-form-small">capitis</span></td>
+                    <td><span class="latin-verb-form-small">audītis</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">laudant</span></td>
+                    <td><span class="latin-verb-form">monent</span></td>
+                    <td><span class="latin-verb-form">agunt</span></td>
+                    <td><span class="latin-verb-form">capiunt</span></td>
+                    <td><span class="latin-verb-form">audiunt</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Table 2: Present Indicative Passive -->
+        <table role="table" aria-label="Present Indicative Passive Conjugation for all four conjugations">
+            <caption>Present Indicative Passive</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>laudō, laudāre, laudāvī, laudātus</td>
+                    <td>moneō, monēre, <br />monuī, monitus</td>
+                    <td>agō, agere, <br /> ēgī, actus</td>
+                    <td>capiō, capere, <br /> cēpī, captus</td>
+                    <td>audiō, audīre, <br />audīvī, audītus</td>
+                </tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">laudor</span></td>
+                    <td><span class="latin-verb-form-small">moneor</span></td>
+                    <td><span class="latin-verb-form-small">agor</span></td>
+                    <td><span class="latin-verb-form-small">capior</span></td>
+                    <td><span class="latin-verb-form-small">audior</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">laudāris</span></td>
+                    <td><span class="latin-verb-form-small">monēris</span></td>
+                    <td><span class="latin-verb-form-small">ageris</span></td>
+                    <td><span class="latin-verb-form-small">caperis</span></td>
+                    <td><span class="latin-verb-form-small">audīris</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">laudātur</span></td>
+                    <td><span class="latin-verb-form">monētur</span></td>
+                    <td><span class="latin-verb-form">agitur</span></td>
+                    <td><span class="latin-verb-form">capitur</span></td>
+                    <td><span class="latin-verb-form">audītur</span></td>
+                </tr>
+                <tr><td colspan="6"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">laudāmur</span></td>
+                    <td><span class="latin-verb-form-small">monēmur</span></td>
+                    <td><span class="latin-verb-form-small">agimur</span></td>
+                    <td><span class="latin-verb-form-small">capimur</span></td>
+                    <td><span class="latin-verb-form-small">audīmur</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">laudāminī</span></td>
+                    <td><span class="latin-verb-form-small">monēminī</span></td>
+                    <td><span class="latin-verb-form-small">agiminī</span></td>
+                    <td><span class="latin-verb-form-small">capiminī</span></td>
+                    <td><span class="latin-verb-form-small">audīminī</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">laudantur</span></td>
+                    <td><span class="latin-verb-form">monentur</span></td>
+                    <td><span class="latin-verb-form">aguntur</span></td>
+                    <td><span class="latin-verb-form">capiuntur</span></td>
+                    <td><span class="latin-verb-form">audiuntur</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Table 3: Present Indicative Deponent -->
+        <table role="table" aria-label="Present Indicative Deponent Conjugation for all four conjugations">
+            <caption>Present Indicative Deponent</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>hortor, hortārī, <br />hortātus sum</td>
+                    <td>vereor, verērī, <br />veritus sum</td>
+                    <td>sequor, sequī, <br />secūtus sum</td>
+                    <td>patior, patī, <br />passus sum</td>
+                    <td>orior, orīrī, <br />ortus sum</td>
+                </tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">hortor</span></td>
+                    <td><span class="latin-verb-form-small">vereor</span></td>
+                    <td><span class="latin-verb-form-small">sequor</span></td>
+                    <td><span class="latin-verb-form-small">patior</span></td>
+                    <td><span class="latin-verb-form-small">orior</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">hortāris</span></td>
+                    <td><span class="latin-verb-form-small">verēris</span></td>
+                    <td><span class="latin-verb-form-small">sequeris</span></td>
+                    <td><span class="latin-verb-form-small">pateris</span></td>
+                    <td><span class="latin-verb-form-small">orīris</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">hortātur</span></td>
+                    <td><span class="latin-verb-form">verētur</span></td>
+                    <td><span class="latin-verb-form">sequitur</span></td>
+                    <td><span class="latin-verb-form">patitur</span></td>
+                    <td><span class="latin-verb-form">orītur</span></td>
+                </tr>
+                <tr><td colspan="6"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">hortāmur</span></td>
+                    <td><span class="latin-verb-form-small">verēmur</span></td>
+                    <td><span class="latin-verb-form-small">sequimur</span></td>
+                    <td><span class="latin-verb-form-small">patimur</span></td>
+                    <td><span class="latin-verb-form-small">orīmur</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">hortāminī</span></td>
+                    <td><span class="latin-verb-form-small">verēminī</span></td>
+                    <td><span class="latin-verb-form-small">sequiminī</span></td>
+                    <td><span class="latin-verb-form-small">patiminī</span></td>
+                    <td><span class="latin-verb-form-small">orīminī</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">hortantur</span></td>
+                    <td><span class="latin-verb-form">verentur</span></td>
+                    <td><span class="latin-verb-form">sequuntur</span></td>
+                    <td><span class="latin-verb-form">patiuntur</span></td>
+                    <td><span class="latin-verb-form">oriuntur</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Table 4: Perfect Indicative Active -->
+        <table role="table" aria-label="Perfect Indicative Active Conjugation for all four conjugations">
+            <caption>Perfect Indicative Active</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>laudō, laudāre, <br />laudāvī, laudātus</td>
+                    <td>moneō, monēre, <br />monuī, monitus</td>
+                    <td>agō, agere, <br /> ēgī, actus</td>
+                    <td>capiō, capere, <br /> cēpī, captus</td>
+                    <td>audiō, audīre, <br />audīvī, audītus</td>
+                </tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">laudāvī</span></td>
+                    <td><span class="latin-verb-form-small">monuī</span></td>
+                    <td><span class="latin-verb-form-small">ēgī</span></td>
+                    <td><span class="latin-verb-form-small">cēpī</span></td>
+                    <td><span class="latin-verb-form-small">audīvī</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">laudāvistī</span></td>
+                    <td><span class="latin-verb-form-small">monuistī</span></td>
+                    <td><span class="latin-verb-form-small">ēgistī</span></td>
+                    <td><span class="latin-verb-form-small">cēpistī</span></td>
+                    <td><span class="latin-verb-form-small">audīvistī</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">laudāvit</span></td>
+                    <td><span class="latin-verb-form">monuit</span></td>
+                    <td><span class="latin-verb-form">ēgit</span></td>
+                    <td><span class="latin-verb-form">cēpit</span></td>
+                    <td><span class="latin-verb-form">audīvit</span></td>
+                </tr>
+                <tr><td colspan="6"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">laudāvimus</span></td>
+                    <td><span class="latin-verb-form-small">monuimus</span></td>
+                    <td><span class="latin-verb-form-small">ēgimus</span></td>
+                    <td><span class="latin-verb-form-small">cēpimus</span></td>
+                    <td><span class="latin-verb-form-small">audīvimus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">laudāvistis.</span></td>
+                    <td><span class="latin-verb-form-small">monuistis.</span></td>
+                    <td><span class="latin-verb-form-small">ēgistis.</span></td>
+                    <td><span class="latin-verb-form-small">cēpistis.</span></td>
+                    <td><span class="latin-verb-form-small">audīvistis.</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">laudāvērunt</span></td>
+                    <td><span class="latin-verb-form">monuērunt</span></td>
+                    <td><span class="latin-verb-form">ēgērunt</span></td>
+                    <td><span class="latin-verb-form">cēpērunt</span></td>
+                    <td><span class="latin-verb-form">audīvērunt</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Table 5: Perfect Indicative Passive -->
+        <table role="table" aria-label="Perfect Indicative Passive Conjugation for all four conjugations">
+            <caption>Perfect Indicative Passive</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>laudō, laudāre, <br />laudāvī, laudātus</td>
+                    <td>moneō, monēre, <br />monuī, monitus</td>
+                    <td>agō, agere, <br /> ēgī, actus</td>
+                    <td>capiō, capere, <br /> cēpī, captus</td>
+                    <td>audiō, audīre, <br />audīvī, audītus</td>
+                </tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">laudātus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">monitus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">actus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">captus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">audītus/a/um sum</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">laudātus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">monitus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">actus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">captus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">audītus/a/um es</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">laudātus/a/um est</span></td>
+                    <td><span class="latin-verb-form">monitus/a/um est</span></td>
+                    <td><span class="latin-verb-form">actus/a/um est</span></td>
+                    <td><span class="latin-verb-form">captus/a/um est</span></td>
+                    <td><span class="latin-verb-form">audītus/a/um est</span></td>
+                </tr>
+                <tr><td colspan="6"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">laudātī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">monitī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">actī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">captī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">audītī/ae/a sumus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">laudātī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">monitī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">actī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">captī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">audītī/ae/a estis</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">laudātī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">monitī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">actī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">captī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">audītī/ae/a sunt</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Table 6: Perfect Indicative Deponent -->
+        <table role="table" aria-label="Perfect Indicative Deponent Conjugation for all four conjugations">
+            <caption>Perfect Indicative Deponent</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>hortor, hortārī, <br />hortātus sum</td>
+                    <td>vereor, verērī, <br />veritus sum</td>
+                    <td>sequor, sequī, <br />secūtus sum</td>
+                    <td>patior, patī, <br />passus sum</td>
+                    <td>orior, orīrī, <br />ortus sum</td>
+                </tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">hortātus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">veritus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">secūtus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">passus/a/um sum</span></td>
+                    <td><span class="latin-verb-form-small">ortus/a/um sum</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">hortātus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">veritus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">secūtus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">passus/a/um es</span></td>
+                    <td><span class="latin-verb-form-small">ortus/a/um es</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">hortātus/a/um est</span></td>
+                    <td><span class="latin-verb-form">veritus/a/um est</span></td>
+                    <td><span class="latin-verb-form">secūtus/a/um est</span></td>
+                    <td><span class="latin-verb-form">passus/a/um est</span></td>
+                    <td><span class="latin-verb-form">ortus/a/um est</span></td>
+                </tr>
+                <tr><td colspan="6"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">hortātī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">veritī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">secūtī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">passī/ae/a sumus</span></td>
+                    <td><span class="latin-verb-form-small">ortī/ae/a sumus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">hortātī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">veritī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">secūtī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">passī/ae/a estis</span></td>
+                    <td><span class="latin-verb-form-small">ortuī/ae/a estis</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">hortātī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">veritī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">secūtī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">passī/ae/a sunt</span></td>
+                    <td><span class="latin-verb-form">ortī/ae/a sunt</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Table 7: Irregular "sum, esse" -->
+        <table role="table" aria-label="Irregular verb Sum, Esse Conjugation">
+            <caption>Irregular Verb: Sum, esse</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">Present Indicative Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st singular</th>
+                    <td><span class="latin-verb-form-small">sum</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd singular</th>
+                    <td><span class="latin-verb-form-small">es</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd singular</th>
+                    <td><span class="latin-verb-form">est</span></td>
+                </tr>
+                <tr><td colspan="2"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st plural</th>
+                    <td><span class="latin-verb-form-small">sumus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd plural</th>
+                    <td><span class="latin-verb-form-small">estis</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd plural</th>
+                    <td><span class="latin-verb-form">sunt</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
