@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Perfect and Pluperfect Indicative Paradigms</title>
+        <style>
+            /* Custom styling based on user request and ADA model */
+            table,
+            th,
+            td {
+                border: 1px solid #555555; /* Dark gray border (from Saved Info) */
+                border-collapse: collapse;
+            }
+
+            th {
+                /* Custom color scheme: Dark green (#006400) with white text (from Saved Info) */
+                background-color: #006400; 
+                color: white;
+                font-size: 1.1em;
+                padding: 10px 8px;
+                text-align: left;
+            }
+
+            td {
+                padding: 8px;
+            }
+
+            /* New styling for captions */
+            caption {
+                text-align: left;
+                font-size: 1.25em;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            
+            /* Added margin to separate each table for readability */
+            table {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            /* Custom classes for row visibility and emphasis */
+            .focus {
+                background-color: #ffffcc; /* Light yellow background */
+                font-weight: bold;
+            }
+
+            .hidden {
+                display: none; 
+            }
+
+            /* WCAG 2.4.7: Focus Indicator (Keyboard navigation) */
+            tr:focus, tr:hover {
+                outline: 2px solid #0000ff;
+                outline-offset: -2px;
+                background-color: #f0f0f0;
+            }
+
+            /* Style for verb forms, matching the large red/black style in the source */
+            /* This corresponds to the original div.a */
+            .latin-verb-form-large {
+                color: red; 
+                font-size: 200%; 
+            }
+
+            /* This corresponds to the original div.b (100% font size) */
+            .latin-verb-form-small {
+                color: black; 
+                font-size: 100%; 
+            }
+            
+            /* Style for the identification row's span (original div.c) */
+            .latin-id-form-red {
+                color: red;
+            }
+
+            /* Style for the horizontal rule separator */
+            .separator {
+                border-color: #555555;
+            }
+
+            /* Rule to control the width of the row header column for better alignment */
+            tbody th {
+                width: 20%;
+                text-align: left;
+                white-space: nowrap;
+                font-weight: normal;
+                background-color: #f9f9f9;
+                color: black;
+            }
+            
+            /* Ensure the row header in the focused row is styled correctly */
+            tr.focus th {
+                font-weight: bold;
+                background-color: #ffffcc;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <table role="table" aria-label="Perfect Indicative Conjugation (Active and Passive)">
+            <caption>Perfect Indicative</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">All Verb Classes Active</th>
+                    <th scope="col">All verb classes Passive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>
+                        laudō, laudāre, <span class="latin-id-form-red">laudāvī</span><br />
+                        moneō, monēre, <span class="latin-id-form-red">monuī</span><br />
+                        agō. agere, <span class="latin-id-form-red">ēgī</span><br />
+                        capiō, capere, <span class="latin-id-form-red">cēpī</span><br />
+                        audiō, audīre, <span class="latin-id-form-red">audīvī</span><br />
+                        eō, īre, <span class="latin-id-form-red">iī</span><br />
+                        redeō, redīre, <span class="latin-id-form-red">rediī</span><br />etc.
+                    </td>
+                    <td>
+                        laudō, laudāre, laudāvī, <span class="latin-id-form-red">laudātus</span><br />
+                        moneō, monēre, monuī, <span class="latin-id-form-red">monitus</span><br />
+                        agō. agere, ēgī, <span class="latin-id-form-red">actus</span><br />
+                        capiō, capere, cēpī, <span class="latin-id-form-red">captus</span><br />
+                        audiō, audīre, audīvī, <span class="latin-id-form-red">audītus</span><br />etc.
+                    </td>
+                </tr>
+                <tr><td colspan="3"><hr class="separator"/></td></tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">laudāvī, monuī, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātus, laudāta, laudātum sum</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">laudāvistī, monuistī, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātus, laudāta, laudātum es</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form-large">laudāvit, monuit, etc.</span></td>
+                    <td><span class="latin-verb-form-large">laudātus, laudāta, laudātum est</span></td>
+                </tr>
+                <tr><td colspan="3"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">laudāvimus, monuimus, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātī, laudātae, laudāta sumus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">laudāvistis, monuistis, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātī, laudātae, laudāta estis</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form-large">laudāvērunt, monuērunt, etc.</span></td>
+                    <td><span class="latin-verb-form-large">laudātī, laudātae, laudāta sunt</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table role="table" aria-label="Pluperfect Indicative Conjugation (Active and Passive)">
+            <caption>Pluperfect Indicative</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">All Verb Classes Active</th>
+                    <th scope="col">All verb classes Passive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>
+                        laudō, laudāre, <span class="latin-id-form-red">laudāvī</span><br />
+                        moneō, monēre, <span class="latin-id-form-red">monuī</span><br />
+                        agō. agere, <span class="latin-id-form-red">ēgī</span><br />
+                        capiō, capere, <span class="latin-id-form-red">cēpī</span><br />
+                        audiō, audīre, <span class="latin-id-form-red">audīvī</span><br />
+                        eō, īre, <span class="latin-id-form-red">iī</span><br />
+                        redeō, redīre, <span class="latin-id-form-red">rediī</span><br />etc.
+                    </td>
+                    <td>
+                        laudō, laudāre, laudāvī, <span class="latin-id-form-red">laudātus</span><br />
+                        moneō, monēre, monuī, <span class="latin-id-form-red">monitus</span><br />
+                        agō. agere, ēgī, <span class="latin-id-form-red">actus</span><br />
+                        capiō, capere, cēpī, <span class="latin-id-form-red">captus</span><br />
+                        audiō, audīre, audīvī, <span class="latin-id-form-red">audītus</span><br />etc.
+                    </td>
+                </tr>
+                <tr><td colspan="3"><hr class="separator"/></td></tr>
+                
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form-small">laudāveram, monueram, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātus, laudāta, laudātum eram</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form-small">laudāverās, monuerās, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātus, laudāta, laudātum erās</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form-large">laudāverat, monuerat, etc.</span></td>
+                    <td><span class="latin-verb-form-large">laudātus, laudāta, laudātum erat</span></td>
+                </tr>
+                <tr><td colspan="3"><hr class="separator"/></td></tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form-small">laudāverāmus, monuerāmus, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātī, laudātae, laudāta erāmus</span></td>
+                </tr>
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form-small">laudāverātis, monuerātis, etc.</span></td>
+                    <td><span class="latin-verb-form-small">laudātī, laudātae, laudāta erātis</span></td>
+                </tr>
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form-large">laudāverant, monuerant, etc.</span></td>
+                    <td><span class="latin-verb-form-large">laudātī, laudātae, laudāta erant</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>
