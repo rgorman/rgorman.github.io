@@ -3,19 +3,19 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Verb Paradigms - Present and Imperfect Tenses (ADA Compliant)</title>
+        <title>Verb Paradigms - Present and Imperfect Tenses (Targeted View)</title>
         <style>
             /* Custom styling based on user request and ADA model */
             table,
             th,
             td {
-                border: 1px solid #555555; /* Dark gray border (from Saved Info) */
+                border: 1px solid #555555; /* Dark gray border */
                 border-collapse: collapse;
             }
 
             th {
-                /* Custom color scheme: Dark green (#006400) with white text (from Saved Info) */
-                background-color: #006400; 
+                /* Custom color scheme: Dark green (#006400) with white text */
+                background-color: #006400;
                 color: white;
                 font-size: 1.1em;
                 padding: 10px 8px;
@@ -46,8 +46,11 @@
                 font-weight: bold;
             }
 
+            /* The 'hidden' class now only hides the entire table data for those rows */
             .hidden {
-                display: none; 
+                /* Apply to the <tr> element for 1st/2nd person rows in this custom view */
+                /* This ensures the entire cell content is gone, not just the text */
+                background-color: #f0f0f0; /* Slight off-white to distinguish from focus */
             }
 
             /* WCAG 2.4.7: Focus Indicator (Keyboard navigation) */
@@ -57,15 +60,17 @@
                 background-color: #f0f0f0;
             }
 
-            /* Style for verb forms, matching the large red/black style in the source */
+            /* Style for verb forms - Large Red Text (VISIBLE ANSWERS) */
             .latin-verb-form {
-                color: red; /* Original div.a color */
-                font-size: 200%; 
+                color: red;
+                font-size: 200%;
+                font-weight: bold;
             }
-
-            .latin-verb-form-small {
-                color: black; /* Original div.b color/default */
-                font-size: 100%; 
+            
+            /* Style for verb forms - Hidden Text (QUIZ BLANKS) */
+            /* This is the key change: we need a class to completely hide the text inside the TD */
+            .verb-hidden {
+                display: none;
             }
 
             /* Style for the horizontal rule separator */
@@ -92,16 +97,19 @@
     </head>
     <body>
         
-        <table role="table" aria-label="Present Indicative Active Conjugation for all four conjugations">
+        <!-- ================================================================================= -->
+        <!-- PRESENT INDICATIVE ACTIVE (P A) -->
+        <!-- ================================================================================= -->
+        <table role="table" aria-label="Present Indicative Active Conjugation, Quiz View">
             <caption>Present Indicative Active</caption>
             <thead>
                 <tr>
                     <th scope="col">Person/Number</th>
-                    <th scope="col">1st conj.</th>
-                    <th scope="col">2nd conj.</th>
-                    <th scope="col">3rd conj.</th>
-                    <th scope="col">3rd -io conj</th>
-                    <th scope="col">4th conj</th>
+                    <th scope="col">1st conj. (Visible)</th>
+                    <th scope="col">2nd conj. (Quiz)</th>
+                    <th scope="col">3rd conj. (Quiz)</th>
+                    <th scope="col">3rd -io conj (Quiz)</th>
+                    <th scope="col">4th conj (Quiz)</th>
                 </tr>
             </thead>
             <tbody>
@@ -115,22 +123,25 @@
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
                 
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form">laudō</span></td>
-                    <td><span class="latin-verb-form">moneō</span></td>
-                    <td><span class="latin-verb-form">agō</span></td>
-                    <td><span class="latin-verb-form">capiō</span></td>
-                    <td><span class="latin-verb-form">audiō</span></td>
+                    <td><span class="verb-hidden">moneō</span></td>
+                    <td><span class="verb-hidden">agō</span></td>
+                    <td><span class="verb-hidden">capiō</span></td>
+                    <td><span class="verb-hidden">audiō</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form">laudās</span></td>
-                    <td><span class="latin-verb-form">monēs</span></td>
-                    <td><span class="latin-verb-form">agis</span></td>
-                    <td><span class="latin-verb-form">capis</span></td>
-                    <td><span class="latin-verb-form">audīs</span></td>
+                    <td><span class="verb-hidden">monēs</span></td>
+                    <td><span class="verb-hidden">agis</span></td>
+                    <td><span class="verb-hidden">capis</span></td>
+                    <td><span class="verb-hidden">audīs</span></td>
                 </tr>
+                <!-- 3rd Person Singular (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person sing</th>
                     <td><span class="latin-verb-form">laudat</span></td>
@@ -140,22 +151,25 @@
                     <td><span class="latin-verb-form">audit</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form">laudāmus</span></td>
-                    <td><span class="latin-verb-form">monēmus</span></td>
-                    <td><span class="latin-verb-form">agimus</span></td>
-                    <td><span class="latin-verb-form">capimus</span></td>
-                    <td><span class="latin-verb-form">audīmus</span></td>
+                    <td><span class="verb-hidden">monēmus</span></td>
+                    <td><span class="verb-hidden">agimus</span></td>
+                    <td><span class="verb-hidden">capimus</span></td>
+                    <td><span class="verb-hidden">audīmus</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form">laudātis</span></td>
-                    <td><span class="latin-verb-form">monētis</span></td>
-                    <td><span class="latin-verb-form">agitis</span></td>
-                    <td><span class="latin-verb-form">capitis</span></td>
-                    <td><span class="latin-verb-form">audītis</span></td>
+                    <td><span class="verb-hidden">monētis</span></td>
+                    <td><span class="verb-hidden">agitis</span></td>
+                    <td><span class="verb-hidden">capitis</span></td>
+                    <td><span class="verb-hidden">audītis</span></td>
                 </tr>
+                <!-- 3rd Person Plural (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person plur</th>
                     <td><span class="latin-verb-form">laudant</span></td>
@@ -167,16 +181,19 @@
             </tbody>
         </table>
         
-        <table role="table" aria-label="Imperfect Indicative Active Conjugation for all four conjugations">
+        <!-- ================================================================================= -->
+        <!-- IMPERFECT INDICATIVE ACTIVE (I A) -->
+        <!-- ================================================================================= -->
+        <table role="table" aria-label="Imperfect Indicative Active Conjugation, Quiz View">
             <caption>Imperfect Indicative Active</caption>
             <thead>
                 <tr>
                     <th scope="col">Person/Number</th>
-                    <th scope="col">1st conj.</th>
-                    <th scope="col">2nd conj.</th>
-                    <th scope="col">3rd conj.</th>
-                    <th scope="col">3rd -io conj</th>
-                    <th scope="col">4th conj</th>
+                    <th scope="col">1st conj. (Visible)</th>
+                    <th scope="col">2nd conj. (Quiz)</th>
+                    <th scope="col">3rd conj. (Quiz)</th>
+                    <th scope="col">3rd -io conj (Quiz)</th>
+                    <th scope="col">4th conj (Quiz)</th>
                 </tr>
             </thead>
             <tbody>
@@ -190,22 +207,25 @@
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
                 
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form">laudābam</span></td>
-                    <td><span class="latin-verb-form">monēbam</span></td>
-                    <td><span class="latin-verb-form">agēbam</span></td>
-                    <td><span class="latin-verb-form">capiēbam</span></td>
-                    <td><span class="latin-verb-form">audiēbam</span></td>
+                    <td><span class="verb-hidden">monēbam</span></td>
+                    <td><span class="verb-hidden">agēbam</span></td>
+                    <td><span class="verb-hidden">capiēbam</span></td>
+                    <td><span class="verb-hidden">audiēbam</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form">laudābās</span></td>
-                    <td><span class="latin-verb-form">monēbās</span></td>
-                    <td><span class="latin-verb-form">agēbās</span></td>
-                    <td><span class="latin-verb-form">capiēbās</span></td>
-                    <td><span class="latin-verb-form">audiēbās</span></td>
+                    <td><span class="verb-hidden">monēbās</span></td>
+                    <td><span class="verb-hidden">agēbās</span></td>
+                    <td><span class="verb-hidden">capiēbās</span></td>
+                    <td><span class="verb-hidden">audiēbās</span></td>
                 </tr>
+                <!-- 3rd Person Singular (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person sing</th>
                     <td><span class="latin-verb-form">laudābat</span></td>
@@ -215,22 +235,25 @@
                     <td><span class="latin-verb-form">audiēbat</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form">laudābāmus</span></td>
-                    <td><span class="latin-verb-form">monēbāmus</span></td>
-                    <td><span class="latin-verb-form">agēbāmus</span></td>
-                    <td><span class="latin-verb-form">capiēbāmus</span></td>
-                    <td><span class="latin-verb-form">audiēbāmus</span></td>
+                    <td><span class="verb-hidden">monēbāmus</span></td>
+                    <td><span class="verb-hidden">agēbāmus</span></td>
+                    <td><span class="verb-hidden">capiēbāmus</span></td>
+                    <td><span class="verb-hidden">audiēbāmus</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form">laudābātis</span></td>
-                    <td><span class="latin-verb-form">monēbātis</span></td>
-                    <td><span class="latin-verb-form">agēbātis</span></td>
-                    <td><span class="latin-verb-form">capiēbātis</span></td>
-                    <td><span class="latin-verb-form">audiēbātis</span></td>
+                    <td><span class="verb-hidden">monēbātis</span></td>
+                    <td><span class="verb-hidden">agēbātis</span></td>
+                    <td><span class="verb-hidden">capiēbātis</span></td>
+                    <td><span class="verb-hidden">audiēbātis</span></td>
                 </tr>
+                <!-- 3rd Person Plural (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person plur</th>
                     <td><span class="latin-verb-form">laudābant</span></td>
@@ -242,16 +265,19 @@
             </tbody>
         </table>
 
-        <table role="table" aria-label="Present Indicative Passive Conjugation for all four conjugations">
+        <!-- ================================================================================= -->
+        <!-- PRESENT INDICATIVE PASSIVE (P P) -->
+        <!-- ================================================================================= -->
+        <table role="table" aria-label="Present Indicative Passive Conjugation, Quiz View">
             <caption>Present Indicative Passive</caption>
             <thead>
                 <tr>
                     <th scope="col">Person/Number</th>
-                    <th scope="col">1st conj.</th>
-                    <th scope="col">2nd conj.</th>
-                    <th scope="col">3rd conj.</th>
-                    <th scope="col">3rd -io conj</th>
-                    <th scope="col">4th conj</th>
+                    <th scope="col">1st conj. (Visible)</th>
+                    <th scope="col">2nd conj. (Quiz)</th>
+                    <th scope="col">3rd conj. (Quiz)</th>
+                    <th scope="col">3rd -io conj (Quiz)</th>
+                    <th scope="col">4th conj (Quiz)</th>
                 </tr>
             </thead>
             <tbody>
@@ -265,22 +291,25 @@
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
                 
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form">laudor</span></td>
-                    <td><span class="latin-verb-form">moneor</span></td>
-                    <td><span class="latin-verb-form">agor</span></td>
-                    <td><span class="latin-verb-form">capior</span></td>
-                    <td><span class="latin-verb-form">audior</span></td>
+                    <td><span class="verb-hidden">moneor</span></td>
+                    <td><span class="verb-hidden">agor</span></td>
+                    <td><span class="verb-hidden">capior</span></td>
+                    <td><span class="verb-hidden">audior</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form">laudāris</span></td>
-                    <td><span class="latin-verb-form">monēris</span></td>
-                    <td><span class="latin-verb-form">ageris</span></td>
-                    <td><span class="latin-verb-form">caperis</span></td>
-                    <td><span class="latin-verb-form">audīris</span></td>
+                    <td><span class="verb-hidden">monēris</span></td>
+                    <td><span class="verb-hidden">ageris</span></td>
+                    <td><span class="verb-hidden">caperis</span></td>
+                    <td><span class="verb-hidden">audīris</span></td>
                 </tr>
+                <!-- 3rd Person Singular (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person sing</th>
                     <td><span class="latin-verb-form">laudātur</span></td>
@@ -290,22 +319,25 @@
                     <td><span class="latin-verb-form">audītur</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form">laudāmur</span></td>
-                    <td><span class="latin-verb-form">monēmur</span></td>
-                    <td><span class="latin-verb-form">agimur</span></td>
-                    <td><span class="latin-verb-form">capimur</span></td>
-                    <td><span class="latin-verb-form">audīmur</span></td>
+                    <td><span class="verb-hidden">monēmur</span></td>
+                    <td><span class="verb-hidden">agimur</span></td>
+                    <td><span class="verb-hidden">capimur</span></td>
+                    <td><span class="verb-hidden">audīmur</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form">laudāminī</span></td>
-                    <td><span class="latin-verb-form">monēminī</span></td>
-                    <td><span class="latin-verb-form">agiminī</span></td>
-                    <td><span class="latin-verb-form">capiminī</span></td>
-                    <td><span class="latin-verb-form">audīminī</span></td>
+                    <td><span class="verb-hidden">monēminī</span></td>
+                    <td><span class="verb-hidden">agiminī</span></td>
+                    <td><span class="verb-hidden">capiminī</span></td>
+                    <td><span class="verb-hidden">audīminī</span></td>
                 </tr>
+                <!-- 3rd Person Plural (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person plur</th>
                     <td><span class="latin-verb-form">laudantur</span></td>
@@ -317,16 +349,19 @@
             </tbody>
         </table>
 
-        <table role="table" aria-label="Imperfect Indicative Passive Conjugation for all four conjugations">
+        <!-- ================================================================================= -->
+        <!-- IMPERFECT INDICATIVE PASSIVE (I P) -->
+        <!-- ================================================================================= -->
+        <table role="table" aria-label="Imperfect Indicative Passive Conjugation, Quiz View">
             <caption>Imperfect Indicative Passive</caption>
             <thead>
                 <tr>
                     <th scope="col">Person/Number</th>
-                    <th scope="col">1st conj.</th>
-                    <th scope="col">2nd conj.</th>
-                    <th scope="col">3rd conj.</th>
-                    <th scope="col">3rd -io conj</th>
-                    <th scope="col">4th conj</th>
+                    <th scope="col">1st conj. (Visible)</th>
+                    <th scope="col">2nd conj. (Quiz)</th>
+                    <th scope="col">3rd conj. (Quiz)</th>
+                    <th scope="col">3rd -io conj (Quiz)</th>
+                    <th scope="col">4th conj (Quiz)</th>
                 </tr>
             </thead>
             <tbody>
@@ -340,22 +375,25 @@
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
                 
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person sing</th>
                     <td><span class="latin-verb-form">laudābar</span></td>
-                    <td><span class="latin-verb-form">monēbar</span></td>
-                    <td><span class="latin-verb-form">agēbar</span></td>
-                    <td><span class="latin-verb-form">capiēbar</span></td>
-                    <td><span class="latin-verb-form">audiēbar</span></td>
+                    <td><span class="verb-hidden">monēbar</span></td>
+                    <td><span class="verb-hidden">agēbar</span></td>
+                    <td><span class="verb-hidden">capiēbar</span></td>
+                    <td><span class="verb-hidden">audiēbar</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person sing</th>
                     <td><span class="latin-verb-form">laudābāris</span></td>
-                    <td><span class="latin-verb-form">monēbāris</span></td>
-                    <td><span class="latin-verb-form">agēbāris</span></td>
-                    <td><span class="latin-verb-form">capiēbāris</span></td>
-                    <td><span class="latin-verb-form">audiēbāris</span></td>
+                    <td><span class="verb-hidden">monēbāris</span></td>
+                    <td><span class="verb-hidden">agēbāris</span></td>
+                    <td><span class="verb-hidden">capiēbāris</span></td>
+                    <td><span class="verb-hidden">audiēbāris</span></td>
                 </tr>
+                <!-- 3rd Person Singular (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person sing</th>
                     <td><span class="latin-verb-form">laudābātur</span></td>
@@ -365,22 +403,25 @@
                     <td><span class="latin-verb-form">audiēbātur</span></td>
                 </tr>
                 <tr><td colspan="6"><hr class="separator"/></td></tr>
-                <tr class="focus" tabindex="0">
+                <!-- 1st Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">1st person plur</th>
                     <td><span class="latin-verb-form">laudābāmur</span></td>
-                    <td><span class="latin-verb-form">monēbāmur</span></td>
-                    <td><span class="latin-verb-form">agēbāmur</span></td>
-                    <td><span class="latin-verb-form">capiēbāmur</span></td>
-                    <td><span class="latin-verb-form">audiēbāmur</span></td>
+                    <td><span class="verb-hidden">monēbāmur</span></td>
+                    <td><span class="verb-hidden">agēbāmur</span></td>
+                    <td><span class="verb-hidden">capiēbāmur</span></td>
+                    <td><span class="verb-hidden">audiēbāmur</span></td>
                 </tr>
-                <tr class="focus" tabindex="0">
+                <!-- 2nd Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
                     <th scope="row">2nd person plur</th>
                     <td><span class="latin-verb-form">laudābāminī</span></td>
-                    <td><span class="latin-verb-form">monēbāminī</span></td>
-                    <td><span class="latin-verb-form">agēbāminī</span></td>
-                    <td><span class="latin-verb-form">capiēbāminī</span></td>
-                    <td><span class="latin-verb-form">audiēbāminī</span></td>
+                    <td><span class="verb-hidden">monēbāminī</span></td>
+                    <td><span class="verb-hidden">agēbāminī</span></td>
+                    <td><span class="verb-hidden">capiēbāminī</span></td>
+                    <td><span class="verb-hidden">audiēbāminī</span></td>
                 </tr>
+                <!-- 3rd Person Plural (Visible and Red in all columns) -->
                 <tr class="focus" tabindex="0">
                     <th scope="row">3rd person plur</th>
                     <td><span class="latin-verb-form">laudābantur</span></td>

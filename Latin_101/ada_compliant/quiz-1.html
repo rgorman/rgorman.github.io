@@ -1,149 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Latin 101 Noun Patterns (Declensions)</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz Study Guide</title>
         <style>
+            /* Custom styling based on user request and ADA model */
             table,
             th,
             td {
-                border: 1px solid #555555; /* Darker border color */
+                border: 1px solid #555555; /* Dark gray border */
+                border-collapse: collapse;
             }
 
             th {
-                background-color: #006400; /* Darker green for higher contrast */
+                /* Custom color scheme: Dark green (#006400) with white text */
+                background-color: #006400;
                 color: white;
+                font-size: 1.1em;
+                padding: 10px 8px;
+                text-align: left;
+            }
+
+            td {
+                padding: 8px;
+            }
+
+            /* New styling for captions */
+            caption {
+                text-align: left;
+                font-size: 1.25em;
+                font-weight: bold;
+                margin-bottom: 10px;
             }
             
+            /* Added margin to separate each table for readability */
+            table {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            /* Custom classes for row visibility and emphasis */
             .focus {
                 background-color: #ffffcc; /* Light yellow background */
-                font-weight: bold; /* Bold text for emphasis */
+                font-weight: bold;
             }
 
-            .no_focus {
-                background-color: #f2f2f2; /* Light gray background */
-                font-style: italic; /* Italic text for less emphasis */
-            }
-
+            /* The 'hidden' class now only hides the entire table data for those rows */
             .hidden {
-                display: none; /* Hides the row completely */
+                /* Apply to the <tr> element for 1st/2nd person rows in this custom view */
+                /* This ensures the entire cell content is gone, not just the text */
+                background-color: #f0f0f0; /* Slight off-white to distinguish from focus */
             }
 
-            .latin-text {
+            /* WCAG 2.4.7: Focus Indicator (Keyboard navigation) */
+            tr:focus, tr:hover {
+                outline: 2px solid #0000ff;
+                outline-offset: -2px;
+                background-color: #f0f0f0;
+            }
+
+            /* Style for verb forms - Large Red Text (VISIBLE ANSWERS) */
+            .latin-verb-form {
+                color: red;
+                font-size: 200%;
+                font-weight: bold;
+            }
+            
+            /* Style for verb forms - Hidden Text (QUIZ BLANKS) */
+            /* This is the key change: we need a class to completely hide the text inside the TD */
+            .verb-hidden {
+                display: none;
+            }
+
+            /* Style for the horizontal rule separator */
+            .separator {
+                border-color: #555555;
+            }
+
+            /* Rule to control the width of the row header column for better alignment */
+            tbody th {
+                width: 20%;
+                text-align: left;
+                white-space: nowrap;
+                font-weight: normal;
+                background-color: #f9f9f9;
                 color: black;
-                font-size: 150%;
-                font-family: serif;
+            }
+            
+            /* Ensure the row header in the focused row is styled correctly */
+            tr.focus th {
+                font-weight: bold;
+                background-color: #ffffcc;
             }
         </style>
     </head>
     <body>
-        <table style="width:100%">
-            <caption>Latin Noun Patterns (Declensions) - Part 1</caption>
+        <!-- ================================================================================= -->
+        <!-- PRESENT INDICATIVE ACTIVE (P A) -->
+        <!-- ================================================================================= -->
+        <table role="table" aria-label="Present Indicative Active Conjugation, Quiz View">
+            <caption>Present Indicative Active</caption>
             <thead>
                 <tr>
-                    <td></td>
-                    <th scope="col">1st Decl.</th>
-                    <th scope="col">2nd Decl.</th>
-                    <th scope="col">2nd Neuter Decl.</th>
-                    <th scope="col">3c. Decl.</th>
-                    <th scope="col">3c. Neuter Decl.</th>
+                    <th scope="col">Person/Number</th>
+                    <th scope="col">1st conj. (Visible)</th>
+                    <th scope="col">2nd conj. (Quiz)</th>
+                    <th scope="col">3rd conj. (Quiz)</th>
+                    <th scope="col">3rd -io conj (Quiz)</th>
+                    <th scope="col">4th conj (Quiz)</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="no_focus">
-                    <th scope="row">ID Criterion (ABL Sing)</th>
-                    <td>-ā</td>
-                    <td>-ō</td>
-                    <td>-ō</td>
-                    <td>-e</td>
-                    <td>-e</td>
+                <tr tabindex="0">
+                    <th scope="row">identification</th>
+                    <td>laudō, laudāre</td>
+                    <td>moneō, monēre</td>
+                    <td>agō, agere</td>
+                    <td>capiō, capere</td>
+                    <td>audiō, audīre</td>
                 </tr>
-                <tr class="focus">
-                    <th scope="row">Nom Sing</th>
-                    <td><span class="latin-text">silva</span></td>
-                    <td><span class="latin-text">hortus</span></td>
-                    <td><span class="latin-text">bellum</span></td>
-                    <td><span class="latin-text">cōnsul</span></td>
-                    <td><span class="latin-text">corpus</span></td>
+                <tr>
+                    <td colspan="6">
+                        <hr class="separator" />
+                    </td>
                 </tr>
-                <tr class="focus">
-                    <th scope="row">Gen Sing</th>
-                    <td><strong class="latin-text">silvae</strong></td>
-                    <td><strong class="latin-text">hortī</strong></td>
-                    <td><strong class="latin-text">bellī</strong></td>
-                    <td><strong class="latin-text">cōnsulis</strong></td>
-                    <td><strong class="latin-text">corporis</strong></td>
+                <!-- 1st Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-verb-form">laudō</span></td>
+                    <td>
+                        <span class="verb-hidden">moneō</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">agō</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">capiō</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">audiō</span>
+                    </td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Dat Sing</th>
-                    <td><span class="latin-text">silvae</span></td>
-                    <td><span class="latin-text">hortō</span></td>
-                    <td><span class="latin-text">bellō</span></td>
-                    <td><span class="latin-text">cōnsulī</span></td>
-                    <td><span class="latin-text">corporī</span></td>
+                <!-- 2nd Person Singular (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-verb-form">laudās</span></td>
+                    <td>
+                        <span class="verb-hidden">monēs</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">agis</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">capis</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">audīs</span>
+                    </td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Acc Sing</th>
-                    <td><span class="latin-text">silvam</span></td>
-                    <td><span class="latin-text">hortum</span></td>
-                    <td><span class="latin-text">bellum</span></td>
-                    <td><span class="latin-text">cōnsulem</span></td>
-                    <td><span class="latin-text">corpus</span></td>
+                <!-- 3rd Person Singular (Visible and Red in all columns) -->
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person sing</th>
+                    <td><span class="latin-verb-form">laudat</span></td>
+                    <td><span class="latin-verb-form">monet</span></td>
+                    <td><span class="latin-verb-form">agit</span></td>
+                    <td><span class="latin-verb-form">capit</span></td>
+                    <td><span class="latin-verb-form">audit</span></td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Abl Sing</th>
-                    <td><span class="latin-text">silvā</span></td>
-                    <td><span class="latin-text">hortō</span></td>
-                    <td><span class="latin-text">bellō</span></td>
-                    <td><span class="latin-text">cōnsule</span></td>
-                    <td><span class="latin-text">corpore</span></td>
+                <tr>
+                    <td colspan="6">
+                        <hr class="separator" />
+                    </td>
                 </tr>
-                <tr><td colspan="6"><hr style="border-color: #555555;"/></td></tr>
-                <tr class="hidden">
-                    <th scope="row">Nom Plur</th>
-                    <td><span class="latin-text">silvae</span></td>
-                    <td><span class="latin-text">hortī</span></td>
-                    <td><span class="latin-text">bella</span></td>
-                    <td><span class="latin-text">cōnsulēs</span></td>
-                    <td><span class="latin-text">corpora</span></td>
+                <!-- 1st Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-verb-form">laudāmus</span></td>
+                    <td>
+                        <span class="verb-hidden">monēmus</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">agimus</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">capimus</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">audīmus</span>
+                    </td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Gen Plur</th>
-                    <td><span class="latin-text">silvārum</span></td>
-                    <td><span class="latin-text">hortōrum</span></td>
-                    <td><span class="latin-text">bellōrum</span></td>
-                    <td><span class="latin-text">cōnsulum</span></td>
-                    <td><span class="latin-text">corporum</span></td>
+                <!-- 2nd Person Plural (Hidden in columns 2-5) -->
+                <tr class="hidden" tabindex="0">
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-verb-form">laudātis</span></td>
+                    <td>
+                        <span class="verb-hidden">monētis</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">agitis</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">capitis</span>
+                    </td>
+                    <td>
+                        <span class="verb-hidden">audītis</span>
+                    </td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Dat Plur</th>
-                    <td><span class="latin-text">silvīs</span></td>
-                    <td><span class="latin-text">hortīs</span></td>
-                    <td><span class="latin-text">bellīs</span></td>
-                    <td><span class="latin-text">cōnsulibus</span></td>
-                    <td><span class="latin-text">corporibus</span></td>
-                </tr>
-                <tr class="hidden">
-                    <th scope="row">Acc Plur</th>
-                    <td><span class="latin-text">silvās</span></td>
-                    <td><span class="latin-text">hortōs</span></td>
-                    <td><span class="latin-text">bella</span></td>
-                    <td><span class="latin-text">cōnsulēs</span></td>
-                    <td><span class="latin-text">corpora</span></td>
-                </tr>
-                <tr class="hidden">
-                    <th scope="row">Abl Plur</th>
-                    <td><span class="latin-text">silvīs</span></td>
-                    <td><span class="latin-text">hortīs</span></td>
-                    <td><span class="latin-text">bellīs</span></td>
-                    <td><span class="latin-text">cōnsulibus</span></td>
-                    <td><span class="latin-text">corporibus</span></td>
+                <!-- 3rd Person Plural (Visible and Red in all columns) -->
+                <tr class="focus" tabindex="0">
+                    <th scope="row">3rd person plur</th>
+                    <td><span class="latin-verb-form">laudant</span></td>
+                    <td><span class="latin-verb-form">monent</span></td>
+                    <td><span class="latin-verb-form">agunt</span></td>
+                    <td><span class="latin-verb-form">capiunt</span></td>
+                    <td><span class="latin-verb-form">audiunt</span></td>
                 </tr>
             </tbody>
         </table>
-        
-        <br/>
-        <br/>
-        <br/>
-        
     </body>
 </html>
