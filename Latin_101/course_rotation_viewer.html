@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///C:/Users/rgorm/OneDrive/Documents/business/curriculum/pyth_code/output.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Scheduling Data Viewer</title>
+    <script src="./course_rotation_viewer_files/saved_resource"></script>
+    <style>
+        .table-border-custom { border-color: #555555; }
+        body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; }
+        .conflict-detail-text { white-space: pre-wrap; word-wrap: break-word; }
+        table { width: 100%; border-collapse: collapse; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        th, td { padding: 12px 15px; text-align: left; border-width: 1px; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sticky{position:sticky}.left-0{left:0px}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.h-5{height:1.25rem}.w-5{width:1.25rem}.min-w-full{min-width:100%}.max-w-6xl{max-width:72rem}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.items-center{align-items:center}.justify-between{justify-content:space-between}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gray-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(229 231 235 / var(--tw-divide-opacity, 1))}.overflow-x-auto{overflow-x:auto}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-r{border-right-width:1px}.border-red-400{--tw-border-opacity:1;border-color:rgb(248 113 113 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.bg-\[\#006400\]{--tw-bg-opacity:1;background-color:rgb(0 100 0 / var(--tw-bg-opacity, 1))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-wider{letter-spacing:0.05em}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.duration-200{transition-duration:200ms}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-red-100:hover{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.group[open] .group-open\:rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group[open] .group-open\:rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:p-8{padding:2rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}}</style></head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="text-center mb-10 p-6 bg-blue-700 rounded-xl shadow-lg">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Course Level and Conflict Data</h1>
+            <p class="text-blue-200 mt-2">Generated from input.csv</p>
+        </header>
+
+        <div id="data-container" class="space-y-12">
+
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Spring 2020 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 121<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 102</td>
+                    <td class="table-border-custom border-r">LATN 102</td>
+                    <td class="table-border-custom">RELG 108</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 209<br> CLAS 282</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 208<br> RELG 216<br> RELG 218<br> RELG 219</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 312<br> CLAS 315<br> CLAS 331<br> CLAS 399</td>
+                    <td class="table-border-custom border-r">GREK 302</td>
+                    <td class="table-border-custom border-r">LATN 302<br> LATN 304</td>
+                    <td class="table-border-custom">RELG 306<br> RELG 312<br> RELG 319<br> RELG 331<br> RELG 381</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401<br> CLAS 417<br> CLAS 438</td>
+                    <td class="table-border-custom border-r">GREK 492</td>
+                    <td class="table-border-custom border-r">LATN 492</td>
+                    <td class="table-border-custom">RELG 401<br> RELG 418</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6" open="">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 121 (Sec 101) conflicts with CLAS 121 (Sec 101)<br><br>CLAS 180 (Sec 001) conflicts with CLAS 401 (Sec 001), and RELG 108 (Sec 001)<br><br>CLAS 180 (Sec 002) conflicts with CLAS 315 (Sec 001)<br><br>CLAS 209 (Sec 001) conflicts with LATN 304 (Sec 001), LATN 492 (Sec 001), RELG 208 (Sec 001), RELG 319 (Sec 001), and RELG 381 (Sec 001)<br><br>CLAS 282 (Sec 001) conflicts with CLAS 180 (Sec 002), and CLAS 315 (Sec 001)<br><br>CLAS 331 (Sec 001) conflicts with GREK 102 (Sec 001)<br><br>CLAS 417 (Sec 001) conflicts with CLAS 312 (Sec 001), LATN 102 (Sec 001), and RELG 312 (Sec 001)<br><br>LATN 102 (Sec 001) conflicts with CLAS 312 (Sec 001), and RELG 312 (Sec 001)<br><br>LATN 102 (Sec 002) conflicts with RELG 218 (Sec 001)<br><br>LATN 302 (Sec 001) conflicts with CLAS 209 (Sec 001), LATN 492 (Sec 001), RELG 208 (Sec 001), RELG 319 (Sec 001), and RELG 381 (Sec 001)<br><br>LATN 304 (Sec 001) conflicts with LATN 492 (Sec 001), RELG 208 (Sec 001), RELG 319 (Sec 001), and RELG 381 (Sec 001)<br><br>LATN 492 (Sec 001) conflicts with RELG 381 (Sec 001)<br><br>RELG 108 (Sec 001) conflicts with CLAS 401 (Sec 001)<br><br>RELG 208 (Sec 001) conflicts with LATN 492 (Sec 001), and RELG 381 (Sec 001)<br><br>RELG 216 (Sec 001) conflicts with CLAS 438 (Sec 001), and RELG 306 (Sec 001)<br><br>RELG 306 (Sec 001) conflicts with CLAS 438 (Sec 001)<br><br>RELG 319 (Sec 001) conflicts with LATN 492 (Sec 001), RELG 208 (Sec 001), and RELG 381 (Sec 001)<br><br>RELG 331 (Sec 001) conflicts with GREK 102 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Fall 2020 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 101</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 210<br> CLAS 222<br> CLAS 252<br> CLAS 281</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 217<br> RELG 227<br> RELG 230<br> RELG 288</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 307<br> CLAS 311<br> CLAS 317</td>
+                    <td class="table-border-custom border-r">GREK 301<br> GREK 399</td>
+                    <td class="table-border-custom border-r">LATN 301</td>
+                    <td class="table-border-custom">RELG 307<br> RELG 319<br> RELG 350</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 440</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 491</td>
+                    <td class="table-border-custom"></td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 141 (Sec 001) conflicts with LATN 491 (Sec 001)<br><br>CLAS 180 (Sec 001) conflicts with CLAS 307 (Sec 001), LATN 101 (Sec 001), and RELG 307 (Sec 001)<br><br>CLAS 210 (Sec 001) conflicts with RELG 150 (Sec 002)<br><br>CLAS 252 (Sec 001) conflicts with LATN 301 (Sec 001)<br><br>CLAS 307 (Sec 001) conflicts with LATN 101 (Sec 001)<br><br>CLAS 440 (Sec 002) conflicts with RELG 150 (Sec 001), RELG 227 (Sec 001), and RELG 288 (Sec 001)<br><br>LATN 101 (Sec 002) conflicts with CLAS 317 (Sec 001)<br><br>RELG 150 (Sec 001) conflicts with RELG 227 (Sec 001)<br><br>RELG 217 (Sec 001) conflicts with CLAS 440 (Sec 002), RELG 150 (Sec 001), RELG 227 (Sec 001), and RELG 288 (Sec 001)<br><br>RELG 288 (Sec 001) conflicts with RELG 150 (Sec 001), and RELG 227 (Sec 001)<br><br>RELG 307 (Sec 001) conflicts with LATN 101 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Spring 2021 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 151</td>
+                    <td class="table-border-custom border-r">LATN 102</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 134</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 209<br> CLAS 278<br> CLAS 282<br> CLAS 283</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 212<br> RELG 218<br> RELG 219</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 309<br> CLAS 315<br> CLAS 331<br> CLAS 340<br> CLAS 392</td>
+                    <td class="table-border-custom border-r">GREK 302<br> GREK 399</td>
+                    <td class="table-border-custom border-r">LATN 302<br> LATN 304<br> LATN 399</td>
+                    <td class="table-border-custom">RELG 306<br> RELG 309<br> RELG 331<br> RELG 381</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 492</td>
+                    <td class="table-border-custom">RELG 401<br> RELG 418</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 401 (Sec 001) conflicts with RELG 212 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Fall 2021 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 101</td>
+                    <td class="table-border-custom border-r">LATN 101</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 209<br> CLAS 222<br> CLAS 252<br> CLAS 281</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 206<br> RELG 217<br> RELG 230</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 312<br> CLAS 317</td>
+                    <td class="table-border-custom border-r">GREK 301</td>
+                    <td class="table-border-custom border-r">LATN 301<br> LATN 396</td>
+                    <td class="table-border-custom">RELG 312<br> RELG 342<br> RELG 350</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401<br> CLAS 418<br> CLAS 438<br> CLAS 440<br> CLAS 499</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 491</td>
+                    <td class="table-border-custom">RELG 401</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 180 (Sec 001) conflicts with LATN 301 (Sec 001), and RELG 206 (Sec 001)<br><br>CLAS 252 (Sec 001) conflicts with CLAS 141 (Sec 001), and CLAS 418 (Sec 001)<br><br>CLAS 312 (Sec 001) conflicts with RELG 230 (Sec 001)<br><br>CLAS 317 (Sec 001) conflicts with CLAS 312 (Sec 001), RELG 230 (Sec 001), and RELG 312 (Sec 001)<br><br>CLAS 418 (Sec 001) conflicts with CLAS 141 (Sec 001)<br><br>CLAS 438 (Sec 001) conflicts with CLAS 222 (Sec 001), and LATN 101 (Sec 001)<br><br>GREK 101 (Sec 001) conflicts with CLAS 281 (Sec 001)<br><br>GREK 301 (Sec 001) conflicts with RELG 150 (Sec 001)<br><br>LATN 101 (Sec 001) conflicts with CLAS 222 (Sec 001)<br><br>LATN 301 (Sec 001) conflicts with RELG 206 (Sec 001)<br><br>RELG 217 (Sec 001) conflicts with RELG 350 (Sec 001)<br><br>RELG 312 (Sec 001) conflicts with RELG 230 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Spring 2022 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 102</td>
+                    <td class="table-border-custom border-r">LATN 102</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 134</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 210<br> CLAS 241<br> CLAS 282</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 214<br> RELG 216<br> RELG 226</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 301<br> CLAS 309<br> CLAS 315<br> CLAS 321<br> CLAS 331<br> CLAS 392<br> CLAS 396</td>
+                    <td class="table-border-custom border-r">GREK 302</td>
+                    <td class="table-border-custom border-r">LATN 302</td>
+                    <td class="table-border-custom">RELG 306<br> RELG 309<br> RELG 331<br> RELG 381<br> RELG 396</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401<br> CLAS 499</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 401<br> RELG 418</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 180 (Sec 001) conflicts with CLAS 241 (Sec 001)<br><br>CLAS 301 (Sec 001) conflicts with CLAS 401 (Sec 001), and RELG 216 (Sec 001)<br><br>CLAS 315 (Sec 001) conflicts with CLAS 282 (Sec 001), and RELG 226 (Sec 001)<br><br>CLAS 321 (Sec 001) conflicts with GREK 102 (Sec 001)<br><br>CLAS 331 (Sec 001) conflicts with RELG 381 (Sec 001)<br><br>CLAS 401 (Sec 001) conflicts with RELG 216 (Sec 001)<br><br>GREK 302 (Sec 001) conflicts with CLAS 282 (Sec 001), CLAS 315 (Sec 001), and RELG 226 (Sec 001)<br><br>LATN 102 (Sec 001) conflicts with CLAS 321 (Sec 001), and GREK 102 (Sec 001)<br><br>LATN 302 (Sec 001) conflicts with RELG 134 (Sec 001)<br><br>RELG 214 (Sec 001) conflicts with CLAS 309 (Sec 001), and RELG 309 (Sec 001)<br><br>RELG 226 (Sec 001) conflicts with CLAS 282 (Sec 001)<br><br>RELG 306 (Sec 001) conflicts with CLAS 331 (Sec 001), RELG 331 (Sec 001), and RELG 381 (Sec 001)<br><br>RELG 331 (Sec 001) conflicts with RELG 381 (Sec 001)<br><br>RELG 401 (Sec 001) conflicts with CLAS 301 (Sec 001), and RELG 216 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Fall 2022 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 101</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 210<br> CLAS 222<br> CLAS 252<br> CLAS 281<br> CLAS 286</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 217<br> RELG 288</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 311<br> CLAS 317<br> CLAS 331</td>
+                    <td class="table-border-custom border-r">GREK 301</td>
+                    <td class="table-border-custom border-r">LATN 301</td>
+                    <td class="table-border-custom">RELG 319<br> RELG 331<br> RELG 350</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom"></td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 141 (Sec 001) conflicts with CLAS 317 (Sec 001), RELG 108 (Sec 001), and RELG 217 (Sec 001)<br><br>CLAS 180 (Sec 001) conflicts with LATN 101 (Sec 001)<br><br>CLAS 222 (Sec 001) conflicts with LATN 301 (Sec 001)<br><br>CLAS 281 (Sec 001) conflicts with RELG 319 (Sec 001)<br><br>CLAS 286 (Sec 001) conflicts with RELG 288 (Sec 001), and RELG 350 (Sec 001)<br><br>GREK 301 (Sec 001) conflicts with CLAS 311 (Sec 001)<br><br>RELG 108 (Sec 001) conflicts with CLAS 317 (Sec 001)<br><br>RELG 150 (Sec 001) conflicts with CLAS 311 (Sec 001), and GREK 301 (Sec 001)<br><br>RELG 217 (Sec 001) conflicts with CLAS 317 (Sec 001), and RELG 108 (Sec 001)<br><br>RELG 350 (Sec 001) conflicts with RELG 288 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Spring 2023 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180<br> CLAS 183</td>
+                    <td class="table-border-custom border-r">GREK 151</td>
+                    <td class="table-border-custom border-r">LATN 102</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 241<br> CLAS 245<br> CLAS 282</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 201<br> RELG 219<br> RELG 220</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 307<br> CLAS 309<br> CLAS 321</td>
+                    <td class="table-border-custom border-r">GREK 302<br> GREK 396</td>
+                    <td class="table-border-custom border-r">LATN 350<br> LATN 396</td>
+                    <td class="table-border-custom">RELG 306<br> RELG 307<br> RELG 309<br> RELG 342</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 401</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 241 (Sec 001) conflicts with CLAS 180 (Sec 001), CLAS 307 (Sec 001), RELG 108 (Sec 001), and RELG 307 (Sec 001)<br><br>CLAS 282 (Sec 001) conflicts with LATN 350 (Sec 001)<br><br>CLAS 307 (Sec 001) conflicts with CLAS 180 (Sec 001)<br><br>CLAS 309 (Sec 001) conflicts with CLAS 401 (Sec 001), and RELG 401 (Sec 001)<br><br>CLAS 321 (Sec 001) conflicts with CLAS 180 (Sec 001), CLAS 241 (Sec 001), CLAS 307 (Sec 001), RELG 108 (Sec 001), and RELG 307 (Sec 001)<br><br>GREK 302 (Sec 001) conflicts with GREK 151 (Sec 001), and RELG 220 (Sec 001)<br><br>LATN 102 (Sec 001) conflicts with CLAS 245 (Sec 001)<br><br>RELG 108 (Sec 001) conflicts with CLAS 180 (Sec 001), CLAS 307 (Sec 001), and RELG 307 (Sec 001)<br><br>RELG 220 (Sec 001) conflicts with GREK 151 (Sec 001)<br><br>RELG 307 (Sec 001) conflicts with CLAS 180 (Sec 001)<br><br>RELG 309 (Sec 001) conflicts with CLAS 401 (Sec 001), and RELG 401 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Fall 2023 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 101</td>
+                    <td class="table-border-custom border-r">LATN 101</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 134<br> RELG 150<br> RELG 180<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 252<br> CLAS 281</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 216<br> RELG 217<br> RELG 218<br> RELG 288</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 307<br> CLAS 312<br> CLAS 317</td>
+                    <td class="table-border-custom border-r">GREK 301</td>
+                    <td class="table-border-custom border-r">LATN 301</td>
+                    <td class="table-border-custom">RELG 307<br> RELG 312<br> RELG 350</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 412</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom"></td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 312 (Sec 001) conflicts with CLAS 412 (Sec 001)<br><br>CLAS 317 (Sec 001) conflicts with CLAS 141 (Sec 001), and RELG 108 (Sec 001)<br><br>GREK 301 (Sec 001) conflicts with GREK 101 (Sec 001), and RELG 217 (Sec 001)<br><br>LATN 301 (Sec 001) conflicts with LATN 101 (Sec 001), and RELG 218 (Sec 001)<br><br>RELG 108 (Sec 001) conflicts with CLAS 141 (Sec 001)<br><br>RELG 134 (Sec 001) conflicts with GREK 101 (Sec 001), GREK 301 (Sec 001), and RELG 217 (Sec 001)<br><br>RELG 150 (Sec 001) conflicts with GREK 101 (Sec 001), GREK 301 (Sec 001), RELG 134 (Sec 001), and RELG 217 (Sec 001)<br><br>RELG 216 (Sec 001) conflicts with RELG 288 (Sec 001), and RELG 350 (Sec 001)<br><br>RELG 217 (Sec 001) conflicts with GREK 101 (Sec 001)<br><br>RELG 218 (Sec 001) conflicts with LATN 101 (Sec 001)<br><br>RELG 312 (Sec 001) conflicts with CLAS 412 (Sec 001)<br><br>RELG 350 (Sec 001) conflicts with RELG 288 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Spring 2024 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 102</td>
+                    <td class="table-border-custom border-r">LATN 102</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 209<br> CLAS 282</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 219<br> RELG 227</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 309<br> CLAS 331</td>
+                    <td class="table-border-custom border-r">GREK 302</td>
+                    <td class="table-border-custom border-r">LATN 302</td>
+                    <td class="table-border-custom">RELG 306<br> RELG 309<br> RELG 319<br> RELG 331<br> RELG 340<br> RELG 381</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401<br> CLAS 499</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 401</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 180 (Sec 001) conflicts with LATN 102 (Sec 001), and RELG 227 (Sec 001)<br><br>CLAS 331 (Sec 001) conflicts with RELG 306 (Sec 001)<br><br>GREK 102 (Sec 001) conflicts with CLAS 282 (Sec 001)<br><br>GREK 302 (Sec 001) conflicts with RELG 381 (Sec 001)<br><br>LATN 302 (Sec 001) conflicts with RELG 108 (Sec 001)<br><br>RELG 150 (Sec 001) conflicts with CLAS 309 (Sec 001), and RELG 309 (Sec 001)<br><br>RELG 227 (Sec 001) conflicts with LATN 102 (Sec 001)<br><br>RELG 319 (Sec 001) conflicts with CLAS 282 (Sec 001), and GREK 102 (Sec 001)<br><br>RELG 331 (Sec 001) conflicts with RELG 306 (Sec 001)<br><br>RELG 340 (Sec 001) conflicts with RELG 181 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Fall 2024 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 101</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 252</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 205<br> RELG 218<br> RELG 288</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 307<br> CLAS 314<br> CLAS 317</td>
+                    <td class="table-border-custom border-r">GREK 301</td>
+                    <td class="table-border-custom border-r">LATN 301<br> LATN 396</td>
+                    <td class="table-border-custom">RELG 307</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom"></td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 141 (Sec 001) conflicts with CLAS 317 (Sec 001), and RELG 150 (Sec 001)<br><br>CLAS 317 (Sec 001) conflicts with RELG 150 (Sec 001)<br><br>GREK 301 (Sec 001) conflicts with CLAS 314 (Sec 001), RELG 108 (Sec 001), and RELG 205 (Sec 001)<br><br>RELG 108 (Sec 001) conflicts with CLAS 314 (Sec 001)<br><br>RELG 205 (Sec 001) conflicts with CLAS 314 (Sec 001), and RELG 108 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Spring 2025 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 180</td>
+                    <td class="table-border-custom border-r">GREK 151</td>
+                    <td class="table-border-custom border-r">LATN 102</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 210<br> CLAS 281<br> CLAS 282</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 220</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 307<br> CLAS 309<br> CLAS 321</td>
+                    <td class="table-border-custom border-r">GREK 302</td>
+                    <td class="table-border-custom border-r">LATN 302</td>
+                    <td class="table-border-custom">RELG 307<br> RELG 309<br> RELG 319<br> RELG 342<br> RELG 381</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r">CLAS 401<br> CLAS 417</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 401</td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 281 (Sec 001) conflicts with CLAS 417 (Sec 001), RELG 181 (Sec 001), and RELG 381 (Sec 001)<br><br>CLAS 282 (Sec 001) conflicts with CLAS 309 (Sec 001), and RELG 309 (Sec 001)<br><br>CLAS 307 (Sec 001) conflicts with GREK 151 (Sec 001), and RELG 150 (Sec 001)<br><br>CLAS 321 (Sec 001) conflicts with RELG 108 (Sec 001)<br><br>CLAS 401 (Sec 001) conflicts with LATN 102 (Sec 001), and RELG 319 (Sec 001)<br><br>CLAS 417 (Sec 001) conflicts with RELG 381 (Sec 001)<br><br>GREK 151 (Sec 001) conflicts with RELG 150 (Sec 001)<br><br>GREK 302 (Sec 001) conflicts with CLAS 307 (Sec 001), GREK 151 (Sec 001), and RELG 150 (Sec 001)<br><br>LATN 102 (Sec 001) conflicts with RELG 319 (Sec 001)<br><br>LATN 302 (Sec 001) conflicts with CLAS 281 (Sec 001), CLAS 417 (Sec 001), and RELG 381 (Sec 001)<br><br>RELG 220 (Sec 001) conflicts with CLAS 321 (Sec 001), and RELG 108 (Sec 001)<br><br>RELG 307 (Sec 001) conflicts with GREK 151 (Sec 001), GREK 302 (Sec 001), and RELG 150 (Sec 001)<br><br>RELG 401 (Sec 001) conflicts with LATN 102 (Sec 001), and RELG 319 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-2xl p-6">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Fall 2025 Courses</h2>
+            
+            <!-- Course Levels Table (Main Data) -->
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full table-border-custom border-2">
+                    <thead>
+                        <tr>
+                            <th class="sticky left-0 bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">Level</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">CLAS</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">GREK</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider table-border-custom border-r">LATN</th>
+                            <th class="bg-[#006400] text-white font-semibold uppercase tracking-wider">RELG</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">100</td>
+                    <td class="table-border-custom border-r">CLAS 116<br> CLAS 141<br> CLAS 180</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 101</td>
+                    <td class="table-border-custom">RELG 108<br> RELG 150<br> RELG 180<br> RELG 181</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">200</td>
+                    <td class="table-border-custom border-r">CLAS 209<br> CLAS 245<br> CLAS 252</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom">RELG 218<br> RELG 225<br> RELG 288</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">300</td>
+                    <td class="table-border-custom border-r">CLAS 307<br> CLAS 311<br> CLAS 312<br> CLAS 317<br> CLAS 331</td>
+                    <td class="table-border-custom border-r">GREK 301</td>
+                    <td class="table-border-custom border-r">LATN 301</td>
+                    <td class="table-border-custom">RELG 307<br> RELG 312<br> RELG 331</td>
+                </tr>
+            
+                <tr class="hover:bg-gray-50 transition duration-150">
+                    <td class="font-bold table-border-custom border-r bg-gray-50">400</td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r"></td>
+                    <td class="table-border-custom border-r">LATN 491</td>
+                    <td class="table-border-custom"></td>
+                </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Conflict Details Section -->
+            
+            <details class="group border border-red-500 rounded-lg shadow-md mt-6">
+                <summary class="flex justify-between items-center cursor-pointer p-4 bg-red-50 text-red-700 font-semibold transition hover:bg-red-100">
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-red-600 group-open:rotate-90 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Click to view Explicit Schedule Conflicts
+                    </span>
+                    <svg class="w-5 h-5 text-red-600 group-open:rotate-180 transform transition duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+                <div class="p-4 bg-white text-sm">
+                    <p class="font-bold text-gray-700 border-b pb-2 mb-4">Combined Explicit Schedule Conflicts:</p>
+                    <div class="p-4 bg-red-50 rounded-md border-l-4 border-red-400">
+                        <p class="conflict-detail-text text-gray-800">CLAS 180 (Sec 001) conflicts with GREK 301 (Sec 001), and LATN 101 (Sec 001)<br><br>CLAS 245 (Sec 001) conflicts with CLAS 331 (Sec 001), RELG 108 (Sec 001), and RELG 331 (Sec 001)<br><br>CLAS 307 (Sec 001) conflicts with RELG 218 (Sec 001)<br><br>CLAS 311 (Sec 001) conflicts with RELG 225 (Sec 001)<br><br>CLAS 312 (Sec 001) conflicts with LATN 301 (Sec 001), and RELG 150 (Sec 001)<br><br>CLAS 331 (Sec 001) conflicts with RELG 108 (Sec 001)<br><br>LATN 101 (Sec 001) conflicts with GREK 301 (Sec 001)<br><br>LATN 301 (Sec 001) conflicts with RELG 150 (Sec 001)<br><br>LATN 491 (Sec 001) conflicts with RELG 288 (Sec 001)<br><br>RELG 181 (Sec 001) conflicts with CLAS 317 (Sec 001)<br><br>RELG 307 (Sec 001) conflicts with RELG 218 (Sec 001)<br><br>RELG 312 (Sec 001) conflicts with LATN 301 (Sec 001), and RELG 150 (Sec 001)<br><br>RELG 331 (Sec 001) conflicts with RELG 108 (Sec 001)</p>
+                    </div>
+                </div>
+            </details>
+            
+        </div>
+        
+        </div>
+    </div>
+
+
+</body></html>
