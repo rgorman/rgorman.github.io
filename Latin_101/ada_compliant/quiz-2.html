@@ -1,149 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Latin 101 Noun Patterns (Declensions)</title>
+        <title>Verb Paradigms: Present and Perfect Infinitives</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <style>
+            /* Custom styling based on user's preference and ADA model */
             table,
             th,
             td {
-                border: 1px solid #555555; /* Darker border color */
+                border: 1px solid #555555; /* Dark gray border */
+                border-collapse: collapse; /* Collapses the borders for a cleaner look */
             }
 
             th {
-                background-color: #006400; /* Darker green for higher contrast */
+                background-color: #006400; /* Dark green for high contrast */
                 color: white;
+                font-size: 1.1em; /* Increased font size for visibility */
+                padding: 10px; 
+                text-align: center;
+            }
+
+            td {
+                padding: 10px; /* Add padding to data cells */
+                text-align: center;
+            }
+
+            /* New styling for captions */
+            caption {
+                text-align: left;
+                font-size: 1.5em; /* Larger font size */
+                font-weight: bold; /* Bold text */
+                margin-bottom: 20px; /* Space below the caption */
+                /* Use the red color for the main title element */
+                color: #CC0000; 
+                padding: 10px 0;
             }
             
-            .focus {
-                background-color: #ffffcc; /* Light yellow background */
-                font-weight: bold; /* Bold text for emphasis */
+            /* Added margin to separate each table for readability */
+            table {
+                width: 100%;
+                max-width: 600px; /* Limit width on large screens */
+                margin: 20px auto 40px auto; /* Center table */
             }
 
-            .no_focus {
-                background-color: #f2f2f2; /* Light gray background */
-                font-style: italic; /* Italic text for less emphasis */
+            /* Custom class for the Latin verb forms: Large (200%) and Red */
+            .latin-verb-form-large-red {
+                color: #CC0000; /* Bright red color */
+                font-size: 200%; /* Very large font size */
+                font-weight: bold;
+                display: block; /* Ensures it takes up full cell space */
+            }
+            
+            /* Style for the row headers (e.g., "Pattern 1") */
+            .row-header {
+                font-weight: bold;
+                text-align: left;
+                padding-left: 15px;
+                white-space: nowrap;
             }
 
-            .hidden {
-                display: none; /* Hides the row completely */
+            /* Style for the separator row */
+            .separator-row td {
+                padding: 0;
+                border: none;
             }
-
-            .latin-text {
-                color: black;
-                font-size: 150%;
-                font-family: serif;
+            .separator {
+                border-color: #555555;
+                margin: 0;
             }
         </style>
     </head>
     <body>
-        <table style="width:100%">
-            <caption>Latin Noun Patterns (Declensions) - Part 1</caption>
+        
+        <!-- Table 1: Present Infinitive (Regular) -->
+        <table border="1">
+            <caption>Present Infinitive - Regular Verbs</caption>
             <thead>
                 <tr>
-                    <td></td>
-                    <th scope="col">1st Decl.</th>
-                    <th scope="col">2nd Decl.</th>
-                    <th scope="col">2nd Neuter Decl.</th>
-                    <th scope="col">3c. Decl.</th>
-                    <th scope="col">3c. Neuter Decl.</th>
+                    <th scope="col" style="width: 40%;">Conjugation</th>
+                    <th scope="col">Active</th>
+                    <th scope="col">Passive</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="no_focus">
-                    <th scope="row">ID Criterion (ABL Sing)</th>
-                    <td>-ā</td>
-                    <td>-ō</td>
-                    <td>-ō</td>
-                    <td>-e</td>
-                    <td>-e</td>
+                <tr>
+                    <td class="row-header">Pattern 1 (laudō)</td>
+                    <td><span class="latin-verb-form-large-red">laudāre</span></td>
+                    <td><span class="latin-verb-form-large-red">laudārī</span></td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Nom Sing</th>
-                    <td><span class="latin-text">silva</span></td>
-                    <td><span class="latin-text">hortus</span></td>
-                    <td><span class="latin-text">bellum</span></td>
-                    <td><span class="latin-text">cōnsul</span></td>
-                    <td><span class="latin-text">corpus</span></td>
+                <tr>
+                    <td class="row-header">Pattern 2 (moneō)</td>
+                    <td><span class="latin-verb-form-large-red">monēre</span></td>
+                    <td><span class="latin-verb-form-large-red">monērī</span></td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Gen Sing</th>
-                    <td><strong class="latin-text">silvae</strong></td>
-                    <td><strong class="latin-text">hortī</strong></td>
-                    <td><strong class="latin-text">bellī</strong></td>
-                    <td><strong class="latin-text">cōnsulis</strong></td>
-                    <td><strong class="latin-text">corporis</strong></td>
+                <tr>
+                    <td class="row-header">Pattern 3 (agō)</td>
+                    <td><span class="latin-verb-form-large-red">agere</span></td>
+                    <td><span class="latin-verb-form-large-red">agī</span></td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Dat Sing</th>
-                    <td><span class="latin-text">silvae</span></td>
-                    <td><span class="latin-text">hortō</span></td>
-                    <td><span class="latin-text">bellō</span></td>
-                    <td><span class="latin-text">cōnsulī</span></td>
-                    <td><span class="latin-text">corporī</span></td>
+                <tr>
+                    <td class="row-header">Pattern 3i (capiō)</td>
+                    <td><span class="latin-verb-form-large-red">capere</span></td>
+                    <td><span class="latin-verb-form-large-red">capī</span></td>
                 </tr>
-                <tr class="hidden">
-                    <th scope="row">Acc Sing</th>
-                    <td><span class="latin-text">silvam</span></td>
-                    <td><span class="latin-text">hortum</span></td>
-                    <td><span class="latin-text">bellum</span></td>
-                    <td><span class="latin-text">cōnsulem</span></td>
-                    <td><span class="latin-text">corpus</span></td>
-                </tr>
-                <tr class="hidden">
-                    <th scope="row">Abl Sing</th>
-                    <td><span class="latin-text">silvā</span></td>
-                    <td><span class="latin-text">hortō</span></td>
-                    <td><span class="latin-text">bellō</span></td>
-                    <td><span class="latin-text">cōnsule</span></td>
-                    <td><span class="latin-text">corpore</span></td>
-                </tr>
-                <tr><td colspan="6"><hr style="border-color: #555555;"/></td></tr>
-                <tr class="focus">
-                    <th scope="row">Nom Plur</th>
-                    <td><span class="latin-text">silvae</span></td>
-                    <td><span class="latin-text">hortī</span></td>
-                    <td><span class="latin-text">bella</span></td>
-                    <td><span class="latin-text">cōnsulēs</span></td>
-                    <td><span class="latin-text">corpora</span></td>
-                </tr>
-                <tr class="focus">
-                    <th scope="row">Gen Plur</th>
-                    <td><span class="latin-text">silvārum</span></td>
-                    <td><span class="latin-text">hortōrum</span></td>
-                    <td><span class="latin-text">bellōrum</span></td>
-                    <td><span class="latin-text">cōnsulum</span></td>
-                    <td><span class="latin-text">corporum</span></td>
-                </tr>
-                <tr class="hidden">
-                    <th scope="row">Dat Plur</th>
-                    <td><span class="latin-text">silvīs</span></td>
-                    <td><span class="latin-text">hortīs</span></td>
-                    <td><span class="latin-text">bellīs</span></td>
-                    <td><span class="latin-text">cōnsulibus</span></td>
-                    <td><span class="latin-text">corporibus</span></td>
-                </tr>
-                <tr class="hidden">
-                    <th scope="row">Acc Plur</th>
-                    <td><span class="latin-text">silvās</span></td>
-                    <td><span class="latin-text">hortōs</span></td>
-                    <td><span class="latin-text">bella</span></td>
-                    <td><span class="latin-text">cōnsulēs</span></td>
-                    <td><span class="latin-text">corpora</span></td>
-                </tr>
-                <tr class="hidden">
-                    <th scope="row">Abl Plur</th>
-                    <td><span class="latin-text">silvīs</span></td>
-                    <td><span class="latin-text">hortīs</span></td>
-                    <td><span class="latin-text">bellīs</span></td>
-                    <td><span class="latin-text">cōnsulibus</span></td>
-                    <td><span class="latin-text">corporibus</span></td>
+                <tr>
+                    <td class="row-header">Pattern 4 (audiō)</td>
+                    <td><span class="latin-verb-form-large-red">audīre</span></td>
+                    <td><span class="latin-verb-form-large-red">audīrī</span></td>
                 </tr>
             </tbody>
         </table>
-        
-        <br/>
-        <br/>
-        <br/>
         
     </body>
 </html>
