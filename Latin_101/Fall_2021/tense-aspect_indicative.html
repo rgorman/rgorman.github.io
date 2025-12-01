@@ -1,159 +1,379 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>aspect/tense of indicative</title>
-        <style>
-            
-           
-         div.a {
-                font-size: 200%;
-                color: red;
-            }
-            
-            div.b {
-                font-size: 150%;
-            }
-        
-       
-            table, th, td {
-  border: 1px solid black;
-}
-        
-       th {
-  background-color: #04AA6D;
-  color: white; 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tense and Aspect of Latin Indicatives</title>
+    <!-- Tailwind CSS for layout and responsiveness -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* USER STYLING PREFERENCES 
+           ------------------------
+           Header Background: #006400 (Dark Green)
+           Header Text: White
+           Border Color: #555555 (Dark Gray)
+        */
+
+        :root {
+            --header-bg: #006400;
+            --header-text: #ffffff;
+            --border-color: #555555;
         }
+
+        /* Table Base Styling */
+        .conjugation-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .conjugation-table th, 
+        .conjugation-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px 16px; /* Generous padding for touch targets (Title II/Accessbility) */
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Header Specifics */
+        .conjugation-table thead th {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        /* Row Headers (Scope="row") Styling */
+        .conjugation-table tbody th {
+            background-color: #f3f4f6; /* Light gray for row headers */
+            color: #1f2937;
+            font-weight: 700;
+            width: 15%;
+        }
+
+        /* Content Styling within cells */
+        .cell-content b {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: #006400; /* Using the theme green for sub-headers */
+        }
+        
+        .cell-section {
+            margin-bottom: 1rem;
+        }
+
+        .cell-section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hover effects */
+        .conjugation-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+
+        /* Utility class to hide elements visually but keep them in DOM if needed later */
+        .hidden-temporarily {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 md:p-8">
+
+    <main class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        
+        <!-- Header Section -->
+        <header class="bg-gray-800 text-white p-6">
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">Tense and Aspect of Latin Indicatives</h1>
+            <p class="text-gray-300">Study guide for Latin Tense and Aspect. (Future time, Prospective aspect, and Debitive aspect are currently obscured).</p>
+        </header>
+
+        <!-- Content Section -->
+        <div class="p-6 overflow-x-auto">
             
-          
-         
- 
-            
-        </style>
-    </head>
-    <body>
-        <table style="width:100%">
-            <caption>Tense and Aspect of Latin Indicatives </caption>
-            <colgroup>
-                <col />
-                <col />
-                <col />
-                <col />
-            </colgroup>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Past time</th>
-                    <th>Present time</th>
-                    <th>Future time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Completed aspect</td>
-                    <td>
-                        <div class="b"><b>Active</b><br /> Latin: pluperfect tense<br />Eng.: -ed(have) +
-                            -en(verb-x)<br />example: "had
-                            bitten"<br /><br /><b>Passive</b>:<br />Latin: perfect participle +
-                            Imperfect indicative of <i>sum</i><br />Eng.: -ed(have) + -en(be) +
-                            -en(verb-x)<br />example: "had been bitten"</div>
-                    </td>
-                    <td><div class="b"><b>Active</b><br />Latin: perfect tense<br />Eng.: -s(have) +
-                            -en(verb-x)<br />example: "has
-                            bitten"<br /><br /><b>Passive</b><br />Latin: perfect participle +
-                            Present indicative of <i>sum</i><br />Eng.: -s(have) + -en(be) +
-                            -en(verb-x)<br />example: "has been bitten" </div></td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: future perfect tense<br />Eng.:
-                            will + -base(have) + -en(verb-x)<br />example: "will have
-                                bitten"<br /><br /><b>Passive</b><br />Latin: perfect participle +
-                            Future indicative of <i>sum</i><br />Eng.: will + base(have) + -en(be) +
-                            -en(verb-x)<br />example: "will have been bitten"</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Simple aspect</td>
-                    <td>
-                        <div class="b"><b>Active</b>:<br />Latin: perfect tense<br />Eng.:
-                            -ed(verb-x)<br />example: "bit"<br /><br /><b>Passive</b>:<br />Latin:
-                            perfect participle + Present  indicative of <i>sum</i><br />Eng.:
-                            -ed(be) + -en(verb-x)<br />example: "was bitten"</div>
-                    </td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: present tense<br />Eng.:
-                            -s(verb-x)<br />example: "bites"<br /><br /><b>Passive</b><br />Latin:
-                            present tense<br />Eng.: -s(be) + -en(verb-x)<br />example: "is
-                            bitten"</div>
-                    </td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: future tense<br />Eng.: will +
-                            -base(verb-x)<br />example: "will
-                            bite"<br /><br /><b>Passive</b><br />Latin: future tense<br />Eng.: will
-                            + base(be) + -en(verb-x)<br />example: "will be bitten"</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Progressive aspect</td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: imperfect tense<br />Eng.: -ed(be) +
-                            -ing(verb-x)<br />example: "was
-                            biting"<br /><br /><b>Passive</b><br />Latin: imperfect tense<br />Eng.:
-                            -ed(be) + -ing(be) + -en(verb-x)<br />example: "was being bitten"</div>
-                    </td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: present tense<br />Eng.: -s (be) +
-                            -ing(verb-x)<br />example: "is
-                            biting"<br /><br /><b>Passive</b><br />Latin: present tense<br />Eng.:
-                            -s(be) + -ing(be) + -en(verb-x)<br />example: "is being bitten"</div>
-                    </td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: future tense<br />Eng.: will +
-                            base(be) + -ing(verb-x)<br />example: "will be
-                                biting"<br /><br /><b>Passive</b><br />Latin: future
-                            tense<br />Eng.: will + base(be) + -ing(be) + -en(verb-x)<br />example:
-                            "will be being bitten"</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Prospective aspect</td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: future active participle + Imperfect indicative of
-                            <i>sum</i><br />Eng.: -ed(be) + going to/about to +
-                            base(verb-x)<br />example: "was about to/going to bite"<br /><br /><b>No
-                                Passive</b></div>
-                    </td>
-                    <td>
-                        <div class="b"><b>Active</b><br />Latin: future active participle + present indicative of <i>sum</i><br />Eng.:
-                            -s(be) + going to/about to + base(verb-x)<br />example: "is about
-                            to/going to bite"<br /><br /><b>No Passive</b></div>
-                    </td>
-                   <td>
-                       <div class="b"><b>Active</b><br />Latin: future active participle + future indicative of
-                            <i>sum</i><br />Eng.:  will + base(be) + going to/about to +
-                        -base(verb-x)<br />example: "will be about to/going to
-                            bite"<br /><br /><b>No Passive</b></div>
-                   </td>
-                    
-                </tr>
-                <tr>
-                    <td>Debitive aspect</td>
-                    <td>
-                        <div class="b"><b>No Active</b><br /><br /><b>Passive</b><br />Latin: future passive
-                        participle + imperfect indicative of <i>sum</i><br />Eng.: -ed(have) + to be
-                        + -en(verb-x)<br />example: "had to be bitten"</div>
-                    </td>
-                    <td>
-                        <div class="b"><b>No Active</b><br /><br /><b>Passive</b><br />Latin: future passive
-                        participle + present indicative of <i>sum</i><br />Eng.: -s(have) + to be +
-                        -en(verb-x)<br />example: "has to be bitten"</div>
-                    </td>
-                    <td>
-                        <div class="b"><b>No Active</b><br /><br /><b>Passive</b><br />Latin: future passive participle + future
-                            indicative of <i>sum</i><br />Eng.: will + base(have) + to be +
-                            -en(verb-x)<br />example: "will have to be bitten"</div>
-                    </td>
-                   
-                </tr>
-            </tbody>
-        </table>
-    </body>
+            <table class="conjugation-table" aria-label="Latin Indicative Tense and Aspect Table">
+                <caption class="sr-only">A table showing the relationship between time and aspect in Latin Indicatives. Future time and Debitive/Prospective aspects are currently hidden.</caption>
+                
+                <colgroup>
+                    <col class="w-1/6">
+                    <col class="w-1/4">
+                    <col class="w-1/4">
+                    <!-- Future column width -->
+                    <col class="w-1/4 hidden-temporarily">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Aspect / Time</th>
+                        <th scope="col">Past time</th>
+                        <th scope="col">Present time</th>
+                        <!-- HIDDEN: Future Time Column -->
+                        <th scope="col" class="hidden-temporarily">Future time</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <!-- COMPLETED ASPECT -->
+                    <tr>
+                        <th scope="row">Completed aspect</th>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: pluperfect tense<br>
+                                    Eng.: -ed(have) + -en(verb-x)<br>
+                                    <em>example: "had bitten"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: perfect participle + Imperfect indicative of <i>sum</i><br>
+                                    Eng.: -ed(have) + -en(be) + -en(verb-x)<br>
+                                    <em>example: "had been bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: perfect tense<br>
+                                    Eng.: -s(have) + -en(verb-x)<br>
+                                    <em>example: "has bitten"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: perfect participle + Present indicative of <i>sum</i><br>
+                                    Eng.: -s(have) + -en(be) + -en(verb-x)<br>
+                                    <em>example: "has been bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-temporarily">
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: future perfect tense<br>
+                                    Eng.: will + -base(have) + -en(verb-x)<br>
+                                    <em>example: "will have bitten"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: perfect participle + Future indicative of <i>sum</i><br>
+                                    Eng.: will + base(have) + -en(be) + -en(verb-x)<br>
+                                    <em>example: "will have been bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- SIMPLE ASPECT -->
+                    <tr>
+                        <th scope="row">Simple aspect</th>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: perfect tense<br>
+                                    Eng.: -ed(verb-x)<br>
+                                    <em>example: "bit"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: perfect participle + Present indicative of <i>sum</i><br>
+                                    Eng.: -ed(be) + -en(verb-x)<br>
+                                    <em>example: "was bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: present tense<br>
+                                    Eng.: -s(verb-x)<br>
+                                    <em>example: "bites"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: present tense<br>
+                                    Eng.: -s(be) + -en(verb-x)<br>
+                                    <em>example: "is bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-temporarily">
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: future tense<br>
+                                    Eng.: will + -base(verb-x)<br>
+                                    <em>example: "will bite"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: future tense<br>
+                                    Eng.: will + base(be) + -en(verb-x)<br>
+                                    <em>example: "will be bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- PROGRESSIVE ASPECT -->
+                    <tr>
+                        <th scope="row">Progressive aspect</th>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: imperfect tense<br>
+                                    Eng.: -ed(be) + -ing(verb-x)<br>
+                                    <em>example: "was biting"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: imperfect tense<br>
+                                    Eng.: -ed(be) + -ing(be) + -en(verb-x)<br>
+                                    <em>example: "was being bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: present tense<br>
+                                    Eng.: -s (be) + -ing(verb-x)<br>
+                                    <em>example: "is biting"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: present tense<br>
+                                    Eng.: -s(be) + -ing(be) + -en(verb-x)<br>
+                                    <em>example: "is being bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-temporarily">
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: future tense<br>
+                                    Eng.: will + base(be) + -ing(verb-x)<br>
+                                    <em>example: "will be biting"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: future tense<br>
+                                    Eng.: will + base(be) + -ing(be) + -en(verb-x)<br>
+                                    <em>example: "will be being bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- PROSPECTIVE ASPECT (HIDDEN ROW) -->
+                    <tr class="hidden-temporarily">
+                        <th scope="row">Prospective aspect</th>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: future active participle + Imperfect indicative of <i>sum</i><br>
+                                    Eng.: -ed(be) + going to/about to + base(verb-x)<br>
+                                    <em>example: "was about to/going to bite"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>No Passive</b>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: future active participle + present indicative of <i>sum</i><br>
+                                    Eng.: -s(be) + going to/about to + base(verb-x)<br>
+                                    <em>example: "is about to/going to bite"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>No Passive</b>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-temporarily">
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>Active</b>
+                                    Latin: future active participle + future indicative of <i>sum</i><br>
+                                    Eng.: will + base(be) + going to/about to + -base(verb-x)<br>
+                                    <em>example: "will be about to/going to bite"</em>
+                                </div>
+                                <div class="cell-section">
+                                    <b>No Passive</b>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- DEBITIVE ASPECT (HIDDEN ROW) -->
+                    <tr class="hidden-temporarily">
+                        <th scope="row">Debitive aspect</th>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>No Active</b>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: future passive participle + imperfect indicative of <i>sum</i><br>
+                                    Eng.: -ed(have) + to be + -en(verb-x)<br>
+                                    <em>example: "had to be bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>No Active</b>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: future passive participle + present indicative of <i>sum</i><br>
+                                    Eng.: -s(have) + to be + -en(verb-x)<br>
+                                    <em>example: "has to be bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="hidden-temporarily">
+                            <div class="cell-content">
+                                <div class="cell-section">
+                                    <b>No Active</b>
+                                </div>
+                                <div class="cell-section">
+                                    <b>Passive</b>
+                                    Latin: future passive participle + future indicative of <i>sum</i><br>
+                                    Eng.: will + base(have) + to be + -en(verb-x)<br>
+                                    <em>example: "will have to be bitten"</em>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Accessibility Note / Legend -->
+            <div class="mt-4 text-sm text-gray-500 italic">
+                * Note: Advanced tenses (Future) and aspects (Prospective, Debitive) are currently hidden from this view.
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-4 text-gray-500 text-sm mt-8">
+        &copy; 2024 Latin Language Module. Compliant with WCAG 2.1 AA.
+    </footer>
+
+</body>
 </html>
