@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin Morphology Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        h1, h2, .latin-text {
+            font-family: 'Noto Serif', serif;
+        }
+
+        /* Custom Table Styling per User Request */
+        .morph-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .morph-table th {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #555555;
+        }
+
+        .morph-table td {
+            padding: 10px 15px;
+            border: 1px solid #555555; /* Dark Gray Border */
+            color: #1f2937;
+            vertical-align: top;
+        }
+
+        .morph-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .morph-table tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        /* Loading Spinner */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #006400;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Debug Area */
+        .debug-box {
+            background-color: #1a202c;
+            color: #00ff00;
+            font-family: monospace;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            max-height: 200px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            display: none;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Latin Morphology Analyzer</h1>
+            <p class="text-gray-600">Enter Latin text below to retrieve morphological data from Perseids or Alpheios.</p>
+        </header>
+
+        <!-- Controls Section -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Latin Text Input</label>
+                    <textarea id="latinInput" rows="4" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-700 focus:outline-none latin-text text-lg" placeholder="e.g., Arma virumque cano..."></textarea>
+                    <p class="text-xs text-gray-500 mt-1">Tip: If "Perseids" fails, try switching the engine to "Alpheios".</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">API Engine</label>
+                    <select id="apiEngine" class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:ring-2 focus:ring-green-700 focus:outline-none">
+                        <option value="alpheios">Alpheios (Whitaker's Words)</option>
+                        <option value="perseids">Perseids (Morpheus)</option>
+                    </select>
+                    
+                    <div class="mt-6">
+                        <button onclick="processText()" id="analyzeBtn" class="w-full bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-4 rounded transition duration-200 shadow">
+                            Analyze Text
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="statusArea" class="hidden items-center text-sm font-semibold text-green-800 mt-2">
+                <span id="statusText">Processing...</span>
+                <div class="loader"></div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsContainer" class="bg-white p-6 rounded-lg shadow-md hidden">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Analysis Results</h2>
+                <div class="flex gap-4">
+                    <button onclick="toggleDebug()" class="text-sm text-gray-600 hover:text-gray-800 underline">Toggle Debug Logs</button>
+                    <button onclick="clearResults()" class="text-sm text-red-600 hover:text-red-800 underline">Clear Results</button>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="morph-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%">Word</th>
+                            <th style="width: 15%">Lemma (Root)</th>
+                            <th style="width: 15%">Part of Speech</th>
+                            <th style="width: 40%">Morphology (Case, Number, Gender, Tense, Mood)</th>
+                            <th style="width: 15%">Parse Source</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- Rows will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration for the APIs
+        const APIS = {
+            perseids: {
+                url: "https://morph.perseids.org/analysis/word",
+                params: (word) => `?lang=lat&engine=morpheuslat&word=${encodeURIComponent(word)}`
+            },
+            alpheios: {
+                url: "https://morph.alpheios.net/api/v1/analysis/word",
+                params: (word) => `?word=${encodeURIComponent(word)}&engine=whitakerLat&lang=lat&clientId=latin-morph-app-v1`
+            }
+        };
+
+        const parser = new DOMParser();
+
+        async function processText() {
+            const input = document.getElementById('latinInput').value;
+            const engineKey = document.getElementById('apiEngine').value;
+            const resultsContainer = document.getElementById('resultsContainer');
+            const resultsBody = document.getElementById('resultsBody');
+            const statusArea = document.getElementById('statusArea');
+            const statusText = document.getElementById('statusText');
+            const btn = document.getElementById('analyzeBtn');
+
+            if (!input.trim()) {
+                alert("Please enter some Latin text.");
+                return;
+            }
+
+            // Reset UI
+            resultsBody.innerHTML = '';
+            resultsContainer.classList.remove('hidden');
+            statusArea.classList.remove('hidden');
+            statusArea.classList.add('flex');
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // Split text into words, removing punctuation
+            // 1. Lowercase inputs (APIs are often strict)
+            // 2. Remove punctuation
+            const rawWords = input.split(/\s+/);
+            const wordsToProcess = rawWords
+                .map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'«»]/g, "").trim())
+                .filter(w => w.length > 0);
+
+            let processedCount = 0;
+
+            // Process words sequentially
+            for (const word of wordsToProcess) {
+                const lowerWord = word.toLowerCase(); // Enforce lowercase for better hit rate
+                statusText.innerText = `Analyzing: ${word} (${processedCount + 1}/${wordsToProcess.length})`;
+                
+                try {
+                    const { analyses, rawXml } = await fetchMorphology(lowerWord, engineKey);
+                    displayResult(word, analyses, rawXml, engineKey);
+                } catch (error) {
+                    console.error(error);
+                    displayError(word, error.message, null);
+                }
+
+                processedCount++;
+                await new Promise(r => setTimeout(r, 200)); 
+            }
+
+            statusText.innerText = "Complete!";
+            setTimeout(() => {
+                statusArea.classList.add('hidden');
+                btn.disabled = false;
+                btn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }, 1000);
+        }
+
+        async function fetchMorphology(word, engineKey) {
+            const apiConfig = APIS[engineKey];
+            const url = apiConfig.url + apiConfig.params(word);
+
+            // UPDATED: Added headers to explicitly request XML
+            const response = await fetch(url, { 
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/xml, text/xml'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const str = await response.text();
+            
+            // Log raw response for debugging
+            console.log(`Response for ${word}:`, str);
+
+            if (!str || str.trim().length === 0) {
+                throw new Error("Received empty response from API");
+            }
+
+            // FALLBACK: Check if response is JSON (starts with { or [)
+            if (str.trim().startsWith('{') || str.trim().startsWith('[')) {
+                return {
+                    analyses: parseJSON(str),
+                    rawXml: "Received JSON format: " + str // Store JSON in debug slot
+                };
+            }
+
+            // Otherwise, attempt XML parsing
+            const xmlDoc = parser.parseFromString(str, "text/xml");
+            
+            // Check for XML parsing errors
+            const parseError = xmlDoc.querySelector('parsererror');
+            if (parseError) {
+                // If XML failed, provide a hint about what we received
+                const snippet = str.substring(0, 50).replace(/</g, "&lt;");
+                throw new Error(`XML Parsing failed. Received: "${snippet}..."`);
+            }
+
+            return { 
+                analyses: parseXML(xmlDoc), 
+                rawXml: str 
+            };
+        }
+
+        // New JSON Parser for fallback (Basic Alpheios/RDF mapping)
+        function parseJSON(jsonStr) {
+            try {
+                const data = JSON.parse(jsonStr);
+                // Very basic handling for JSON structure if it matches simple Alpheios wrapper
+                // Adapting to flattened structure similar to XML logic
+                
+                // If it's the newer Alpheios API JSON, it might be complex. 
+                // We'll try to find "RDF" or "entry" or just return raw dump if structure is unknown.
+                // For now, let's treat it as a generic object dump if we can't map it perfectly.
+                
+                // Note: Without exact JSON schema documentation for this endpoint, 
+                // this is a best-effort mapping.
+                
+                let entries = [];
+                
+                // Try to find a body or entries array
+                // Example: [ { "body": { ... } } ] or { "RDF": { ... } }
+                
+                // If we can't easily parse specific fields, we return a generic object
+                // asking user to check debug logs or relying on XML fix.
+                
+                return [{
+                    lemma: "JSON Response",
+                    pos: "See details",
+                    details: "The API returned JSON. Check Debug Logs for raw data."
+                }];
+                
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function parseXML(xmlDoc) {
+            const entries = xmlDoc.getElementsByTagName('entry');
+            const analyses = [];
+
+            if (entries.length === 0) {
+                return null; 
+            }
+
+            for (let i = 0; i < entries.length; i++) {
+                const entry = entries[i];
+                
+                // Extract Headword (Lemma)
+                let lemma = "Unknown";
+                const hdwd = entry.getElementsByTagName('hdwd')[0];
+                if (hdwd) lemma = hdwd.textContent;
+
+                // Extract Part of Speech
+                let pofs = "";
+                const pofsTag = entry.getElementsByTagName('pofs')[0];
+                if (pofsTag) pofs = pofsTag.textContent;
+
+                // Extract Inflection Data
+                const infl = entry.getElementsByTagName('infl')[0];
+                let morphDetails = [];
+
+                if (infl) {
+                    const tags = ['case', 'num', 'gend', 'pers', 'tense', 'mood', 'voice'];
+                    
+                    tags.forEach(tag => {
+                        const el = infl.getElementsByTagName(tag)[0];
+                        if (el && el.textContent) {
+                            const val = el.textContent;
+                            morphDetails.push(`${tag}: ${val}`);
+                        }
+                    });
+                }
+
+                analyses.push({
+                    lemma: lemma,
+                    pos: pofs,
+                    details: morphDetails.join(', ')
+                });
+            }
+
+            return analyses;
+        }
+
+        function displayResult(originalWord, data, rawXml, source) {
+            const tbody = document.getElementById('resultsBody');
+            const tr = document.createElement('tr');
+            
+            // Debug ID to toggle visibility
+            const debugId = `debug-${Math.random().toString(36).substr(2, 9)}`;
+
+            if (!data || data.length === 0) {
+                tr.innerHTML = `
+                    <td class="font-bold">${originalWord}</td>
+                    <td colspan="4">
+                        <span class="text-gray-500 italic">No morphology data found.</span>
+                        <div id="${debugId}" class="debug-box">${escapeHtml(rawXml || 'No XML Data')}</div>
+                    </td>
+                `;
+            } else {
+                let lemmaHTML = "";
+                let posHTML = "";
+                let morphHTML = "";
+
+                data.forEach((item, index) => {
+                    const separator = index < data.length - 1 ? '<hr class="my-2 border-gray-300">' : '';
+                    lemmaHTML += `<div class="mb-1"><strong>${item.lemma}</strong></div>${separator}`;
+                    posHTML += `<div class="mb-1">${item.pos}</div>${separator}`;
+                    morphHTML += `<div class="mb-1">${item.details}</div>${separator}`;
+                });
+
+                tr.innerHTML = `
+                    <td class="font-bold text-lg">
+                        ${originalWord}
+                        <div id="${debugId}" class="debug-box mt-2 font-normal text-xs">${escapeHtml(rawXml || '')}</div>
+                    </td>
+                    <td>${lemmaHTML}</td>
+                    <td>${posHTML}</td>
+                    <td>${morphHTML}</td>
+                    <td class="text-sm text-gray-500 capitalize">${source}</td>
+                `;
+            }
+
+            tbody.appendChild(tr);
+        }
+
+        function displayError(word, message, rawXml) {
+            const tbody = document.getElementById('resultsBody');
+            const tr = document.createElement('tr');
+            const debugId = `debug-${Math.random().toString(36).substr(2, 9)}`;
+            
+            tr.innerHTML = `
+                <td class="font-bold text-red-600">${word}</td>
+                <td colspan="4">
+                    <span class="text-red-500 italic">${message}</span>
+                    <div id="${debugId}" class="debug-box" style="display:block">${escapeHtml(rawXml || 'No raw data available.')}</div>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        }
+
+        function toggleDebug() {
+            const boxes = document.querySelectorAll('.debug-box');
+            boxes.forEach(box => {
+                box.style.display = box.style.display === 'block' ? 'none' : 'block';
+            });
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function clearResults() {
+            document.getElementById('resultsBody').innerHTML = '';
+            document.getElementById('resultsContainer').classList.add('hidden');
+            document.getElementById('latinInput').value = '';
+        }
+    </script>
+</body>
+</html>
