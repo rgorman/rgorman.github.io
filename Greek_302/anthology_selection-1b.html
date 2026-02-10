@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Meleager: Selected Love Poems</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+                window.AlpheiosEmbed.importDependencies({
+                    mode: 'cdn'
+                }).then(Embedded => {
+                    new Embedded({
+                        clientId: 'grekanthology-1'
+                    }).activate();
+                }).catch(e => {
+                    console.error(`Import of Alpheios embedded library dependencies failed: ${e}`)
+                })
+            }).catch(e => {
+                console.error(`Import of Alpheios Embedded library failed: ${e}`)
+            })
+        });
+    </script>
+
+    <style>
+        /* --- GENERAL PAGE STYLING --- */
+        body {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+            margin: 40px;
+            background-color: #fcfcfc;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c2c2c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        h2.section-header {
+            color: #006400; /* UNL Green */
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            border-left: 5px solid #006400;
+            padding-left: 15px;
+        }
+
+        p.instructions {
+            font-family: 'Segoe UI', sans-serif;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* --- POETRY STYLING --- */
+        .verse-line {
+            display: inline-block;
+        }
+        
+        .indent {
+            display: inline-block;
+            width: 2em; 
+        }
+
+        /* --- LAYOUT: FLEXBOX (Side-by-Side) --- */
+        .poem-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+            border-bottom: 1px solid #e0e0e0; 
+            padding-bottom: 30px;
+        }
+
+        .poem-container {
+            flex: 1 1 50%;
+            min-width: 300px;
+            font-size: 1.25rem;
+        }
+
+        .poem-container h3 {
+            margin-top: 0;
+            color: #006400;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 1.1rem;
+        }
+
+        /* --- COMMENTARY STYLING --- */
+        .notes-container {
+            flex: 1 1 50%;
+            border: 2px solid #333;
+            border-radius: 4px;
+            background-color: #fff;
+            padding: 0;             
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .notes-header {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 15px;
+            margin: 0;
+            font-family: 'Segoe UI', Verdana, sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .notes-body {
+            padding: 15px;
+            font-family: 'Segoe UI', Verdana, sans-serif;
+            color: #212121;
+            font-size: 1rem;
+        }
+        
+        .notes-body ul {
+            margin: 0;
+            padding-left: 1.2em;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            .poem-wrapper {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .poem-container, .notes-container {
+                width: 100%;
+                flex: none;
+            }
+            body {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meleager: Selected Love Poems</h1>
+    <p class="instructions">Double-click any word to view its morphology and definition.</p>
+    
+    <div class="alpheios-enabled" lang="grc">
+
+        <h2 class="section-header">The Zenophila Cycle</h2>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.139</h3>
+                <p>
+                    <span class="verse-line">ἁδὺ μέλος, ναὶ Πᾶνα τὸν Ἀρκάδα, πηκτίδι μέλπεις,</span><br/>
+                    <span class="indent"></span><span class="verse-line">Ζηνοφίλα, ναὶ Πᾶν᾽ , ἁδὺ κρέκεις τι μέλος.</span><br/>
+                    <span class="verse-line">ποῖ σε φύγω; πάντῃ με περιστείχουσιν Ἔρωτες,</span><br/>
+                    <span class="indent"></span><span class="verse-line">οὐδ᾽ ὅσον ἀμπνεῦσαι βαιὸν ἐῶσι χρόνον.</span><br/>
+                    <span class="verse-line">ἢ γάρ μοι μορφὰ βάλλει πόθον, ἢ πάλι μοῦσα,</span><br/>
+                    <span class="indent"></span><span class="verse-line">ἢ χάρις, ἢ τί λέγω; πάντα πυρὶ φλέγομαι.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-139">
+                <h2 id="notes-title-139" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li>ἁδὺ: = Doric form = Attic ἡδὺ</li>
+                        <li>ναὶ: exclamation/adverb ≈ "by Pan"</li>
+                        <li>Ζηνοφίλα: Doric = Attic Ζηνοφίλη</li>
+                        <li>φύγω: PRES SUBJ in main clause → "am I to flee/should I flee"</li>
+                        <li>Ἔρωτες: often thought to be attended by a swarm of "Cupids"</li>
+                        <li>μορφὰ: = μορφὴ</li>
+                        <li>μοῦσα: the poet praises Zenophila's learning and culture</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.140</h3>
+                <p>
+                    <span class="verse-line">Ἡδυμελεῖς Μοῦσαι σὺν πηκτίδι, καὶ Λόγος ἔμφρων</span><br/>
+                    <span class="indent"></span><span class="verse-line">σὺν Πειθοῖ, καὶ Ἔρως Κάλλος ὑφηνιοχῶν,</span><br/>
+                    <span class="verse-line">Ζηνοφίλα, σοὶ σκῆπτρα Πόθων ἀπένειμαν, ἐπεί σοι</span><br/>
+                    <span class="indent"></span><span class="verse-line">αἱ τρισσαὶ Χάριτες τρεῖς ἔδοσαν χάριτας.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-140">
+                <h2 id="notes-title-140" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li>Λόγος: personified as the god of Reason</li>
+                        <li>ἔμφρων: = "sensible/intelligent"</li>
+                        <li>ὑφηνιοχῶν: verb frame → SBJ(X) holds the reins of OBJ(Y)</li>
+                        <li>Κάλλος: "Beauty" personified as a god</li>
+                        <li>σκῆπτρα: ≈ "royal power," here in the realm of desire</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.144</h3>
+                <p>
+                    <span class="verse-line">ἤδη λευκόιον θάλλει, θάλλει δὲ φίλομβρος</span><br/>
+                    <span class="indent"></span><span class="verse-line">νάρκισσος, θάλλει δ᾽ οὐρεσίφοιτα κρίνα.</span><br/>
+                    <span class="verse-line">ἤδη δ᾽ ἡ φιλέραστος, ἐν ἄνθεσιν ὥριμον ἄνθος,</span><br/>
+                    <span class="indent"></span><span class="verse-line">Ζηνοφίλα Πειθοῦς ἡδὺ τέθηλε ῥόδον.</span><br/>
+                    <span class="verse-line">λειμῶνες, τί μάταια κόμαις ἔπι φαιδρὰ γελᾶτε;</span><br/>
+                    <span class="indent"></span><span class="verse-line">ἁ γὰρ παῖς κρέσσων ἁδυπνόων στεφάνων.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-144">
+                <h2 id="notes-title-144" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li>θάλλει, θάλλει: rhetorical technique known as anadiplosis</li>
+                        <li>οὐρεσίφοιτα: = "mountain-roaming"</li>
+                        <li>ῥόδον: secondary predication (= "has bloomed as a rose")</li>
+                        <li>λειμῶνες: address to inanimate objects is "apostrophe"</li>
+                        <li>ἁ: = Attic ἡ; κρέσσων: = Attic κρείττων</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.151</h3>
+                <p>
+                    <span class="verse-line">Ὀξυβόαι κώνωπες, ἀναιδέες, αἵματος ἀνδρῶν</span><br/>
+                    <span class="indent"></span><span class="verse-line">σίφωνες, νυκτὸς κνώδαλα διπτέρυγα,</span><br/>
+                    <span class="verse-line">βαιὸν Ζηνοφίλαν, λίτομαι, πάρεθ᾽ ἥσυχον ὕπνον</span><br/>
+                    <span class="indent"></span><span class="verse-line">εὕδειν, τἀμὰ δ᾽ ἰδοὺ σαρκοφαγεῖτε μέλη.</span><br/>
+                    <span class="verse-line">καίτοι πρὸς τί μάτην αὐδῶ; καὶ θῆρες ἄτεγκτοι</span><br/>
+                    <span class="indent"></span><span class="verse-line">τέρπονται τρυφερῷ χρωτὶ χλιαινόμενοι.</span><br/>
+                    <span class="verse-line">ἀλλ᾽ ἔτι νῦν προλέγω, κακὰ θρέμματα, λήγετε τόλμης,</span><br/>
+                    <span class="indent"></span><span class="verse-line">ἢ γνώσεσθε χερῶν ζηλοτύπων δύναμιν.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-151">
+                <h2 id="notes-title-151" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>κώνωπες</b>: = "mosquitos"</li>
+                        <li><b>κνώδαλα</b>: ≈ "monsters/gnawers"</li>
+                        <li><b>πάρεθ᾽</b>: imperative of παρίημι; = "let/allow"</li>
+                        <li><b>ὕπνον</b>: cognate accusative (sleep a sleep)</li>
+                        <li><b>σαρκοφαγεῖτε</b>: literally "to flesh-eat"</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.152</h3>
+                <p>
+                    <span class="verse-line">Πταίης μοι, κώνωψ, ταχὺς ἄγγελος, οὔασι δ᾽ ἄκροις</span><br/>
+                    <span class="indent"></span><span class="verse-line">Ζηνοφίλας ψαύσας προσψιθύριζε τάδε:</span><br/>
+                    <span class="verse-line">ἄγρυπνος μίμνει σε: σὺ δ᾽, ὦ λήθαργε φιλούντων,</span><br/>
+                    <span class="indent"></span><span class="verse-line">εὕδεις. εἶα, πέτευ; ναί, φιλόμουσε, πέτευ:</span><br/>
+                    <span class="verse-line">ἥσυχα δὲ φθέγξαι, μὴ καὶ σύγκοιτον ἐγείρας</span><br/>
+                    <span class="indent"></span><span class="verse-line">κινήσῃς ἐπ᾽ ἐμοὶ ζηλοτύπους ὀδύνας,</span><br/>
+                    <span class="verse-line">ἢν δ᾽ ἀγάγῃς τὴν παῖδα, δορᾷ στέψω σε λέοντος,</span><br/>
+                    <span class="indent"></span><span class="verse-line">κώνωψ, καὶ δώσω χειρὶ φέρειν ῥόπαλον.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-152">
+                <h2 id="notes-title-152" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>Πταίης</b>: optative → volitive</li>
+                        <li><b>ἄγρυπνος</b>: ≈ "insomniac"</li>
+                        <li><b>πέτευ</b>: Ionic form = Attic πέτου</li>
+                        <li><b>μὴ</b>: + subjunctive → purpose clause</li>
+                        <li><b>στέψω</b>: wreathe OBJ1 with OBJ2 (DAT)</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <h2 class="section-header">The Heliodora Cycle</h2>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.147</h3>
+                <p>
+                    <span class="verse-line">Πλέξω λευκόιον, πλέξω δ᾽ ἁπαλὴν ἅμα μύρτοις</span><br/>
+                    <span class="indent"></span><span class="verse-line">νάρκισσον, πλέξω καὶ τὰ γελῶντα κρίνα,</span><br/>
+                    <span class="verse-line">πλέξω καὶ κρόκον ἡδὺν· ἐπιπλέξω δ᾽ ὑάκινθον</span><br/>
+                    <span class="indent"></span><span class="verse-line">πορφυρέην, πλέξω καὶ φιλέραστα ῥόδα,</span><br/>
+                    <span class="verse-line">ὡς ἂν ἐπὶ κροτάφοις μυροβοστρύχου Ἡλιοδώρας</span><br/>
+                    <span class="indent"></span><span class="verse-line">εὐπλόκαμον χαίτην ἀνθοβολῇ στέφανος.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-147">
+                <h2 id="notes-title-147" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>Πλέξω</b>: repetition at start is anaphora</li>
+                        <li><b>γελῶντα</b>: a flower "laughing" (in bloom)</li>
+                        <li><b>κροτάφοις</b>: = "temples" of the head</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.155</h3>
+                <p>
+                    <span class="verse-line">ἐντὸς ἐμῆς κραδίης τὴν εὔλαλον Ἡλιοδώραν</span><br/>
+                    <span class="indent"></span><span class="verse-line">ψυχὴν τῆς ψυχῆς αὐτὸς ἔπλασσεν Ἔρως.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-155">
+                <h2 id="notes-title-155" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>ἐντὸς</b>: prep. + GEN = "within"</li>
+                        <li><b>ἔπλασσεν</b>: = "form/create"</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Poem 5.163</h3>
+                <p>
+                    <span class="verse-line">Ἀνθοδίαιτε μέλισσα, τί μοι χροὸς Ἡλιοδώρας</span><br/>
+                    <span class="indent"></span><span class="verse-line">ψαύεις, ἐκπρολιποῦσ᾽ εἰαρινὰς κάλυκας;</span><br/>
+                    <span class="verse-line">ἦ σύ γε μηνύεις ὅτι καὶ γλυκὺ καὶ δυσύποιστον,</span><br/>
+                    <span class="indent"></span><span class="verse-line">πικρὸν ἀεὶ κραδίᾳ, κέντρον Ἔρωτος ἔχει;</span><br/>
+                    <span class="verse-line">ναὶ δοκέω, τοῦτ᾽ εἶπας. ἰώ, φιλέραστε, παλίμπους</span><br/>
+                    <span class="indent"></span><span class="verse-line">στεῖχε: πάλαι τὴν σὴν οἴδαμεν ἀγγελίην.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-163">
+                <h2 id="notes-title-163" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>μοί</b>: dative of interest (my Heliodora)</li>
+                        <li><b>ψαύεις</b>: SBJ touches OBJ (GEN)</li>
+                        <li><b>παλίμπους</b>: VOC adj. "backtracking"; secondary predication</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <h2 class="section-header">Other Selections</h2>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Rufinus, 5.74</h3>
+                <p>
+                    <span class="verse-line">Πέμπω σοι, Ῥοδόκλεια, τόδε στέφος, ἄνθεσι καλοῖς</span><br/>
+                    <span class="indent"></span><span class="verse-line">αὐτὸς ὑφ’ ἡμετέραις πλεξάμενος παλάμαις.</span><br/>
+                    <span class="verse-line">ἔστι κρίνον, ῥοδέη τε κάλυξ, νοτερή τ’ ἀνεμώνη,</span><br/>
+                    <span class="indent"></span><span class="verse-line">καὶ νάρκισσος ὑγρός, καὶ κυαναυγὲς ἴον.</span><br/>
+                    <span class="verse-line">ταῦτα στεψαμένη, λῆξον μεγάλαυχος ἐοῦσα:</span><br/>
+                    <span class="indent"></span><span class="verse-line">ἀνθεῖς καὶ λήγεις καὶ σὺ καὶ ὁ στέφανος.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-ruf74">
+                <h2 id="notes-title-ruf74" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>ἄνθεσι</b>: DAT of instrument</li>
+                        <li><b>ὑφ’</b>: + DAT = "under/with one's hand"</li>
+                        <li><b>λῆξον</b>: SBJ ceases X-ing (participle)</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Agathias, 5.261</h3>
+                <p>
+                    <span class="verse-line">Εἰμὶ μὲν οὐ φιλόοινος· ὅταν δ’ ἐθέλῃς με μεθύσαι,</span><br/>
+                    <span class="indent"></span><span class="verse-line">πρῶτα σὺ γευομένη πρόσφερε, καὶ δέχομαι.</span><br/>
+                    <span class="verse-line">εἰ γὰρ ἐπιψαύσεις τοῖς χείλεσιν, οὐκέτι νήφειν</span><br/>
+                    <span class="indent"></span><span class="verse-line">εὔμαρες, οὐδὲ φυγεῖν τὸν γλυκὺν οινοχόον·</span><br/>
+                    <span class="verse-line">πορθμεύει γὰρ ἔμοιγε κύλιξ παρὰ σοῦ τὸ φίλημα,</span><br/>
+                    <span class="indent"></span><span class="verse-line">καί μοι ἀπαγγέλλει τὴν χάριν ἧς ἔλαβεν.</span>
+                </p>
+            </div>
+            <section class="notes-container" aria-labelledby="notes-title-aga261">
+                <h2 id="notes-title-aga261" class="notes-header">Commentary</h2>
+                <div class="notes-body">
+                    <ul>
+                        <li><b>ἐθέλῃς</b>: subjunctive → potential</li>
+                        <li><b>γευομένη</b>: middle = "take a taste"</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="poem-wrapper">
+            <div class="poem-container">
+                <h3>Plato (attrib.), 7.669 and 7.670</h3>
+                <p>
+                    <span class="verse-line">Ἀστέρας εἰσαθρεῖς Ἀστὴρ ἐμός· εἴθε γενοίμην</span><br/>
+                    <span class="indent"></span><span class="verse-line">οὐρανός, ὡς πολλοῖς ὄμμασιν εἰς σὲ βλέπω.</span><br/>
+                    <br/>
+                    <span class="verse-line">Ἀστὴρ πρὶν μὲν ἔλαμπες ἐνὶ ζωοῖσιν Ἑῷος,</span>
