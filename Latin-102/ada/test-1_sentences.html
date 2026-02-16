@@ -32,13 +32,11 @@
             border-bottom: 1px solid #f0f0f0;
         }
 
-        /* Title II Compliance: Focus states for keyboard navigation */
         ol li:focus-within {
             outline: 2px solid #003366;
             background-color: #f9f9f9;
         }
 
-        /* Ensure Alpheios data displays correctly as per your template [cite: 2] */
         .alpheios-morph-data__morphdata,
         .alpheios-inflections-list__inflections {
             display: block;
@@ -52,35 +50,35 @@
             
             <div class="alpheios-enabled" lang="lat">
                 <ol>
-                    <li>eō Caesar venit. [cite: 1]</li>
-                    <li>Tullia vēnit ad mē. [cite: 1]</li>
-                    <li>ē prōvinciā rediit. [cite: 1]</li>
-                    <li>ad urbem proficīscitur. [cite: 1]</li>
-                    <li>mīlitibus signum dedit. [cite: 1]</li>
-                    <li>equitātuī omnī praefuit. [cite: 1]</li>
-                    <li>Carthāginem īre iussī sunt. [cite: 1]</li>
-                    <li>Sīlius tē cum Clōdiō loquī vult. [cite: 1]</li>
-                    <li>Caesar sē in Galliam recēpit. [cite: 1]</li>
-                    <li>Hērodotus Rōmā revertitur. [cite: 1]</li>
-                    <li>Afrānius cōpiās ēdūcit. [cite: 1]</li>
-                    <li>equitēs flūmen trānseunt. [cite: 1]</li>
-                    <li>Caesar Labiēnum cum cohortibus sex subsidiō mittit. [cite: 1]</li>
-                    <li>Lūcius Plancus locum capit superiōrem. [cite: 1]</li>
-                    <li>magnus hōc bellō Themistoclēs fuit. [cite: 1]</li>
-                    <li>nostrī celeriter arma cēpērunt. [cite: 1]</li>
-                    <li>Rōmae posteā nōn fuistī. [cite: 1]</li>
-                    <li>fīlius ad mē nōn vēnerat. [cite: 1]</li>
-                    <li>Alexandrī fuerant amīcī. [cite: 1]</li>
-                    <li>pācis enim auctor erās. [cite: 1]</li>
-                    <li>multās iam prōvinciās occupāvit. [cite: 1]</li>
-                    <li>Rhodiīs nāvibus praeerat Euphrānor. [cite: 1]</li>
-                    <li>ipsī ad mē dēdūcuntur. [cite: 1]</li>
-                    <li>trēs lēgātī Athēnās missī sunt. [cite: 1]</li>
-                    <li>in urbe ā Catilīnā relictī sunt. [cite: 1]</li>
-                    <li>hōc tempore data est Eumenī Cappadocia. [cite: 1]</li>
-                    <li>haec ūna nāvis ā classe nostrā nōn captā est. [cite: 1]</li>
-                    <li>Pompeius eō proeliō imperātor est appellātus. [cite: 1]</li>
-                    <li>Vercingetorix minōribus Caesarem itineribus subsequitur. [cite: 1]</li>
+                    <li>eō Caesar venit.</li>
+                    <li>Tullia vēnit ad mē.</li>
+                    <li>ē prōvinciā rediit.</li>
+                    <li>ad urbem proficīscitur.</li>
+                    <li>mīlitibus signum dedit.</li>
+                    <li>equitātuī omnī praefuit.</li>
+                    <li>Carthāginem īre iussī sunt.</li>
+                    <li>Sīlius tē cum Clōdiō loquī vult.</li>
+                    <li>Caesar sē in Galliam recēpit.</li>
+                    <li>Hērodotus Rōmā revertitur.</li>
+                    <li>Afrānius cōpiās ēdūcit.</li>
+                    <li>equitēs flūmen trānseunt.</li>
+                    <li>Caesar Labiēnum cum cohortibus sex subsidiō mittit.</li>
+                    <li>Lūcius Plancus locum capit superiōrem.</li>
+                    <li>magnus hōc bellō Themistoclēs fuit.</li>
+                    <li>nostrī celeriter arma cēpērunt.</li>
+                    <li>Rōmae posteā nōn fuistī.</li>
+                    <li>fīlius ad mē nōn vēnerat.</li>
+                    <li>Alexandrī fuerant amīcī.</li>
+                    <li>pācis enim auctor erās.</li>
+                    <li>multās iam prōvinciās occupāvit.</li>
+                    <li>Rhodiīs nāvibus praeerat Euphrānor.</li>
+                    <li>ipsī ad mē dēdūcuntur.</li>
+                    <li>trēs lēgātī Athēnās missī sunt.</li>
+                    <li>in urbe ā Catilīnā relictī sunt.</li>
+                    <li>hōc tempore data est Eumenī Cappadocia.</li>
+                    <li>haec ūna nāvis ā classe nostrā nōn captā est.</li>
+                    <li>Pompeius eō proeliō imperātor est appellātus.</li>
+                    <li>Vercingetorix minōribus Caesarem itineribus subsequitur.</li>
                 </ol>
             </div>
         </main>
@@ -92,13 +90,13 @@
                     mode: 'cdn'
                 }).then(Embedded => {
                     new Embedded({
-                        clientId: 'latin-sentence-bank-2026-clean'
+                        clientId: 'latin-sentence-bank-2026'
                     }).activate();
                 }).catch(e => {
-                    console.error(`Import of Alpheios embedded library dependencies failed: ${e}`);
+                    console.error("Import of Alpheios dependencies failed:", e);
                 });
             }).catch(e => {
-                console.error(`Import of Alpheios Embedded library failed: ${e}`);
+                console.error("Import of Alpheios library failed:", e);
             });
         });
     </script>
