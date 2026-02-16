@@ -1,127 +1,105 @@
 <!DOCTYPE html>
 <html lang="la">
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Latin Sentence Bank - Accessible Edition</title>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+        <meta charset="UTF-8" />
+        <title>Latin Sentence Bank</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css" />
         
         <style>
-        :root {
-            --primary-color: #1a365d;
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --accent-bg: #f0f4f8;
-            --border-color: #cbd5e0;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 50rem;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #1a1a1a;
+            background-color: #ffffff;
         }
 
         h1 {
-            color: var(--primary-color);
-            font-size: 2.25rem;
-            border-bottom: 0.25rem solid var(--primary-color);
-            padding-bottom: 0.5rem;
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 10px;
         }
 
-        .instruction-box {
-            background: var(--accent-bg);
-            border-left: 0.5rem solid var(--primary-color);
-            padding: 1.25rem;
-            margin: 2rem 0;
+        .alpheios-enabled {
+            font-size: 1.4rem;
         }
 
-        .sentence-list {
-            padding-left: 2.5rem;
+        ol li {
+            margin-bottom: 15px;
+            padding: 5px;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .sentence-list li {
-            margin-bottom: 1.25rem;
-            font-size: 1.25rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
+        /* Title II Compliance: Focus states for keyboard navigation */
+        ol li:focus-within {
+            outline: 2px solid #003366;
+            background-color: #f9f9f9;
         }
 
-        /* Focus styles for keyboard navigation */
-        li:focus-within {
-            outline: 2px solid var(--primary-color);
-            background-color: var(--accent-bg);
-        }
-
-        @media (max-width: 600px) {
-            body { margin: 1rem auto; }
-            h1 { font-size: 1.75rem; }
+        /* Ensure Alpheios data displays correctly as per your template [cite: 2] */
+        .alpheios-morph-data__morphdata,
+        .alpheios-inflections-list__inflections {
+            display: block;
         }
     </style>
     </head>
     <body>
         
         <main>
-            <header>
-                <h1>Latin Sentence Analysis Bank</h1>
-            </header>
+            <h1>Latin Sentence Bank</h1>
             
-            <section aria-labelledby="instructions-heading">
-                <h2 id="instructions-heading" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Instructions</h2>
-                <div class="instruction-box">
-                    <p><strong>Accessibility Note:</strong> This page is Alpheios-enabled. To use the dictionary and morphology tools, double-click or long-press any Latin word. Keyboard users can navigate through the sentences using the Tab key.</p>
-                </div>
-            </section>
-            
-            <section aria-label="Latin Sentences">
-                <ol class="sentence-list alpheios-enabled" lang="la">
-                    <li>eō Caesar venit.</li>
-                    <li>Tullia vēnit ad mē.</li>
-                    <li>ē prōvinciā rediit.</li>
-                    <li>ad urbem proficīscitur.</li>
-                    <li>mīlitibus signum dedit.</li>
-                    <li>equitātuī omnī praefuit.</li>
-                    <li>Carthāginem īre iussī sunt.</li>
-                    <li>Sīlius tē cum Clōdiō loquī vult.</li>
-                    <li>Caesar sē in Galliam recēpit.</li>
-                    <li>Hērodotus Rōmā revertitur.</li>
-                    <li>Afrānius cōpiās ēdūcit.</li>
-                    <li>equitēs flūmen trānseunt.</li>
-                    <li>Caesar Labiēnum cum cohortibus sex subsidiō mittit.</li>
-                    <li>Lūcius Plancus locum capit superiōrem.</li>
-                    <li>magnus hōc bellō Themistoclēs fuit.</li>
-                    <li>nostrī celeriter arma cēpērunt.</li>
-                    <li>Rōmae posteā nōn fuistī.</li>
-                    <li>fīlius ad mē nōn vēnerat.</li>
-                    <li>Alexandrī fuerant amīcī.</li>
-                    <li>pācis enim auctor erās.</li>
-                    <li>multās iam prōvinciās occupāvit.</li>
-                    <li>Rhodiīs nāvibus praeerat Euphrānor.</li>
-                    <li>ipsī ad mē dēdūcuntur.</li>
-                    <li>trēs lēgātī Athēnās missī sunt.</li>
-                    <li>in urbe ā Catilīnā relictī sunt.</li>
-                    <li>hōc tempore data est Eumenī Cappadocia.</li>
-                    <li>haec ūna nāvis ā classe nostrā nōn captā est.</li>
-                    <li>Pompeius eō proeliō imperātor est appellātus.</li>
-                    <li>Vercingetorix minōribus Caesarem itineribus subsequitur.</li>
+            <div class="alpheios-enabled" lang="lat">
+                <ol>
+                    <li>eō Caesar venit. [cite: 1]</li>
+                    <li>Tullia vēnit ad mē. [cite: 1]</li>
+                    <li>ē prōvinciā rediit. [cite: 1]</li>
+                    <li>ad urbem proficīscitur. [cite: 1]</li>
+                    <li>mīlitibus signum dedit. [cite: 1]</li>
+                    <li>equitātuī omnī praefuit. [cite: 1]</li>
+                    <li>Carthāginem īre iussī sunt. [cite: 1]</li>
+                    <li>Sīlius tē cum Clōdiō loquī vult. [cite: 1]</li>
+                    <li>Caesar sē in Galliam recēpit. [cite: 1]</li>
+                    <li>Hērodotus Rōmā revertitur. [cite: 1]</li>
+                    <li>Afrānius cōpiās ēdūcit. [cite: 1]</li>
+                    <li>equitēs flūmen trānseunt. [cite: 1]</li>
+                    <li>Caesar Labiēnum cum cohortibus sex subsidiō mittit. [cite: 1]</li>
+                    <li>Lūcius Plancus locum capit superiōrem. [cite: 1]</li>
+                    <li>magnus hōc bellō Themistoclēs fuit. [cite: 1]</li>
+                    <li>nostrī celeriter arma cēpērunt. [cite: 1]</li>
+                    <li>Rōmae posteā nōn fuistī. [cite: 1]</li>
+                    <li>fīlius ad mē nōn vēnerat. [cite: 1]</li>
+                    <li>Alexandrī fuerant amīcī. [cite: 1]</li>
+                    <li>pācis enim auctor erās. [cite: 1]</li>
+                    <li>multās iam prōvinciās occupāvit. [cite: 1]</li>
+                    <li>Rhodiīs nāvibus praeerat Euphrānor. [cite: 1]</li>
+                    <li>ipsī ad mē dēdūcuntur. [cite: 1]</li>
+                    <li>trēs lēgātī Athēnās missī sunt. [cite: 1]</li>
+                    <li>in urbe ā Catilīnā relictī sunt. [cite: 1]</li>
+                    <li>hōc tempore data est Eumenī Cappadocia. [cite: 1]</li>
+                    <li>haec ūna nāvis ā classe nostrā nōn captā est. [cite: 1]</li>
+                    <li>Pompeius eō proeliō imperātor est appellātus. [cite: 1]</li>
+                    <li>Vercingetorix minōribus Caesarem itineribus subsequitur. [cite: 1]</li>
                 </ol>
-            </section>
+            </div>
         </main>
         
         <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-            import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js")
-                .then(alpheios => {
-                    new alpheios.Embedded({ 
-                        clientId: 'latin-sentence-bank-v2-accessible',
-                        textLangCode: 'lat' 
+        document.addEventListener("DOMContentLoaded", function (event) {
+            import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+                window.AlpheiosEmbed.importDependencies({
+                    mode: 'cdn'
+                }).then(Embedded => {
+                    new Embedded({
+                        clientId: 'latin-sentence-bank-2026-clean'
                     }).activate();
-                })
-                .catch(err => console.error("Alpheios failed to load:", err));
+                }).catch(e => {
+                    console.error(`Import of Alpheios embedded library dependencies failed: ${e}`);
+                });
+            }).catch(e => {
+                console.error(`Import of Alpheios Embedded library failed: ${e}`);
+            });
         });
     </script>
     </body>
