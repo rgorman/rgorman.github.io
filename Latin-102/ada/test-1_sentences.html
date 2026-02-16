@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="la">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Latin Sentence Bank - Accessible Edition</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
+        
+        <style>
+        :root {
+            --primary-color: #1a365d;
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-bg: #f0f4f8;
+            --border-color: #cbd5e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 50rem;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.25rem;
+            border-bottom: 0.25rem solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .instruction-box {
+            background: var(--accent-bg);
+            border-left: 0.5rem solid var(--primary-color);
+            padding: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .sentence-list {
+            padding-left: 2.5rem;
+        }
+
+        .sentence-list li {
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Focus styles for keyboard navigation */
+        li:focus-within {
+            outline: 2px solid var(--primary-color);
+            background-color: var(--accent-bg);
+        }
+
+        @media (max-width: 600px) {
+            body { margin: 1rem auto; }
+            h1 { font-size: 1.75rem; }
+        }
+    </style>
+    </head>
+    <body>
+        
+        <main>
+            <header>
+                <h1>Latin Sentence Analysis Bank</h1>
+            </header>
+            
+            <section aria-labelledby="instructions-heading">
+                <h2 id="instructions-heading" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Instructions</h2>
+                <div class="instruction-box">
+                    <p><strong>Accessibility Note:</strong> This page is Alpheios-enabled. To use the dictionary and morphology tools, double-click or long-press any Latin word. Keyboard users can navigate through the sentences using the Tab key.</p>
+                </div>
+            </section>
+            
+            <section aria-label="Latin Sentences">
+                <ol class="sentence-list alpheios-enabled" lang="la">
+                    <li>eō Caesar venit.</li>
+                    <li>Tullia vēnit ad mē.</li>
+                    <li>ē prōvinciā rediit.</li>
+                    <li>ad urbem proficīscitur.</li>
+                    <li>mīlitibus signum dedit.</li>
+                    <li>equitātuī omnī praefuit.</li>
+                    <li>Carthāginem īre iussī sunt.</li>
+                    <li>Sīlius tē cum Clōdiō loquī vult.</li>
+                    <li>Caesar sē in Galliam recēpit.</li>
+                    <li>Hērodotus Rōmā revertitur.</li>
+                    <li>Afrānius cōpiās ēdūcit.</li>
+                    <li>equitēs flūmen trānseunt.</li>
+                    <li>Caesar Labiēnum cum cohortibus sex subsidiō mittit.</li>
+                    <li>Lūcius Plancus locum capit superiōrem.</li>
+                    <li>magnus hōc bellō Themistoclēs fuit.</li>
+                    <li>nostrī celeriter arma cēpērunt.</li>
+                    <li>Rōmae posteā nōn fuistī.</li>
+                    <li>fīlius ad mē nōn vēnerat.</li>
+                    <li>Alexandrī fuerant amīcī.</li>
+                    <li>pācis enim auctor erās.</li>
+                    <li>multās iam prōvinciās occupāvit.</li>
+                    <li>Rhodiīs nāvibus praeerat Euphrānor.</li>
+                    <li>ipsī ad mē dēdūcuntur.</li>
+                    <li>trēs lēgātī Athēnās missī sunt.</li>
+                    <li>in urbe ā Catilīnā relictī sunt.</li>
+                    <li>hōc tempore data est Eumenī Cappadocia.</li>
+                    <li>haec ūna nāvis ā classe nostrā nōn captā est.</li>
+                    <li>Pompeius eō proeliō imperātor est appellātus.</li>
+                    <li>Vercingetorix minōribus Caesarem itineribus subsequitur.</li>
+                </ol>
+            </section>
+        </main>
+        
+        <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js")
+                .then(alpheios => {
+                    new alpheios.Embedded({ 
+                        clientId: 'latin-sentence-bank-v2-accessible',
+                        textLangCode: 'lat' 
+                    }).activate();
+                })
+                .catch(err => console.error("Alpheios failed to load:", err));
+        });
+    </script>
+    </body>
+</html>
