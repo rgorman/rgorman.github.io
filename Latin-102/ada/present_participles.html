@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Latin 101: Present Active Participles</title>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 30px;
+            }
+
+            table, th, td {
+                border: 2px solid #555555;
+            }
+
+            th {
+                background-color: #006400; /* Dark Green */
+                color: white;
+                padding: 10px;
+                font-size: 1.2em;
+            }
+
+            td {
+                padding: 8px;
+                text-align: center;
+            }
+
+            /* --- ROW CONTROLS (Edit the TR class in the HTML Body) --- */
+            
+            .focus {
+                background-color: #ffffcc; /* Light yellow background */
+                color: black;
+            }
+
+            .no_focus {
+                background-color: #e0e0e0; /* Gray background */
+                color: #666666; /* Gray text */
+                font-style: italic;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            /* --- COLUMN CONTROLS (Add these classes to the TABLE tag) --- */
+            /* Usage: <table class="hide-fem hide-neut"> to show only Masculine */
+
+            /* HIDE COLUMNS (Removes them entirely) */
+            .hide-masc tr > *:nth-child(2) { display: none; }
+            .hide-fem  tr > *:nth-child(3) { display: none; }
+            .hide-neut tr > *:nth-child(4) { display: none; }
+
+            /* DIM COLUMNS (Grays them out but keeps them visible) */
+            .dim-masc tr > *:nth-child(2) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-fem  tr > *:nth-child(3) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-neut tr > *:nth-child(4) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+
+
+            /* --- TEXT STYLING --- */
+
+            .latin-text {
+                font-size: 150%;
+                font-family: "Times New Roman", Times, serif;
+                font-weight: bold;
+            }
+
+            /* Target specific cells (add class="target" to any TD) */
+            .target .latin-text {
+                color: #D30000;
+                text-decoration: underline;
+            }
+            
+            th[scope="row"] {
+                background-color: #f2f2f2;
+                color: black;
+                width: 15%;
+                text-align: left;
+                padding-left: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <h2>Present Active Participles</h2>
+        
+        <table class=""> 
+            <caption>Paradigm Verbs: Nominative and Genitive Singular</caption>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th scope="col">Nominative Singular</th>
+                    <th scope="col">Genitive Singular</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="focus">
+                    <th scope="row">1st (laudō)</th>
+                    <td><span class="latin-text">laudāns</span></td>
+                    <td><span class="latin-text">laudantis</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">2nd (moneō)</th>
+                    <td><span class="latin-text">monēns</span></td>
+                    <td><span class="latin-text">monentis</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">3rd (mittō)</th>
+                    <td><span class="latin-text">mittēns</span></td>
+                    <td><span class="latin-text">mittentis</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">3rd -io (capiō)</th>
+                    <td><span class="latin-text">capiēns</span></td>
+                    <td><span class="latin-text">capientis</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">4th (audiō)</th>
+                    <td><span class="latin-text">audiēns</span></td>
+                    <td><span class="latin-text">audientis</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br/>
+        
+        <table class=""> 
+            <caption>Declension of mittēns, mittentis</caption>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th scope="col">Masculine</th>
+                    <th scope="col">Feminine</th>
+                    <th scope="col">Neuter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="focus">
+                    <th scope="row">Nom Sing</th>
+                    <td><span class="latin-text">mittēns</span></td>
+                    <td><span class="latin-text">mittēns</span></td>
+                    <td><span class="latin-text">mittēns</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Gen Sing</th>
+                    <td><span class="latin-text">mittentis</span></td>
+                    <td><span class="latin-text">mittentis</span></td>
+                    <td><span class="latin-text">mittentis</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Dat Sing</th>
+                    <td><span class="latin-text">mittentī</span></td>
+                    <td><span class="latin-text">mittentī</span></td>
+                    <td><span class="latin-text">mittentī</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Acc Sing</th>
+                    <td><span class="latin-text">mittentem</span></td>
+                    <td><span class="latin-text">mittentem</span></td>
+                    <td><span class="latin-text">mittēns</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Abl Sing</th>
+                    <td><span class="latin-text">mittente</span></td>
+                    <td><span class="latin-text">mittente</span></td>
+                    <td><span class="latin-text">mittente</span></td>
+                </tr>
+                
+                <tr><td colspan="4" style="background-color: #555555; height: 5px; padding: 0;"></td></tr>
+                
+                <tr class="focus">
+                    <th scope="row">Nom Plur</th>
+                    <td><span class="latin-text">mittentēs</span></td>
+                    <td><span class="latin-text">mittentēs</span></td>
+                    <td><span class="latin-text">mittentia</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Gen Plur</th>
+                    <td><span class="latin-text">mittentium</span></td>
+                    <td><span class="latin-text">mittentium</span></td>
+                    <td><span class="latin-text">mittentium</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Dat Plur</th>
+                    <td><span class="latin-text">mittentibus</span></td>
+                    <td><span class="latin-text">mittentibus</span></td>
+                    <td><span class="latin-text">mittentibus</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Acc Plur</th>
+                    <td><span class="latin-text">mittentēs</span></td>
+                    <td><span class="latin-text">mittentēs</span></td>
+                    <td><span class="latin-text">mittentia</span></td>
+                </tr>
+                <tr class="focus">
+                    <th scope="row">Abl Plur</th>
+                    <td><span class="latin-text">mittentibus</span></td>
+                    <td><span class="latin-text">mittentibus</span></td>
+                    <td><span class="latin-text">mittentibus</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>
