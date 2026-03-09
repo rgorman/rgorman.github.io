@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Latin Infinitives in Indirect Statement</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+        /* USER STYLING PREFERENCES 
+           ------------------------
+           Header Background: #006400 (Dark Green)
+           Header Text: White
+           Border Color: #555555 (Dark Gray)
+        */
+
+        :root {
+            --header-bg: #006400;
+            --header-text: #ffffff;
+            --border-color: #555555;
+        }
+
+        /* Table Base Styling */
+        .conjugation-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .conjugation-table th, 
+        .conjugation-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px 16px; 
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Header Specifics */
+        .conjugation-table thead th {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        /* Row Headers Styling */
+        .conjugation-table tbody th {
+            background-color: #f3f4f6; 
+            color: #1f2937;
+            font-weight: 700;
+            width: 15%;
+            vertical-align: middle;
+        }
+
+        /* Content Styling within cells */
+        .aspect-label {
+            color: var(--header-bg);
+            font-size: 1.05em;
+            font-weight: bold;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+        }
+
+        .cell-content strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: #1f2937; 
+        }
+
+        .translation-formula {
+            font-size: 0.9em;
+            color: #4b5563;
+            margin-bottom: 0.25rem;
+            border-left: 2px solid #ccc;
+            padding-left: 8px;
+            font-family: monospace; /* Added monospace for formula clarity */
+        }
+
+        .override-note {
+            font-size: 0.85em;
+            color: #b91c1c; 
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        /* Sub-unit spacing for Active/Passive */
+        .voice-section {
+            margin-bottom: 0.75rem;
+        }
+        
+        .voice-section.passive {
+            border-top: 1px dashed #d1d5db;
+            padding-top: 0.75rem;
+            margin-bottom: 0;
+        }
+
+        /* Hover effects */
+        .conjugation-table tbody tr:hover td {
+            background-color: #f9fafb;
+        }
+    </style>
+    </head>
+    <body class="bg-gray-50 text-gray-800 p-4 md:p-8">
+        
+        <main class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            
+            <header class="bg-gray-800 text-white p-6">
+                <h1 class="text-2xl md:text-3xl font-bold mb-2">Tense and Aspect of Infinitives in Indirect Statement</h1>
+                <p class="text-gray-300">Translating the accusative + infinitive construction based on matrix verb time. Future/prospective infinitives are omitted for introductory practice.</p>
+            </header>
+            
+            <div class="p-6 overflow-x-auto">
+                
+                <table class="conjugation-table" aria-label="Indirect Statement Infinitive Translation Table">
+                    <caption class="sr-only">A table showing how to translate present and perfect infinitives in indirect statements depending on whether the main verb is present or past tense, grouped by aspect and voice.</caption>
+                    
+                    <colgroup>
+                        <col class="w-1/6"/>
+                        <col class="w-2/5"/>
+                        <col class="w-2/5"/>
+                    </colgroup>
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col">Infinitive Form</th>
+                            <th scope="col">Past Matrix (e.g., <em>dixit</em>)</th>
+                            <th scope="col">Present Matrix (e.g., <em>dicit</em>)</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Present<br/><span class="text-sm font-normal text-gray-600">(mittere / mitti)</span></th>
+                            <td>
+                                <div class="cell-content">
+                                    <div class="aspect-label">Simple Past</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: verb-ed</div>
+                                        Latin: <em>dixit Caesarem litteras mittere</em><br/>
+                                        Eng.: "he said that Caesar sent the letters"
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: was/were + verb-en</div>
+                                        Latin: <em>dixit litteras mitti</em><br/>
+                                        Eng.: "he said that the letters were sent"
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-content">
+                                    <div class="aspect-label">Simple Present</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: base / verb-s</div>
+                                        Latin: <em>dicit Caesarem litteras mittere</em><br/>
+                                        Eng.: "he says that Caesar sends the letters"
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: am/is/are +
+                                            verb-en</div>
+                                         Latin: <em>dicit litteras mitti</em><br /> Eng.: "he says
+                                        that the letters are sent" </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="cell-content">
+                                    <div class="aspect-label">Progressive Past</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: was/were + verb-ing</div>
+                                        Latin: <em>dixit Caesarem litteras mittere</em><br/>
+                                        Eng.: "he said that Caesar was sending the letters"<br/>
+                                        <div class="override-note">If stative, use Simple Past</div>
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: was/were + being + verb-en</div>
+                                        Latin: <em>dixit litteras mitti</em><br/>
+                                        Eng.: "he said that the letters were being sent"
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-content">
+                                    <div class="aspect-label">Progressive Present</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: is/are + verb-ing</div>
+                                        Latin: <em>dicit Caesarem litteras mittere</em><br/>
+                                        Eng.: "he says that Caesar is sending the letters"<br/>
+                                        <div class="override-note">If stative, use Simple Present</div>
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: am/is/are + being
+                                            + verb-en</div>
+                                         Latin: <em>dicit litteras mitti</em><br /> Eng.: "he says
+                                        that the letters are being sent" </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Perfect<br/><span class="text-sm font-normal text-gray-600">(misisse / missas esse)</span></th>
+                            <td rowspan="2">
+                                <div class="cell-content">
+                                    <div class="aspect-label">Completed Past</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: had + verb-en</div>
+                                        Latin: <em>dixit Caesarem litteras misisse</em><br/>
+                                        Eng.: "he said that Caesar had sent the letters"
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: had + been + verb-en</div>
+                                        Latin: <em>dixit litteras missas esse</em><br/>
+                                        Eng.: "he said that the letters had been sent"
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cell-content">
+                                    <div class="aspect-label">Simple Past</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: verb-ed</div>
+                                        Latin: <em>dicit Caesarem litteras misisse</em><br/>
+                                        Eng.: "he says that Caesar sent the letters"
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: was/were + verb-en</div>
+                                        Latin: <em>dicit litteras missas esse</em><br/>
+                                        Eng.: "he says that the letters were sent"
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="cell-content">
+                                    <div class="aspect-label">Completed Present</div>
+                                    
+                                    <div class="voice-section active">
+                                        <strong>Active</strong>
+                                        <div class="translation-formula">Formula: has/have + verb-en</div>
+                                        Latin: <em>dicit Caesarem litteras misisse</em><br/>
+                                        Eng.: "he says that Caesar has sent the letters"
+                                    </div>
+                                    
+                                    <div class="voice-section passive">
+                                        <strong>Passive</strong>
+                                        <div class="translation-formula">Formula: has/have + been + verb-en</div>
+                                        Latin: <em>dicit litteras missas esse</em><br/>
+                                        Eng.: "he says that the letters have been sent"
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </main>
+        
+        <footer class="text-center p-4 text-gray-500 text-sm mt-8">
+            &copy; 2026 Latin Language Module. Compliant with WCAG 2.1 AA.
+        </footer>
+        
+    </body>
+</html>
