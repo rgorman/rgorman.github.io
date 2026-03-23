@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Latin 101: Relative Adjectives (Qui, Quae, Quod)</title>
+        <title>Verb Paradigms: Present Indicative & Subjunctive (Active & Passive)</title>
         <style>
             body {
                 font-family: sans-serif;
@@ -11,7 +11,7 @@
             table {
                 width: 100%;
                 border-collapse: collapse;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
             }
 
             table, th, td {
@@ -28,6 +28,13 @@
             td {
                 padding: 8px;
                 text-align: center;
+            }
+
+            caption {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 10px;
+                text-align: left;
             }
 
             /* --- ROW CONTROLS (Edit the TR class in the HTML Body) --- */
@@ -48,17 +55,21 @@
             }
 
             /* --- COLUMN CONTROLS (Add these classes to the TABLE tag) --- */
-            /* Usage: <table class="hide-fem hide-neut"> to show only Masculine */
+            /* Usage: <table class="hide-c1 hide-c2"> to show only 3rd, 3rd-io, 4th */
 
             /* HIDE COLUMNS (Removes them entirely) */
-            .hide-masc tr > *:nth-child(2) { display: none; }
-            .hide-fem  tr > *:nth-child(3) { display: none; }
-            .hide-neut tr > *:nth-child(4) { display: none; }
+            .hide-c1 tr > *:nth-child(2) { display: none; } /* 1st conj */
+            .hide-c2 tr > *:nth-child(3) { display: none; } /* 2nd conj */
+            .hide-c3 tr > *:nth-child(4) { display: none; } /* 3rd conj */
+            .hide-c4 tr > *:nth-child(5) { display: none; } /* 3rd-io conj */
+            .hide-c5 tr > *:nth-child(6) { display: none; } /* 4th conj */
 
             /* DIM COLUMNS (Grays them out but keeps them visible) */
-            .dim-masc tr > *:nth-child(2) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
-            .dim-fem  tr > *:nth-child(3) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
-            .dim-neut tr > *:nth-child(4) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-c1 tr > *:nth-child(2) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-c2 tr > *:nth-child(3) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-c3 tr > *:nth-child(4) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-c4 tr > *:nth-child(5) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
+            .dim-c5 tr > *:nth-child(6) { color: #ccc; background-color: #f2f2f2; font-weight: normal; }
 
 
             /* --- TEXT STYLING --- */
@@ -71,8 +82,8 @@
 
             /* Target specific cells (add class="target" to any TD) */
             .target .latin-text {
-                color: #D30000;
-                text-decoration: underline;
+               
+              
             }
             
             th[scope="row"] {
@@ -83,88 +94,95 @@
                 padding-left: 15px;
             }
 
+            .separator-row td {
+                background-color: #555555; 
+                height: 5px; 
+                padding: 0;
+            }
+
         </style>
     </head>
     <body>
         
-        <h2>quī, quae, quod: who, which, that</h2>
         
-        <table class="hide-masc hide-fem"> 
-            <caption>Declension of the Relative Pronoun</caption>
+
+        <table class="hide-c2 hide-c3 hide-c4 hide-c5" > 
+            <caption>Present Subjunctive Active</caption>
             <thead>
                 <tr>
                     <td></td>
-                    <th scope="col">Masculine</th>
-                    <th scope="col">Feminine</th>
-                    <th scope="col">Neuter</th>
+                    <th scope="col">1st conj.</th>
+                    <th scope="col">2nd conj.</th>
+                    <th scope="col">3rd conj.</th>
+                    <th scope="col">3rd -io conj</th>
+                    <th scope="col">4th conj</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="focus">
-                    <th scope="row">Nom Sing</th>
-                    <td><span class="latin-text">quī</span></td>
-                    <td><span class="latin-text">quae</span></td>
-                    <td><span class="latin-text">quod</span></td>
-                </tr>
-                <tr class="focus">
-                    <th scope="row">Gen Sing</th>
-                    <td><span class="latin-text">cuius</span></td>
-                    <td><span class="latin-text">cuius</span></td>
-                    <td><span class="latin-text">cuius</span></td>
-                </tr>
-                <tr class="focus">
-                    <th scope="row">Dat Sing</th>
-                    <td><span class="latin-text">cui</span></td>
-                    <td><span class="latin-text">cui</span></td>
-                    <td><span class="latin-text">cui</span></td>
-                </tr>
-                <tr class="focus">
-                    <th scope="row">Acc Sing</th>
-                    <td><span class="latin-text">quem</span></td>
-                    <td><span class="latin-text">quam</span></td>
-                    <td><span class="latin-text">quod</span></td>
-                </tr>
-                <tr class="focus">
-                    <th scope="row">Abl Sing</th>
-                    <td><span class="latin-text">quō</span></td>
-                    <td><span class="latin-text">quā</span></td>
-                    <td><span class="latin-text">quō</span></td>
+                    <th scope="row">identification</th>
+                    <td><span class="latin-text">laudō, laudāre</span></td>
+                    <td><span class="latin-text">moneō, monēre</span></td>
+                    <td><span class="latin-text">agō, agere</span></td>
+                    <td><span class="latin-text">capiō, capere</span></td>
+                    <td><span class="latin-text">audiō, audīre</span></td>
                 </tr>
                 
-                <tr><td colspan="4" style="background-color: #555555; height: 5px; padding: 0;"></td></tr>
+                <tr class="separator-row"><td colspan="6"></td></tr>
                 
                 <tr class="focus">
-                    <th scope="row">Nom Plur</th>
-                    <td><span class="latin-text">quī</span></td>
-                    <td><span class="latin-text">quae</span></td>
-                    <td><span class="latin-text">quae</span></td>
+                    <th scope="row">1st person sing</th>
+                    <td><span class="latin-text">laudem</span></td>
+                    <td><span class="latin-text">moneam</span></td>
+                    <td><span class="latin-text">agam</span></td>
+                    <td><span class="latin-text">capiam</span></td>
+                    <td><span class="latin-text">audiam</span></td>
                 </tr>
                 <tr class="focus">
-                    <th scope="row">Gen Plur</th>
-                    <td><span class="latin-text">quōrum</span></td>
-                    <td><span class="latin-text">quārum</span></td>
-                    <td><span class="latin-text">quōrum</span></td>
+                    <th scope="row">2nd person sing</th>
+                    <td><span class="latin-text">laudēs</span></td>
+                    <td><span class="latin-text">moneās</span></td>
+                    <td><span class="latin-text">agās</span></td>
+                    <td><span class="latin-text">capiās</span></td>
+                    <td><span class="latin-text">audiās</span></td>
                 </tr>
                 <tr class="focus">
-                    <th scope="row">Dat Plur</th>
-                    <td><span class="latin-text">quibus</span></td>
-                    <td><span class="latin-text">quibus</span></td>
-                    <td><span class="latin-text">quibus</span></td>
+                    <th scope="row">3rd person sing</th>
+                    <td class="target"><span class="latin-text">laudet</span></td>
+                    <td class="target"><span class="latin-text">moneat</span></td>
+                    <td class="target"><span class="latin-text">agat</span></td>
+                    <td class="target"><span class="latin-text">capiat</span></td>
+                    <td class="target"><span class="latin-text">audiat</span></td>
+                </tr>
+                
+                <tr class="separator-row"><td colspan="6"></td></tr>
+                
+                <tr class="focus">
+                    <th scope="row">1st person plur</th>
+                    <td><span class="latin-text">laudēmus</span></td>
+                    <td><span class="latin-text">moneāmus</span></td>
+                    <td><span class="latin-text">agamus</span></td>
+                    <td><span class="latin-text">capiāmus</span></td>
+                    <td><span class="latin-text">audiāmus</span></td>
                 </tr>
                 <tr class="focus">
-                    <th scope="row">Acc Plur</th>
-                    <td><span class="latin-text">quōs</span></td>
-                    <td><span class="latin-text">quās</span></td>
-                    <td><span class="latin-text">quae</span></td>
+                    <th scope="row">2nd person plur</th>
+                    <td><span class="latin-text">laudētis</span></td>
+                    <td><span class="latin-text">moneātis</span></td>
+                    <td><span class="latin-text">agatis</span></td>
+                    <td><span class="latin-text">capiātis</span></td>
+                    <td><span class="latin-text">audiātis</span></td>
                 </tr>
                 <tr class="focus">
-                    <th scope="row">Abl Plur</th>
-                    <td><span class="latin-text">quibus</span></td>
-                    <td><span class="latin-text">quibus</span></td>
-                    <td><span class="latin-text">quibus</span></td>
+                    <th scope="row">3rd person plur</th>
+                    <td class="target"><span class="latin-text">laudent</span></td>
+                    <td class="target"><span class="latin-text">moneant</span></td>
+                    <td class="target"><span class="latin-text">agant</span></td>
+                    <td class="target"><span class="latin-text">capiant</span></td>
+                    <td class="target"><span class="latin-text">audiant</span></td>
                 </tr>
             </tbody>
         </table>
-        
+
     </body>
 </html>
