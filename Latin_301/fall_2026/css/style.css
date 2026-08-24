@@ -1,0 +1,60 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* 3-Column Aligned Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2.5rem 1.4fr 1fr;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    align-items: baseline;
+}
+
+/* Sentence Number */
+.item1 {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #64748b;
+    text-align: right;
+}
+
+/* Main Text (Large & Clear) */
+.item2 {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: #0f172a;
+}
+
+/* Notes / Glosses */
+.item3 {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #334155;
+    border-left: 2px solid #e2e8f0;
+    padding-left: 1rem;
+}
+
+.item3 ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.item3 li {
+    margin-bottom: 0.25rem;
+}
