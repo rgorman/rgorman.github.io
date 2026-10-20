@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -990,29 +989,29 @@
                     </ul>
                 </div>
             </div>
-
-
-
         </div>
         <!-- Alpheios Initialization Script -->
         <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", function (event) {
-                import ('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js').then(embedLib => {
-                    window.AlpheiosEmbed.importDependencies({
-                        mode: 'custom',
-                        libs: {
-                            components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js'
-                        }
-                    }).then(Embedded => {
-                        new Embedded({
-                            clientId: 'embed-lib-demo-treebanks', authEnv: null
-                        }).activate();
-                    }). catch (e => {
-                        console.error(`Import of embedded library dependencies failed: ${e}`);
+            document.addEventListener("DOMContentLoaded", function () {
+                import('https://cdn.jsdelivr.net/npm/alpheios-embedded@beta/dist/alpheios-embedded.js')
+                    .then(embedLib => {
+                        window.AlpheiosEmbed.importDependencies({
+                            mode: 'custom',
+                            libs: {
+                                components: 'https://cdn.jsdelivr.net/npm/alpheios-components@beta/dist/alpheios-components.js'
+                            }
+                        }).then(Embedded => {
+                            new Embedded({
+                                clientId: 'embed-lib-demo-treebanks',
+                                authEnv: null
+                            }).activate();
+                        }).catch(e => {
+                            console.error(`Import of embedded library dependencies failed: ${e}`);
+                        });
+                    }).catch(e => {
+                        console.error(`Import of embedded library failed: ${e}`);
                     });
-                }). catch (e => {
-                    console.error(`Import of embedded library failed: ${e}`);
-                });
-            });</script>
+            });
+        </script>
     </body>
 </html>
